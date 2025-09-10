@@ -1,5 +1,5 @@
 export default function TestimonialCard({
-  name,
+ name,
   role,
   content,
   rating
@@ -22,11 +22,11 @@ export default function TestimonialCard({
   };
 
   return (
-    <div className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-border">
+    <div className="bg-background dark:bg-background-secondary p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
       <div className="flex mb-4">
         {renderStars()}
       </div>
-      <p className="text-foreground-secondary italic mb-6">&quot;{content}&quot;</p>
+      <p className="text-foreground-secondary italic mb-6">"{content}"</p>
       <div className="flex items-center">
         <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
         <div className="ml-4">

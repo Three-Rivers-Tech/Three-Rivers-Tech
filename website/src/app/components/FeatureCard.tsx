@@ -8,7 +8,7 @@ export default function FeatureCard({
   icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
-    <div className="bg-background-secondary p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-border text-center">
+    <div className="feature-card bg-background-secondary dark:bg-background-tertiary p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border text-center">
       <div className="mb-4 flex justify-center">
         <Icon className="w-12 h-12 text-primary" />
       </div>

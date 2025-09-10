@@ -106,28 +106,28 @@ export default function WhyChooseUs() {
 
         {/* Statistics section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
               {animatedValues.projects}+
             </div>
             <div className="text-lg text-foreground-secondary">Projects Completed</div>
           </div>
 
-          <div className="text-center bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30">
+          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
               {animatedValues.clients}%
             </div>
             <div className="text-lg text-foreground-secondary">Client Retention</div>
           </div>
 
-          <div className="text-center bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30">
+          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
               {animatedValues.satisfaction}%
             </div>
             <div className="text-lg text-foreground-secondary">Satisfaction Rate</div>
           </div>
 
-          <div className="text-center bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
               {animatedValues.experience}+
             </div>
@@ -140,7 +140,13 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
+              className={`why-choose-card bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 ${
+                (feature.title === "Expert Team" ||
+                 feature.title === "Cutting-Edge Solutions" ||
+                 feature.title === "24/7 Support" ||
+                 feature.title === "Proven Results")
+                ? "highlight-card" : ""
+              }`}
             >
               <div className="mb-4">
                 {feature.icon}

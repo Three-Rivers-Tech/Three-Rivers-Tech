@@ -13,12 +13,12 @@
 
   /* Typography colors */
   --text-heading: #0f172a;
-  --text-body: #334155;
+  --text-body: #34155;
   --text-secondary: #64748b;
 
   /* Border colors */
   --border: #cbd5e1;
- --border-hover: #94a3b8;
+  --border-hover: #94a3b8;
 
   /* Accent colors */
   --primary: #3b82f6;
@@ -38,7 +38,7 @@
 .dark {
   --background: #0f172a;
   --background-secondary: #1e293b;
-  --background-tertiary: #33415;
+  --background-tertiary: #334155;
 
   /* Foreground colors */
   --foreground: #f1f5f9;
@@ -48,7 +48,7 @@
   /* Typography colors */
   --text-heading: #f1f5f9;
   --text-body: #cbd5e1;
- --text-secondary: #94a3b8;
+  --text-secondary: #94a3b8;
 
   /* Border colors */
   --border: #334155;
@@ -56,7 +56,37 @@
 
   /* Shadows */
   --shadow: rgba(0, 0, 0, 0.25);
-  --shadow-lg: rgba(0, 0, 0.5);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced dark mode styles for tiles */
+.dark .feature-card,
+.dark .service-card,
+.dark .why-choose-card {
+  background-color: #1e293b;
+  border: 2px solid #475569;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dark .feature-card:hover,
+.dark .service-card:hover,
+.dark .why-choose-card:hover {
+  background-color: #334155;
+  border-color: #64748b;
+  transform: translateY(-5px);
+}
+
+/* Specific white borders for key elements */
+.dark .highlight-card {
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Statistics cards in WhyChooseUs */
+.dark .stats-card {
+  background-color: #1e293b;
+  border: 1px solid #475569;
 }
 
 /* Typography system */

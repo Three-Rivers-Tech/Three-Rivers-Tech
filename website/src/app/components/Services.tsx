@@ -12,13 +12,14 @@ const services = [
     title: "Software Development",
     description: "Custom web and mobile applications tailored to your business needs",
     icon: SoftwareDevelopmentIcon,
+    link: "/software-development",
   },
   {
     id: "it-consulting",
     title: "IT Consulting",
     description: "Expert guidance to optimize your technology infrastructure",
     icon: ITConsultingIcon,
-  },
+ },
   {
     id: "saas-products",
     title: "SaaS Products",
@@ -50,6 +51,7 @@ export default function Services() {
               title={service.title}
               description={service.description}
               icon={service.icon}
+              link={service.link}
             />
           ))}
         </div>

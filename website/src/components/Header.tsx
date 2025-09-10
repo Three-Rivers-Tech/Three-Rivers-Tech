@@ -9,6 +9,7 @@ export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
 
   // Check system preference and saved preference on initial load
   useEffect(() => {

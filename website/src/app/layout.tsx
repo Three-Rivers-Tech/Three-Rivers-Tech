@@ -37,10 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-circle-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-circle-32x32.png" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-circle-48x48.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-circle-192x192.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/company_logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/company_logo.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/company_logo.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/company_logo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -64,7 +64,7 @@ export default function RootLayout({
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-555-123-4567",
+                "telephone": "+1-412-403-5559",
                 "contactType": "Customer Service",
                 "email": "info@threeriverstech.com"
               }
@@ -79,14 +79,14 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "Three Rivers Tech",
               "image": "https://threeriverstech.com/company_logo.png",
-              "telephone": "+1-555-123-4567",
+              "telephone": "+1-412-403-5559",
               "email": "info@threeriverstech.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Technology Drive",
-                "addressLocality": "Pittsburgh",
+                "streetAddress": "124 Grant St",
+                "addressLocality": "Turtle Creek",
                 "addressRegion": "PA",
-                "postalCode": "15203",
+                "postalCode": "15146",
                 "addressCountry": "US"
               },
               "openingHoursSpecification": [
