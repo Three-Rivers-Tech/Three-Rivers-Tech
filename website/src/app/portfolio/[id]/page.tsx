@@ -1,3 +1,16 @@
+// Generate static params for all possible portfolio IDs
+export async function generateStaticParams() {
+  // Return an array of possible IDs for static generation
+  // In a real app, you'd fetch this from your data source
+  return [
+    { id: 'sample-project-1' },
+    { id: 'sample-project-2' },
+    { id: 'sample-project-3' },
+  ];
+}
+
+import BackButton from './BackButton';
+
 export default function CaseStudyPage({ params }: { params: { id: string } }) {
   // In a real implementation, you would fetch the case study data based on the ID
  // For now, we'll use static data
@@ -15,26 +28,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
   return (
     <div className="container mx-auto px-6 py-16">
       <div className="mb-8">
-        <button
-          onClick={() => window.history.back()}
-          className="flex items-center text-primary hover:text-primary-hover"
-        >
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          Back to Portfolio
-        </button>
+        <BackButton />
       </div>
 
       <div className="bg-background-secondary rounded-lg p-8 border border-border">

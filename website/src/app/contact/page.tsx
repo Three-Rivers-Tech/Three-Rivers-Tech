@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -27,20 +28,23 @@ export default function ContactPage() {
     setSubmitError("");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
+      const formDataToSend = new FormData();
+      formDataToSend.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Replace with your Web3Forms access key
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       });
 
       if (response.ok) {
         setSubmitSuccess(true);
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        const errorData = await response.json();
-        setSubmitError(errorData.error || "Failed to send message. Please try again.");
+        setSubmitError("Failed to send message. Please try again.");
       }
     } catch (error) {
       setSubmitError("An unexpected error occurred. Please try again later.");
@@ -127,7 +131,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary"
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -176,21 +180,17 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 05.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
+                  <FaPhoneAlt className="h-6 w-6 text-gray-400" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Phone</h3>
-                  <p className="text-foreground-secondary">(555) 123-4567</p>
+                  <p className="text-foreground-secondary">(412) 403-5559</p>
                 </div>
               </div>
 
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 02.22 0L21 8M5 19h14a2 2 0 02-2-2V7a2 2 0 0-2-2H5a2 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                  <FaEnvelope className="h-6 w-6 text-gray-400" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Email</h3>
@@ -200,29 +200,24 @@ export default function ContactPage() {
 
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 11.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 0 11-6 0 3 3 016 0z" />
-                  </svg>
+                  <FaMapMarkerAlt className="h-6 w-6 text-gray-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Office</h3>
-                  <p className="text-foreground-secondary">123 Technology Drive</p>
-                  <p className="text-foreground-secondary">Pittsburgh, PA 15203</p>
+                  <h3 className="text-xl font-bold mb-2">Office Location</h3>
+                  <p className="text-foreground-secondary">124 Grant St</p>
+                  <p className="text-foreground-secondary">Turtle Creek, PA 15145</p>
                 </div>
               </div>
 
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 0 1-18 0 9 9 0118 0z" />
-                  </svg>
+                  <FaClock className="h-6 w-6 text-gray-400" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Business Hours</h3>
                   <p className="text-foreground-secondary">Monday - Friday: 9am - 5pm</p>
-                  <p className="text-foreground-secondary">Saturday: 10am - 2pm</p>
-                  <p className="text-foreground-secondary">Sunday: Closed</p>
+                  <p className="text-foreground-secondary">Saturday: 9am - 5pm</p>
+                  <p className="text-foreground-secondary">Sunday: 10am - 2pm</p>
                 </div>
               </div>
             </div>

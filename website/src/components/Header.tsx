@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import Search from "@/app/components/Search";
-import { HiSun, HiMoon } from "react-icons/hi";
+import { HiSun, HiMoon, HiMenu } from "react-icons/hi";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
 
   // Check system preference and saved preference on initial load
   useEffect(() => {
@@ -60,71 +59,19 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-background-secondary border-b border-border py-4 px-6">
+    <header className="bg-background-secondary border-b border-border py-4 px-6 relative">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center text-2xl font-bold text-primary">
           <img src="/company_logo.png" alt="Three Rivers Tech Logo" className="h-8 w-8 mr-2" />
           Three Rivers Tech
         </Link>
-        <div className="hidden md:flex items-center space-x-6">
-          <nav>
-            <ul className="flex space-x-6">
-              <li>
-                <Link
-                  href="/"
-                  className="text-foreground-secondary hover:text-foreground transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-foreground-secondary hover:text-foreground transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-foreground-secondary hover:text-foreground transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-foreground-secondary hover:text-foreground transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <Search />
-          <button
-            onClick={toggleDarkMode}
-            className="p-3 rounded-full bg-primary text-gray-400 hover:bg-primary-hover transition-colors shadow-lg border-2 border-gray-400"
-            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {darkMode ? (
-              // Sun icon for light mode
-              <HiSun className="h-5 w-5" />
-            ) : (
-              // Moon icon for dark mode
-              <HiMoon className="h-5 w-5" />
-            )}
-          </button>
-        </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center">
+        {/* Navigation Controls */}
+        <div className="flex items-center">
           <Search />
           <button
             onClick={toggleDarkMode}
-            className="p-3 ml-2 rounded-full bg-primary text-white hover:bg-primary-hover transition-colors shadow-lg border-2 border-white"
+            className="p-3 ml-2 rounded-full bg-background-secondary text-foreground hover:bg-border transition-colors shadow-md border border-border"
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {darkMode ? (
@@ -137,29 +84,27 @@ export default function Header() {
           </button>
           <button
             onClick={toggleMobileMenu}
-            className="p-3 ml-2 rounded-md bg-primary text-white hover:bg-primary-hover transition-colors shadow-lg border-2 border-white"
+            className="p-3 ml-2 rounded-md bg-background-secondary text-foreground hover:bg-border transition-colors shadow-md border border-border"
             aria-label="Toggle mobile menu"
-
           >
             {/* Hamburger Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
+            <HiMenu className="h-6 w-6" />
           </button>
         </div>
+      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden absolute top-full right-0 mt-2 w-full bg-background-secondary border border-border rounded-md shadow-lg z-50"
+          className="absolute top-full right-6 mt-2 w-64 bg-background border border-border rounded-lg shadow-xl z-50 opacity-100"
         >
-          <nav className="py-2">
+          <nav className="py-1">
             <ul>
               <li>
                 <Link
                   href="/"
-                  className="block px-6 py-3 text-foreground-secondary hover:text-foreground hover:bg-border transition-colors"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
                   onClick={closeMobileMenu}
                 >
                   Home
@@ -168,7 +113,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/services"
-                  className="block px-6 py-3 text-foreground-secondary hover:text-foreground hover:bg-border transition-colors"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
                   onClick={closeMobileMenu}
                 >
                   Services
@@ -176,8 +121,26 @@ export default function Header() {
               </li>
               <li>
                 <Link
+                  href="/software-development"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
+                  onClick={closeMobileMenu}
+                >
+                  Software Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/portfolio"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
+                  onClick={closeMobileMenu}
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/about"
-                  className="block px-6 py-3 text-foreground-secondary hover:text-foreground hover:bg-border transition-colors"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
                   onClick={closeMobileMenu}
                 >
                   About
@@ -186,17 +149,25 @@ export default function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="block px-6 py-3 text-foreground-secondary hover:text-foreground hover:bg-border transition-colors"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
                   onClick={closeMobileMenu}
                 >
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search"
+                  className="block px-4 py-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary transition-colors text-sm"
+                  onClick={closeMobileMenu}
+                >
+                  Search
                 </Link>
               </li>
             </ul>
           </nav>
         </div>
       )}
-      </div>
     </header>
   );
 }
