@@ -68,7 +68,7 @@ function SearchContent() {
   return (
     <div className="container mx-auto px-6 py-16">
       <h1 className="text-4xl font-bold mb-8">
-        Search Results for "{query}"
+        Search Results for &ldquo;{query}&rdquo;
       </h1>
 
       {results.length > 0 ? (
@@ -91,7 +91,7 @@ function SearchContent() {
       ) : (
         <div className="text-center py-16">
           <p className="text-foreground-secondary text-xl">
-            No results found for "{query}"
+            No results found for &ldquo;{query}&rdquo;
           </p>
           <p className="text-foreground-secondary mt-4">
             Try adjusting your search terms

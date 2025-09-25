@@ -1,5 +1,4 @@
 import ServiceCard from "./ServiceCard";
-import { FaLaptopCode, FaSearch, FaCloud, FaTools } from "react-icons/fa";
 import SoftwareDevelopmentIcon from "./icons/SoftwareDevelopmentIcon";
 import ITConsultingIcon from "./icons/ITConsultingIcon";
 import SaasProductsIcon from "./icons/SaasProductsIcon";

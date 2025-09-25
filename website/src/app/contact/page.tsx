@@ -46,7 +46,7 @@ export default function ContactPage() {
       } else {
         setSubmitError("Failed to send message. Please try again.");
       }
-    } catch (error) {
+    } catch {
       setSubmitError("An unexpected error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);

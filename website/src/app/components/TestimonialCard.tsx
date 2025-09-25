@@ -26,7 +26,7 @@ export default function TestimonialCard({
       <div className="flex mb-4">
         {renderStars()}
       </div>
-      <p className="text-foreground-secondary italic mb-6">"{content}"</p>
+      <p className="text-foreground-secondary italic mb-6">&ldquo;{content}&rdquo;</p>
       <div className="flex items-center">
         <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
         <div className="ml-4">
