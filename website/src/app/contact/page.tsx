@@ -29,7 +29,7 @@ export default function ContactPage() {
 
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Replace with your Web3Forms access key
+      formDataToSend.append('access_key', '5f3b4db9-8dd9-47ce-a779-b3adb6b23b5c'); // Replace with your Web3Forms access key
       formDataToSend.append('name', formData.name);
       formDataToSend.append('email', formData.email);
       formDataToSend.append('subject', formData.subject);
