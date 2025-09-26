@@ -109,10 +109,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="not-italic text-foreground-secondary">
-              <p className="mb-2">123 Tech Street</p>
-              <p className="mb-2">Pittsburgh, PA 15222</p>
-              <p className="mb-2">Phone: (555) 123-4567</p>
-              <p className="mb-2">Email: info@threeriverstech.com</p>
+              <p className="mb-2">124 Grant Street</p>
+              <p className="mb-2">Turtle Creek, PA 15145</p>
+              <p className="mb-2">Phone: (412) 403-5559</p>
+              <p className="mb-2">Email: info@three-rivers-tech.com</p>
             </address>
           </div>
         </div>

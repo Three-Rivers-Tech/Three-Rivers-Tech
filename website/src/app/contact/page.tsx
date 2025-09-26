@@ -11,8 +11,7 @@ export default function ContactPage() {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState("");
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,29 +24,28 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitError("");
+    setSubmitStatus("idle");
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('access_key', '5f3b4db9-8dd9-47ce-a779-b3adb6b23b5c'); // Replace with your Web3Forms access key
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('subject', formData.subject);
-      formDataToSend.append('message', formData.message);
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        body: formDataToSend
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
-        setSubmitSuccess(true);
+        setSubmitStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSubmitStatus("idle"), 5000); // Reset after 5 seconds
       } else {
-        setSubmitError("Failed to send message. Please try again.");
+        setSubmitStatus("error");
       }
     } catch {
-      setSubmitError("An unexpected error occurred. Please try again later.");
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -94,18 +92,42 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Send us a message</h2>
-            {submitSuccess ? (
-              <div className="bg-green-100 border-green-40 text-green-700 px-4 py-3 rounded mb-6">
-                <p>Thank you for your message! We{`'`}ll get back to you soon.</p>
+            <h2 className="text-3xl font-bold mb-6">Schedule a Meeting</h2>
+            <div className="mb-8">
+              <p className="text-foreground-secondary mb-4">
+                Book a consultation or meeting with our team using Google Bookings scheduling.
+              </p>
+              {/* Google Bookings Embed */}
+              <div className="w-full min-h-[600px] border-2 border-border rounded-lg overflow-hidden bg-background-secondary">
+                <iframe
+                  src="https://calendar.app.google/1EwGScdmrC1dcwMR8"
+                  width="100%"
+                  height="600"
+                  scrolling="no"
+                  frameBorder="0"
+                  title="Schedule an appointment with Three Rivers Tech"
+                  className="w-full min-h-[600px]"
+                  style={{ border: 0 }}
+                ></iframe>
+                <div className="text-center p-4 bg-background-secondary border-t border-border">
+                  <p className="text-sm text-foreground-secondary">
+                    Bookings powered by <span className="font-semibold">Google Calendar</span>
+                  </p>
+                </div>
               </div>
-            ) : null}
+            </div>
 
-            {submitError ? (
-              <div className="bg-red-10 border-red-400 text-red-700 px-4 py-3 rounded mb-6">
-                <p>{submitError}</p>
+            {submitStatus === "error" && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+                <p>Failed to send message. Please try again.</p>
               </div>
-            ) : null}
+            )}
+
+            {submitStatus === "success" && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                <p>Message sent successfully! We'll get back to you soon.</p>
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

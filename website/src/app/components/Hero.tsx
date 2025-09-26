@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="bg-gradient-to-r from-primary to-secondary py-20 md:py-28">
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Comprehensive Technology Solutions for Your Business
+          Comprehensive Technology Solutions
         </h1>
         <p className="text-xl text-foreground-secondary mb-10 max-w-3xl mx-auto">
           Software Development • IT Consulting • SaaS Products • Computer Repair

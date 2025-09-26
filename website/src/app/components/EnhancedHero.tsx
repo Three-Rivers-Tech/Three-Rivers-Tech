@@ -11,28 +11,28 @@ export default function EnhancedHero() {
   // Auto-rotating banner content
   const slides = [
     {
-      title: "Comprehensive Technology Solutions for Your Business",
-      subtitle: "Software Development • IT Consulting • SaaS Products • Computer Repair",
-      ctaPrimary: "Get Started Today",
-      ctaSecondary: "View Our Work",
+      title: "Get Your Technology Working For You",
+      subtitle: "We build websites that actually work, fix slow computers, and create software that saves you time",
+      ctaPrimary: "Get Your Free Tech Checkup",
+      ctaSecondary: "See How We Help",
       ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/portfolio",
       bgColor: "from-blue-700 to-indigo-800"
     },
     {
-      title: "Transform Your Digital Infrastructure",
-      subtitle: "Expert solutions tailored to your business needs",
-      ctaPrimary: "Explore Services",
-      ctaSecondary: "See Case Studies",
-      ctaPrimaryLink: "/services",
+      title: "Stop Losing Customers to Slow Websites",
+      subtitle: "We speed up your website, fix your computers, and automate your boring tasks so you can focus on growing your business",
+      ctaPrimary: "Fix Your Website Today",
+      ctaSecondary: "See Real Results",
+      ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/portfolio",
       bgColor: "from-blue-600 to-indigo-700"
     },
     {
-      title: "Innovative Software Solutions",
-      subtitle: "Custom applications designed for your workflow",
-      ctaPrimary: "Start a Project",
-      ctaSecondary: "View Portfolio",
+      title: "Build Software That Actually Works",
+      subtitle: "Stop wasting time on paperwork and manual tasks. We build simple software that does the work for you.",
+      ctaPrimary: "Get Your Business Software",
+      ctaSecondary: "View Examples",
       ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/portfolio",
       bgColor: "from-purple-600 to-pink-600"

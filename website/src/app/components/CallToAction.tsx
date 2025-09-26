@@ -110,10 +110,10 @@ export default function CallToAction() {
     <section className="py-16 bg-gradient-to-r from-primary to-secondary">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Ready to Transform Your Business?
+          Stop Losing Money to Bad Technology
         </h2>
-        <p className="text-xl text-foreground-secondary mb-10 max-w-3xl mx-auto">
-          Let&apos;s discuss how our technology solutions can help you achieve your goals
+        <p className="text-xl var(--text-secondary) mb-10 max-w-3xl mx-auto">
+          Get a free technology assessment and see exactly how we can save you time and money
         </p>
 
         <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl">

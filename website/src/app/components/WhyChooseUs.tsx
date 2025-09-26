@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FaBullseye, FaLaptopCode, FaTools, FaDollarSign } from "../components/icons";
 
 export default function WhyChooseUs() {
   const [animatedValues, setAnimatedValues] = useState({
@@ -13,10 +14,10 @@ export default function WhyChooseUs() {
   // Animation for statistics
   useEffect(() => {
     const targets = {
-      projects: 150,
-      clients: 85,
-      satisfaction: 98,
-      experience: 10
+      projects: 75,
+      clients: 30,
+      satisfaction: 150,
+      experience: 20
     };
 
     const duration = 2000; // ms
@@ -57,40 +58,24 @@ export default function WhyChooseUs() {
   // Features data
   const features = [
     {
-      title: "Expert Team",
-      description: "Our certified professionals bring years of industry experience to every project.",
-      icon: (
-        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.28 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      )
+      title: "Plain English",
+      description: "No confusing tech jargon or complicated explanations. We talk like normal people and explain everything clearly.",
+      icon: <FaBullseye className="w-12 h-12 text-primary" />
     },
     {
-      title: "Cutting-Edge Solutions",
-      description: "We leverage the latest technologies to deliver innovative solutions that drive results.",
-      icon: (
-        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-        </svg>
-      )
+      title: "Simple Solutions",
+      description: "We create websites and software that make your work less complicated. No more learning curves or steep barriers to entry.",
+      icon: <FaLaptopCode className="w-12 h-12 text-primary" />
     },
     {
-      title: "24/7 Support",
-      description: "Our dedicated support team is always available to ensure your systems run smoothly.",
-      icon: (
-        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-        </svg>
-      )
+      title: "We Fix Problems Fast",
+      description: "When something breaks, we fix it quickly. No waiting days or weeks for a response. We understand your business can't stop.",
+      icon: <FaTools className="w-12 h-12 text-primary" />
     },
     {
-      title: "Proven Results",
-      description: "We measure our success by the tangible results we deliver to our clients.",
-      icon: (
-        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0118 0z" />
-        </svg>
-      )
+      title: "Save You Money",
+      description: "Our solutions help you work smarter, not harder. Less time wasted on manual tasks means more money in your pocket.",
+      icon: <FaDollarSign className="w-12 h-12 text-primary" />
     }
   ];
 
@@ -108,30 +93,30 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-              {animatedValues.projects}+
+              ${animatedValues.projects}k+
             </div>
-            <div className="text-lg text-foreground-secondary">Projects Completed</div>
+            <div className="text-lg text-foreground-secondary">Saved Clients</div>
           </div>
 
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-              {animatedValues.clients}%
+              {animatedValues.clients}+
             </div>
-            <div className="text-lg text-foreground-secondary">Client Retention</div>
+            <div className="text-lg text-foreground-secondary">Businesses Helped</div>
           </div>
 
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-              {animatedValues.satisfaction}%
+              {animatedValues.satisfaction}+
             </div>
-            <div className="text-lg text-foreground-secondary">Satisfaction Rate</div>
+            <div className="text-lg text-foreground-secondary">Problems Fixed</div>
           </div>
 
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-30 border border-border dark:border-border">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
               {animatedValues.experience}+
             </div>
-            <div className="text-lg text-foreground-secondary">Years Experience</div>
+            <div className="text-lg text-foreground-secondary">Hours Saved Weekly</div>
           </div>
         </div>
 
@@ -140,13 +125,7 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`why-choose-card bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 ${
-                (feature.title === "Expert Team" ||
-                 feature.title === "Cutting-Edge Solutions" ||
-                 feature.title === "24/7 Support" ||
-                 feature.title === "Proven Results")
-                ? "highlight-card" : ""
-              }`}
+              className="why-choose-card bg-background-tertiary dark:bg-background p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="mb-4">
                 {feature.icon}

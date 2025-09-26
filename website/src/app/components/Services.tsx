@@ -8,27 +8,27 @@ import ComputerRepairIcon from "./icons/ComputerRepairIcon";
 const services = [
   {
     id: "software-development",
-    title: "Software Development",
-    description: "Custom web and mobile applications tailored to your business needs",
+    title: "Custom Software",
+    description: "We build software that automates your boring tasks and saves you hours every week",
     icon: SoftwareDevelopmentIcon,
     link: "/software-development",
   },
   {
     id: "it-consulting",
-    title: "IT Consulting",
-    description: "Expert guidance to optimize your technology infrastructure",
+    title: "Tech Setup & Support",
+    description: "We set up your computers, networks, and systems so they work reliably every day",
     icon: ITConsultingIcon,
  },
   {
     id: "saas-products",
-    title: "SaaS Products",
-    description: "Innovative software solutions for modern businesses",
+    title: "Business Software Tools",
+    description: "Ready-to-use software that helps you manage customers, track sales, and run your business better",
     icon: SaasProductsIcon,
   },
   {
     id: "computer-repair",
-    title: "Computer Repair",
-    description: "Fast, reliable repair services for all your devices",
+    title: "Computer & Device Repair",
+    description: "We fix slow computers, broken screens, and other tech problems so you can get back to work",
     icon: ComputerRepairIcon,
   },
 ];
