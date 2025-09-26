@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
+  },
+  // Fix turbopack workspace root warning
+  turbopack: {
+    root: __dirname
   }
 };
 
