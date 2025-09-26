@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 
 export default function EnhancedHero() {
@@ -40,7 +40,7 @@ export default function EnhancedHero() {
   ];
 
   // Function to start the auto-rotation
-  const startAutoRotate = () => {
+  const startAutoRotate = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -48,15 +48,15 @@ export default function EnhancedHero() {
     intervalRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-  };
+  }, [slides.length]);
 
   // Function to stop the auto-rotation
-  const stopAutoRotate = () => {
+  const stopAutoRotate = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-  };
+  }, []);
 
   // Auto-rotate slides every 5 seconds, but pause when hovering
   useEffect(() => {
@@ -71,7 +71,7 @@ export default function EnhancedHero() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [isHovering, slides.length, startAutoRotate]);
+  }, [isHovering, startAutoRotate, stopAutoRotate]);
 
   // Handle mouse enter and leave events
   const handleMouseEnter = () => {
