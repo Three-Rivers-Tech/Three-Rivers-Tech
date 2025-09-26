@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ITConsulting() {
   return (
     <section className="py-16 border-b border-border">
@@ -31,9 +33,11 @@ export default function ITConsulting() {
           </ul>
         </div>
         <div className="md:w-1/2">
-          <img
+          <Image
             src="/service-icon-consulting.png"
             alt="IT consulting services including infrastructure assessment and cloud migration"
+            width={400}
+            height={256}
             className="rounded-xl w-full h-64 md:h-80 object-cover"
           />
         </div>

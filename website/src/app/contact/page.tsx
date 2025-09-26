@@ -35,9 +35,8 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
-
       if (response.ok) {
+        await response.json(); // Consume the response but don't store it
         setSubmitStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
         setTimeout(() => setSubmitStatus("idle"), 5000); // Reset after 5 seconds
@@ -86,7 +85,7 @@ export default function ContactPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-foreground-secondary max-w-3xl mx-auto">
-            Get in touch with our team. We{`'`}re here to help and answer any questions you might have.
+            Get in touch with our team. We're here to help and answer any questions you might have.
           </p>
         </div>
 

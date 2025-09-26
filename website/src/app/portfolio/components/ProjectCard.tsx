@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectCard({
   title,
@@ -32,9 +33,11 @@ export default function ProjectCard({
 
   return (
     <div className="bg-background-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border-border">
-      <img
+      <Image
         src={`/${imageSrc}`}
         alt={altText}
+        width={400}
+        height={192}
         className="w-full h-48 object-cover"
       />
       <div className="p-6">

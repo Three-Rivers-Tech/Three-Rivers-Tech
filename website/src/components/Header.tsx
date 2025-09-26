@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import Search from "@/app/components/Search";
 import { HiSun, HiMoon, HiMenu } from "react-icons/hi";
 
@@ -62,7 +63,7 @@ export default function Header() {
     <header className="bg-background-secondary border-b border-border py-4 px-6 relative">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-          <img src="/company_logo.png" alt="Three Rivers Tech Logo" className="h-8 w-8 mr-2" />
+          <Image src="/company_logo.png" alt="Three Rivers Tech Logo" width={32} height={32} className="h-8 w-8 mr-2" />
           Three Rivers Tech
         </Link>
 

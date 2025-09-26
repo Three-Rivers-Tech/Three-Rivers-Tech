@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Software Development Skills - Three Rivers Tech",
@@ -103,9 +104,11 @@ export default function SoftwareDevelopmentSkillsPage() {
           </div>
 
           <div>
-            <img
+            <Image
               src="/service-icon-dev.png"
               alt="Software development skills and expertise"
+              width={400}
+              height={256}
               className="rounded-xl w-full h-64 md:h-80 object-cover"
             />
           </div>

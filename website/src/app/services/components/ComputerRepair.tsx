@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ComputerRepair() {
   return (
     <section className="py-16">
@@ -31,9 +33,11 @@ export default function ComputerRepair() {
           </ul>
         </div>
         <div className="md:w-1/2">
-          <img
+          <Image
             src="/service-icon-repair.png"
             alt="Computer repair services including hardware diagnostics and data recovery"
+            width={400}
+            height={256}
             className="rounded-xl w-full h-64 md:h-80 object-cover"
           />
         </div>

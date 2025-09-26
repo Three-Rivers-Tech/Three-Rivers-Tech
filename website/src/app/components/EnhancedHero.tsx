@@ -71,7 +71,7 @@ export default function EnhancedHero() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [isHovering, slides.length]);
+  }, [isHovering, slides.length, startAutoRotate]);
 
   // Handle mouse enter and leave events
   const handleMouseEnter = () => {
