@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "./components/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
+import StructuredData from "@/components/StructuredData";
+import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebSiteSchema } from "@/lib/structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,70 +50,11 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Three Rivers Tech",
-              "url": "https://threeriverstech.com",
-              "logo": "https://threeriverstech.com/company_logo.png",
-              "sameAs": [
-                "https://www.linkedin.com/company/three-rivers-tech",
-                "https://twitter.com/three_rivers_tech",
-                "https://www.facebook.com/threeriverstech"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-412-403-5559",
-                "contactType": "Customer Service",
-                "email": "info@threeriverstech.com"
-              }
-            })
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Three Rivers Tech",
-              "image": "https://threeriverstech.com/company_logo.png",
-              "telephone": "+1-412-403-5559",
-              "email": "info@threeriverstech.com",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "124 Grant St",
-                "addressLocality": "Turtle Creek",
-                "addressRegion": "PA",
-                "postalCode": "15146",
-                "addressCountry": "US"
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "17:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "10:00",
-                  "closes": "14:00"
-                }
-              ],
-              "priceRange": "$$",
-              "sameAs": [
-                "https://www.linkedin.com/company/three-rivers-tech",
-                "https://twitter.com/three_rivers_tech",
-                "https://www.facebook.com/threeriverstech"
-              ]
-            })
-          }}
-        />
+        <StructuredData data={[
+          generateOrganizationSchema(),
+          generateLocalBusinessSchema(),
+          generateWebSiteSchema()
+        ]} />
       </body>
       <GoogleAnalytics gaId="G-XXXXXXXXXX" />
     </html>

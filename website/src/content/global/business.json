@@ -1,0 +1,82 @@
+{
+  "name": "Three Rivers Tech",
+  "description": "Three Rivers Tech is a comprehensive technology solutions provider serving businesses and individuals throughout the Pittsburgh metropolitan area. We specialize in custom software development, strategic IT consulting, innovative SaaS products, and professional computer repair services. With over a decade of experience, our team combines technical expertise with practical business knowledge to deliver solutions that drive growth and efficiency.",
+  "phone": "(412) 403-5559",
+  "email": "info@threeriverstech.com",
+  "address": {
+    "street": "124 Grant Street",
+    "city": "Turtle Creek",
+    "state": "PA",
+    "zipCode": "15145",
+    "country": "United States"
+  },
+  "hours": [
+    {
+      "day": "Monday",
+      "open": "9:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Tuesday", 
+      "open": "9:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Wednesday",
+      "open": "9:00 AM", 
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Thursday",
+      "open": "9:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Friday",
+      "open": "9:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Saturday",
+      "open": "10:00 AM",
+      "close": "2:00 PM"
+    },
+    {
+      "day": "Sunday", 
+      "closed": true,
+      "open": "",
+      "close": ""
+    }
+  ],
+  "socialMedia": {
+    "linkedin": "https://www.linkedin.com/company/three-rivers-tech",
+    "facebook": "https://www.facebook.com/threeriverstech",
+    "twitter": "https://twitter.com/three_rivers_tech"
+  },
+  "foundedYear": 2014,
+  "employeeCount": "10-50",
+  "specialties": [
+    "Custom Software Development",
+    "Web Application Development",
+    "Mobile App Development",
+    "IT Infrastructure Consulting", 
+    "Cloud Migration & Strategy",
+    "Cybersecurity Assessment",
+    "SaaS Product Development",
+    "Business Process Automation",
+    "Computer Hardware Repair",
+    "Data Recovery Services",
+    "Network Setup & Maintenance",
+    "Technical Support"
+  ],
+  "tagline": "Technology Solutions That Actually Work",
+  "mission": "To empower businesses and individuals with reliable, innovative technology solutions that solve real problems and drive measurable results. We believe technology should work for you, not against you.",
+  "values": [
+    "Customer-First Approach: Your success is our success",
+    "Technical Excellence: We use proven technologies and best practices",
+    "Clear Communication: No technical jargon, just plain English explanations",
+    "Reliable Support: We're here when you need us most",
+    "Local Commitment: Proud to serve the Pittsburgh community",
+    "Continuous Innovation: Always learning and improving our services"
+  ]
+}

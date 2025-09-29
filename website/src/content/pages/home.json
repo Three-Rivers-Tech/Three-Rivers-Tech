@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "headline": "Technology Solutions That Actually Work",
+    "subheadline": "Custom Software • IT Consulting • SaaS Products • Computer Repair",
+    "description": "Stop losing money to technology problems. Three Rivers Tech delivers reliable solutions that save you time, reduce costs, and help your business grow. We speak plain English, not tech jargon, and we're here when you need us most.",
+    "primaryCTA": {
+      "text": "Get Your Free Tech Assessment",
+      "href": "/contact",
+      "variant": "primary"
+    },
+    "secondaryCTA": {
+      "text": "See How We Help",
+      "href": "/portfolio",
+      "variant": "secondary"
+    },
+    "backgroundImage": "/images/hero/technology-solutions.jpg",
+    "features": [
+      "10+ Years Serving Pittsburgh",
+      "Plain English Communication",
+      "Reliable 24/7 Support",
+      "Results-Driven Solutions"
+    ]
+  },
+  "callToAction": {
+    "headline": "Stop Wasting Time on Technology Problems",
+    "description": "Get a free technology assessment and discover how we can save you time, reduce costs, and eliminate the frustration of dealing with unreliable systems. No obligation, no sales pressure.",
+    "primaryButton": {
+      "text": "Get Your Free Assessment",
+      "href": "/contact"
+    },
+    "secondaryButton": {
+      "text": "Call Us Now: (412) 403-5559",
+      "href": "tel:+14124035559"
+    },
+    "backgroundType": "gradient",
+    "backgroundColor": "from-blue-600 to-purple-600"
+  },
+  "seo": {
+    "title": "Three Rivers Tech - Comprehensive Technology Solutions",
+    "description": "Professional technology solutions including software development, IT consulting, SaaS products, and computer repair services in Pittsburgh, PA. 10+ years experience.",
+    "keywords": [
+      "technology solutions",
+      "software development",
+      "IT consulting",
+      "SaaS products",
+      "computer repair",
+      "Pittsburgh",
+      "Pennsylvania",
+      "custom software",
+      "web development",
+      "mobile apps"
+    ],
+    "canonical": "https://threeriverstech.com/",
+    "openGraph": {
+      "title": "Three Rivers Tech - Comprehensive Technology Solutions",
+      "description": "Professional technology solutions including software development, IT consulting, SaaS products, and computer repair services in Pittsburgh, PA.",
+      "images": [
+        {
+          "url": "https://threeriverstech.com/images/og/homepage.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Three Rivers Tech - Technology Solutions"
+        }
+      ],
+      "type": "website",
+      "siteName": "Three Rivers Tech",
+      "locale": "en_US"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Three Rivers Tech - Comprehensive Technology Solutions",
+      "description": "Professional technology solutions including software development, IT consulting, SaaS products, and computer repair services.",
+      "images": [
+        "https://threeriverstech.com/images/twitter/homepage.jpg"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Three Rivers Tech",
+      "description": "Comprehensive technology solutions for businesses",
+      "url": "https://threeriverstech.com",
+      "logo": "https://threeriverstech.com/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-412-403-5559",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "124 Grant Street",
+        "addressLocality": "Turtle Creek",
+        "addressRegion": "PA",
+        "postalCode": "15145",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/three-rivers-tech",
+        "https://www.facebook.com/threeriverstech",
+        "https://twitter.com/three_rivers_tech"
+      ]
+    }
+  }
+}

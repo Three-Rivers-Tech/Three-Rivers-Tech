@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import OptimizedImage, { PortfolioImage } from "@/components/OptimizedImage";
 
 export default function ProjectCard({
   title,
@@ -12,32 +12,21 @@ export default function ProjectCard({
   category: string;
   id?: string;
 }) {
-  // Map categories to image filenames
-  const categoryImages: Record<string, string> = {
-    "Software Development": "portfolio-ecommerce.jpg",
-    "IT Consulting": "portfolio-network.jpg",
-    "SaaS Products": "portfolio-saas.jpg",
-    "Computer Repair": "portfolio-repair.jpg"
+  // Map categories to portfolio image types
+  const categoryImageMap: Record<string, 'banking' | 'cloud' | 'ecommerce' | 'network' | 'repair' | 'saas'> = {
+    "Software Development": "ecommerce",
+    "IT Consulting": "network", 
+    "SaaS Products": "saas",
+    "Computer Repair": "repair"
   };
 
-  // Map categories to alt text
-  const categoryAltText: Record<string, string> = {
-    "Software Development": "E-commerce platform development project",
-    "IT Consulting": "Network infrastructure consulting project",
-    "SaaS Products": "SaaS product development project",
-    "Computer Repair": "Computer repair and data recovery project"
-  };
-
-  const imageSrc = categoryImages[category] || "portfolio-ecommerce.jpg";
-  const altText = categoryAltText[category] || `${category} project`;
+  const imageCategory = categoryImageMap[category] || "ecommerce";
 
   return (
     <div className="bg-background-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border-border">
-      <Image
-        src={`/${imageSrc}`}
-        alt={altText}
-        width={400}
-        height={192}
+      <PortfolioImage
+        category={imageCategory}
+        size="card"
         className="w-full h-48 object-cover"
       />
       <div className="p-6">

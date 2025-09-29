@@ -1,29 +1,6 @@
-import { Metadata } from "next";
+import { generateStaticPageMetadata, generateLocalSeoMetadata } from "@/lib/metadata-generators";
 
-export const metadata: Metadata = {
-  title: "About Our Company - Our Story, Mission & Values",
-  description: "Discover Three Rivers Tech's journey since 2025. Learn about our mission to empower businesses through innovative technology solutions, our core values, and what makes us a leading technology partner.",
-  keywords: "about us, company story, mission, vision, values, technology company, IT solutions, business transformation",
-  alternates: {
-    canonical: "https://threeriverstech.com/about",
-  },
-  openGraph: {
-    title: "About Three Rivers Tech - Our Story and Mission",
-    description: "Learn about Three Rivers Tech, our mission, vision, and values.",
-    url: "https://threeriverstech.com/about",
-    siteName: "Three Rivers Tech",
-    images: [
-      {
-        url: "/company_logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Three Rivers Tech - About Us",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
+export const metadata = generateLocalSeoMetadata(generateStaticPageMetadata("about"));
 
 export default function AboutPage() {
   return (

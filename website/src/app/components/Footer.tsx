@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import OptimizedImage, { LogoImage } from "@/components/OptimizedImage";
 
 export default function Footer() {
   return (
@@ -11,13 +11,9 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               {/* Using existing company logo from public folder */}
-              <Image
-                src="/company_logo.png" // ensure this file exists in /website/public
-                alt="Three Rivers Tech logo"
-                width={48}
-                height={48}
+              <LogoImage 
                 className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity select-none"
-                priority
+                priority={false}
               />
               <h3 className="text-xl font-bold text-primary tracking-tight">Three Rivers Tech</h3>
             </div>
@@ -112,7 +108,7 @@ export default function Footer() {
               <p className="mb-2">124 Grant Street</p>
               <p className="mb-2">Turtle Creek, PA 15145</p>
               <p className="mb-2">Phone: (412) 403-5559</p>
-              <p className="mb-2">Email: info@three-rivers-tech.com</p>
+              <p className="mb-2">Email: info@threeriverstech.com</p>
             </address>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { GoogleCalendarIframe } from "@/components/OptimizedIframe";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -97,23 +98,11 @@ export default function ContactPage() {
                 Book a consultation or meeting with our team using Google Bookings scheduling.
               </p>
               {/* Google Bookings Embed */}
-              <div className="w-full min-h-[600px] border-2 border-border rounded-lg overflow-hidden bg-background-secondary">
-                <iframe
-                  src="https://calendar.app.google/1EwGScdmrC1dcwMR8"
-                  width="100%"
-                  height="600"
-                  scrolling="no"
-                  frameBorder="0"
-                  title="Schedule an appointment with Three Rivers Tech"
-                  className="w-full min-h-[600px]"
-                  style={{ border: 0 }}
-                ></iframe>
-                <div className="text-center p-4 bg-background-secondary border-t border-border">
-                  <p className="text-sm text-foreground-secondary">
-                    Bookings powered by <span className="font-semibold">Google Calendar</span>
-                  </p>
-                </div>
-              </div>
+              <GoogleCalendarIframe 
+                src="https://calendar.app.google/1EwGScdmrC1dcwMR8"
+                className="google-calendar-iframe"
+                height={600}
+              />
             </div>
 
             {submitStatus === "error" && (
@@ -225,7 +214,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Office Location</h3>
-                  <p className="text-foreground-secondary">124 Grant St</p>
+                  <p className="text-foreground-secondary">124 Grant Street</p>
                   <p className="text-foreground-secondary">Turtle Creek, PA 15145</p>
                 </div>
               </div>
@@ -236,9 +225,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Business Hours</h3>
-                  <p className="text-foreground-secondary">Monday - Friday: 9am - 5pm</p>
-                  <p className="text-foreground-secondary">Saturday: 9am - 5pm</p>
-                  <p className="text-foreground-secondary">Sunday: 10am - 2pm</p>
+                  <p className="text-foreground-secondary">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                  <p className="text-foreground-secondary">Saturday: 10:00 AM - 2:00 PM</p>
+                  <p className="text-foreground-secondary">Sunday: Closed</p>
                 </div>
               </div>
             </div>

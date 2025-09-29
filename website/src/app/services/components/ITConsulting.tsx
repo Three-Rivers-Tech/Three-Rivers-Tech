@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ServiceIcon } from "@/components/OptimizedImage";
 
 export default function ITConsulting() {
   return (
@@ -33,11 +33,9 @@ export default function ITConsulting() {
           </ul>
         </div>
         <div className="md:w-1/2">
-          <Image
-            src="/service-icon-consulting.png"
-            alt="IT consulting services including infrastructure assessment and cloud migration"
-            width={400}
-            height={256}
+          <ServiceIcon 
+            service="consulting"
+            size="large"
             className="rounded-xl w-full h-64 md:h-80 object-cover"
           />
         </div>

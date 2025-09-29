@@ -1,15 +1,13 @@
-import Image from "next/image";
+import { ServiceIcon } from "@/components/OptimizedImage";
 
 export default function SaasProducts() {
   return (
     <section className="py-16 border-b border-border">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
-          <Image
-            src="/service-icon-saas.png"
-            alt="SaaS products including innovative software solutions for modern businesses"
-            width={400}
-            height={256}
+          <ServiceIcon 
+            service="saas"
+            size="large"
             className="rounded-xl w-full h-64 md:h-80 object-cover"
           />
         </div>

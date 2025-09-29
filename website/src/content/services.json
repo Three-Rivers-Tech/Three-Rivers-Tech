@@ -1,0 +1,146 @@
+[
+  {
+    "id": "software-development",
+    "title": "Custom Software Development",
+    "description": "Transform your business processes with custom software that actually works. We build web applications, mobile apps, and business automation tools that save you time and eliminate manual work. No cookie-cutter solutions – everything is designed specifically for your business needs and workflows.",
+    "shortDescription": "Custom web and mobile applications that automate your business processes",
+    "icon": "FaCode",
+    "features": [
+      "Business Process Automation",
+      "Custom Web Applications",
+      "Mobile Apps (iOS & Android)",
+      "Database Design & Integration",
+      "API Development & Third-Party Integrations",
+      "Cloud-Based Solutions",
+      "Progressive Web Apps (PWA)",
+      "E-commerce Platforms",
+      "Customer Portals & Dashboards"
+    ],
+    "benefits": [
+      "Eliminate repetitive manual tasks",
+      "Reduce human errors and data entry",
+      "Scale operations without hiring more staff",
+      "Real-time reporting and insights",
+      "Secure, reliable, and fast performance",
+      "Ongoing support and feature updates",
+      "Integration with existing systems"
+    ],
+    "pricing": {
+      "startingPrice": "$5,000",
+      "customPricing": true
+    },
+    "cta": {
+      "text": "Discuss Your Project",
+      "href": "/contact?service=software-development"
+    },
+    "image": "/images/services/software-development.jpg"
+  },
+  {
+    "id": "it-consulting",
+    "title": "IT Consulting & Strategy",
+    "description": "Stop throwing money at technology problems that keep coming back. Our IT consulting helps you make smart technology decisions, reduce costs, and eliminate the headaches of managing complex systems. We assess your current setup, identify problems, and create a clear roadmap for improvement.",
+    "shortDescription": "Strategic IT guidance that reduces costs and eliminates technology headaches",
+    "icon": "FaLaptop",
+    "features": [
+      "Complete IT Infrastructure Assessment",
+      "Cloud Migration Planning & Execution",
+      "Cybersecurity Risk Assessment",
+      "Technology Budget Planning",
+      "Vendor Selection & Management",
+      "Digital Transformation Strategy",
+      "Network Design & Optimization",
+      "Disaster Recovery Planning",
+      "Compliance & Regulatory Guidance"
+    ],
+    "benefits": [
+      "Reduce IT costs by 20-40%",
+      "Eliminate recurring technology problems",
+      "Improve system reliability and uptime",
+      "Enhance security and data protection",
+      "Get expert guidance without hiring full-time IT staff",
+      "Make informed technology investment decisions",
+      "Prepare for business growth and scaling"
+    ],
+    "pricing": {
+      "startingPrice": "$150/hour",
+      "priceRange": "$150-$300/hour"
+    },
+    "cta": {
+      "text": "Get IT Assessment",
+      "href": "/contact?service=it-consulting"
+    },
+    "image": "/images/services/it-consulting.jpg"
+  },
+  {
+    "id": "saas-products",
+    "title": "Business Software Solutions",
+    "description": "Ready-to-use software solutions that solve common business problems without the cost and complexity of custom development. Our SaaS products help you manage customers, track inventory, automate workflows, and grow your business – all with simple monthly pricing and no long-term contracts.",
+    "shortDescription": "Ready-to-use business software with simple monthly pricing",
+    "icon": "FaCloud",
+    "features": [
+      "Customer Relationship Management (CRM)",
+      "Inventory & Order Management",
+      "Project Management & Time Tracking",
+      "Automated Invoicing & Billing",
+      "Team Collaboration Tools",
+      "Business Analytics & Reporting",
+      "Mobile Access & Apps",
+      "Third-Party Integrations",
+      "Automated Backups & Security"
+    ],
+    "benefits": [
+      "Start using immediately – no setup fees",
+      "Pay only for what you use",
+      "Automatic updates and new features",
+      "Works on any device, anywhere",
+      "Secure cloud hosting included",
+      "Cancel anytime – no contracts",
+      "Expert support included"
+    ],
+    "pricing": {
+      "startingPrice": "$29/month",
+      "priceRange": "$29-$299/month"
+    },
+    "cta": {
+      "text": "Try Free for 30 Days",
+      "href": "/contact?service=saas-products"
+    },
+    "image": "/images/services/saas-products.jpg"
+  },
+  {
+    "id": "computer-repair",
+    "title": "Computer Repair & Support",
+    "description": "When your computer breaks down, you need it fixed fast. We provide professional computer repair services for businesses and individuals throughout the Pittsburgh area. From virus removal to hardware replacement, we get you back up and running quickly with a guarantee on all our work.",
+    "shortDescription": "Fast, reliable computer repair with guaranteed results",
+    "icon": "FaTools",
+    "features": [
+      "Complete Hardware Diagnostics",
+      "Virus & Malware Removal",
+      "Data Recovery & Backup",
+      "Hardware Replacement & Upgrades",
+      "Software Installation & Updates",
+      "Network Setup & Troubleshooting",
+      "On-Site Service Available",
+      "Remote Support & Maintenance",
+      "Business IT Support Contracts"
+    ],
+    "benefits": [
+      "Same-day service available",
+      "Free diagnostics and estimates",
+      "90-day warranty on all repairs",
+      "Data protection guarantee",
+      "Competitive, upfront pricing",
+      "Experienced, certified technicians",
+      "Pickup and delivery service available"
+    ],
+    "pricing": {
+      "startingPrice": "$75",
+      "priceRange": "$75-$200"
+    },
+    "cta": {
+      "text": "Get Free Estimate",
+      "href": "/contact?service=computer-repair"
+    },
+    "image": "/images/services/computer-repair.jpg"
+  }
+]

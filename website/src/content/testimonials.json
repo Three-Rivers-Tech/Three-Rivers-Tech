@@ -1,0 +1,61 @@
+[
+  {
+    "id": "testimonial-1",
+    "name": "Sarah Mitchell",
+    "company": "Pittsburgh Medical Associates",
+    "role": "Practice Manager",
+    "content": "We were drowning in paperwork and scheduling conflicts. Three Rivers Tech built us a custom patient management system that automated everything. We've saved 15 hours per week and our patients love the online booking. Best investment we've made in years.",
+    "rating": 5,
+    "service": "software-development",
+    "image": "/images/testimonials/sarah-mitchell.jpg"
+  },
+  {
+    "id": "testimonial-2", 
+    "name": "Mike Rodriguez",
+    "company": "Steel City Manufacturing",
+    "role": "Operations Director",
+    "content": "Our old IT setup was costing us thousands in downtime every month. Three Rivers Tech did a complete assessment and moved us to the cloud. We've had zero major outages in 8 months and cut our IT costs by 35%. They explain everything in plain English, no tech jargon.",
+    "rating": 5,
+    "service": "it-consulting",
+    "image": "/images/testimonials/mike-rodriguez.jpg"
+  },
+  {
+    "id": "testimonial-3",
+    "name": "Jennifer Walsh",
+    "company": "Walsh Accounting Services",
+    "role": "Owner", 
+    "content": "I was spending 10 hours a week on invoicing and client management. Their business software solution automated everything – now it takes me 30 minutes. The monthly cost pays for itself in the first week. Couldn't run my business without it now.",
+    "rating": 5,
+    "service": "saas-products",
+    "image": "/images/testimonials/jennifer-walsh.jpg"
+  },
+  {
+    "id": "testimonial-4",
+    "name": "Robert Chen",
+    "company": "Chen Family Dentistry",
+    "role": "Practice Owner",
+    "content": "Our main computer died right before a busy Monday morning. I called Three Rivers Tech in a panic and they had someone here within an hour. Not only did they fix it, but they recovered all our patient data and set up a backup system so this won't happen again. Lifesavers!",
+    "rating": 5,
+    "service": "computer-repair",
+    "image": "/images/testimonials/robert-chen.jpg"
+  },
+  {
+    "id": "testimonial-5",
+    "name": "Amanda Foster",
+    "company": "Foster Real Estate Group",
+    "role": "Broker/Owner",
+    "content": "Three Rivers Tech doesn't just fix problems – they prevent them. They've been managing our IT for 2 years now and we haven't had a single major issue. Their proactive approach and honest communication make them feel like part of our team.",
+    "rating": 5,
+    "image": "/images/testimonials/amanda-foster.jpg"
+  },
+  {
+    "id": "testimonial-6",
+    "name": "Tom Bradley",
+    "company": "Bradley Construction",
+    "role": "Project Manager",
+    "content": "We needed a way to track job progress and materials in real-time. Three Rivers Tech built us a mobile app that our crews use on-site. Project efficiency is up 25% and we always know exactly where we stand on every job. Game changer for our business.",
+    "rating": 5,
+    "service": "software-development",
+    "image": "/images/testimonials/tom-bradley.jpg"
+  }
+]
