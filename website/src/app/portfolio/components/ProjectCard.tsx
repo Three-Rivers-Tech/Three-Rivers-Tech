@@ -1,5 +1,5 @@
 import Link from "next/link";
-import OptimizedImage, { PortfolioImage } from "@/components/OptimizedImage";
+import { PortfolioImage } from "@/components/OptimizedImage";
 
 export default function ProjectCard({
   title,

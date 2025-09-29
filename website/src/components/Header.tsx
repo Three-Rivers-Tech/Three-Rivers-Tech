@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
-import OptimizedImage, { LogoImage } from "@/components/OptimizedImage";
+import { LogoImage } from "@/components/OptimizedImage";
 import Search from "@/app/components/Search";
 import { HiSun, HiMoon, HiMenu } from "react-icons/hi";
 

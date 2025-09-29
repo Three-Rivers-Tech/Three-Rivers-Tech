@@ -1,5 +1,5 @@
 import Link from "next/link";
-import OptimizedImage, { LogoImage } from "@/components/OptimizedImage";
+import { LogoImage } from "@/components/OptimizedImage";
 
 export default function Footer() {
   return (
