@@ -3,3 +3,53 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache static assets for 1 year
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images for 1 week
+/*.png
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.jpg
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.jpeg
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.gif
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.webp
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.avif
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.svg
+  Cache-Control: public, max-age=604800, s-maxage=604800
+/*.ico
+  Cache-Control: public, max-age=604800, s-maxage=604800
+
+# Cache fonts for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# Service worker should not be cached
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# HTML pages - cache for 1 hour with revalidation
+/*.html
+  Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
+
+# API routes - no cache
+/api/*
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Sitemap and robots - cache for 1 day
+/sitemap.xml
+  Cache-Control: public, max-age=86400, s-maxage=86400
+/robots.txt
+  Cache-Control: public, max-age=86400, s-maxage=86400

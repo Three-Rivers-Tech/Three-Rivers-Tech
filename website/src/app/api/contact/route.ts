@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Configure for static export
+export const dynamic = 'force-static';
+
 export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message } = await request.json();
@@ -48,6 +51,15 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error('Error sending email:', error);
+    
+    // Log error details for monitoring
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Contact form API error:', {
+      error: errorMessage,
+      timestamp: new Date().toISOString(),
+      endpoint: '/api/contact'
+    });
+    
     return NextResponse.json(
       { error: 'Failed to send email' },
       { status: 500 }

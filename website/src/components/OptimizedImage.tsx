@@ -63,8 +63,9 @@ export default function OptimizedImage({
   if (imageError) {
     return (
       <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        className={`bg-gray-200 flex items-center justify-center ${className} responsive-image-placeholder`}
+        data-width={width}
+        data-height={height}
       >
         <span className="text-gray-500 text-sm">Image not available</span>
       </div>
@@ -86,6 +87,19 @@ export default function OptimizedImage({
       loading={priority ? "eager" : "lazy"}
       // Add decoding optimization
       decoding="async"
+      // Prevent layout shift with explicit aspect ratio
+      style={{
+        aspectRatio: `${width} / ${height}`,
+        maxWidth: '100%',
+        height: 'auto'
+      }}
+      // Add placeholder to prevent layout shift
+      placeholder="blur"
+      blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+        `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" fill="#f3f4f6"/>
+        </svg>`
+      ).toString('base64')}`}
     />
   );
 }
@@ -143,8 +157,9 @@ export function ResponsiveImage({
   if (imageError) {
     return (
       <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width: largestSize.width, height: largestSize.height }}
+        className={`bg-gray-200 flex items-center justify-center ${className} responsive-image-placeholder`}
+        data-width={largestSize.width}
+        data-height={largestSize.height}
       >
         <span className="text-gray-500 text-sm">Image not available</span>
       </div>
@@ -178,6 +193,19 @@ export function ResponsiveImage({
         onError={handleImageError}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
+        // Prevent layout shift with explicit aspect ratio
+        style={{
+          aspectRatio: `${largestSize.width} / ${largestSize.height}`,
+          maxWidth: '100%',
+          height: 'auto'
+        }}
+        // Add placeholder to prevent layout shift
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+          `<svg width="${largestSize.width}" height="${largestSize.height}" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#f3f4f6"/>
+          </svg>`
+        ).toString('base64')}`}
       />
     </picture>
   );
