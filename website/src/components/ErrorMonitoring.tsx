@@ -44,22 +44,32 @@ export default function ErrorMonitoring() {
  */
 async function performHealthCheck() {
   try {
-    // Check if error logging API is working
-    const response = await fetch('/api/errors', {
-      method: 'GET',
-    });
+    // For static export, we'll focus on client-side health checks
+    // Check basic browser functionality
+    if (typeof window !== 'undefined') {
+      // Check localStorage availability
+      try {
+        localStorage.setItem('health_check', 'test');
+        localStorage.removeItem('health_check');
+      } catch (error) {
+        console.warn('localStorage not available:', error);
+      }
 
-    if (!response.ok) {
-      console.warn('Error logging API health check failed:', response.status);
-    }
+      // Check sessionStorage availability
+      try {
+        sessionStorage.setItem('health_check', 'test');
+        sessionStorage.removeItem('health_check');
+      } catch (error) {
+        console.warn('sessionStorage not available:', error);
+      }
 
-    // Check if contact API is working
-    const contactHealthResponse = await fetch('/api/contact', {
-      method: 'OPTIONS', // Use OPTIONS to avoid triggering actual email
-    });
-
-    if (!contactHealthResponse.ok && contactHealthResponse.status !== 405) {
-      console.warn('Contact API health check failed:', contactHealthResponse.status);
+      // Check if critical DOM elements are present
+      const criticalElements = ['header', 'main', 'footer'];
+      criticalElements.forEach(selector => {
+        if (!document.querySelector(selector)) {
+          console.warn(`Critical element missing: ${selector}`);
+        }
+      });
     }
 
   } catch (error) {

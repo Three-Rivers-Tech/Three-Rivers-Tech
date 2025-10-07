@@ -347,14 +347,16 @@ function reportError(errorReport: ErrorReport): void {
  */
 async function sendToLoggingService(errorReport: ErrorReport): Promise<void> {
   try {
-    // This would be your custom logging endpoint
-    await fetch('/api/errors', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(errorReport),
-    });
+    // For static export, we'll use console logging and external services
+    // In production, consider using services like Sentry, LogRocket, etc.
+    
+    // Log structured error for external log aggregation services
+    console.error('STRUCTURED_ERROR_LOG:', JSON.stringify(errorReport));
+    
+    // You can also send to external monitoring services here:
+    // await sendToSentry(errorReport);
+    // await sendToLogRocket(errorReport);
+    
   } catch (error) {
     // Don't create infinite loops by reporting errors about error reporting
     console.warn('Failed to send error report:', error);
