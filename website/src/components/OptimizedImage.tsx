@@ -77,6 +77,7 @@ export default function OptimizedImage({
       src={getImageSrc()}
       alt={optimizedAlt}
       width={width}
+      suppressHydrationWarning={true}
       height={height}
       sizes={sizes}
       priority={priority}

@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Suspense } from "react";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "./components/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google';
 import StructuredData from "@/components/StructuredData";
-import { LazyAccessibilityChecker } from "@/lib/dynamic-imports";
-import PerformanceMonitor from "@/components/PerformanceMonitor";
-import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
-import CacheInitializer from "@/components/CacheInitializer";
-import CoreWebVitalsMonitor from "@/components/CoreWebVitalsMonitor";
-import Analytics from "@/components/Analytics";
-import ErrorMonitoring from "@/components/ErrorMonitoring";
-import MonitoringDashboard from "@/components/MonitoringDashboard";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebSiteSchema } from "@/lib/structured-data";
 
 const geistSans = Geist({
@@ -74,18 +64,7 @@ export default function RootLayout({
           generateLocalBusinessSchema(),
           generateWebSiteSchema()
         ]} />
-        <Suspense fallback={null}>
-          <LazyAccessibilityChecker />
-        </Suspense>
-        <PerformanceMonitor />
-        <ServiceWorkerRegistration />
-        <CacheInitializer />
-        <CoreWebVitalsMonitor />
-        <Analytics />
-        <ErrorMonitoring />
-        <MonitoringDashboard />
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-XXXXXXXXXX"} />
     </html>
   );
 }

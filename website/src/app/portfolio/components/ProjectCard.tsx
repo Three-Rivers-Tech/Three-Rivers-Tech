@@ -60,7 +60,10 @@ export default function ProjectCard({
             </svg>
           </Link>
         ) : (
-          <button type="button" className="text-primary hover:text-primary-hover font-medium flex items-center">
+          <button
+            type="button"
+            className="text-primary hover:text-primary-hover font-medium flex items-center"
+          >
             View Case Study
             <svg
               className="w-4 h-4 ml-1"

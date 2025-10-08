@@ -1,81 +1,35 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import { FaBullseye, FaLaptopCode, FaTools, FaDollarSign } from "../components/icons";
 
 export default function WhyChooseUs() {
-  const [animatedValues, setAnimatedValues] = useState({
-    projects: 0,
-    clients: 0,
-    satisfaction: 0,
-    experience: 0
-  });
-
-  // Animation for statistics
-  useEffect(() => {
-    const targets = {
-      projects: 75,
-      clients: 30,
-      satisfaction: 150,
-      experience: 20
-    };
-
-    const duration = 2000; // ms
-    const frameDuration = 1000 / 60; // ~60fps
-    const totalFrames = Math.round(duration / frameDuration);
-
-    const counters = {
-      projects: { value: 0, step: targets.projects / totalFrames },
-      clients: { value: 0, step: targets.clients / totalFrames },
-      satisfaction: { value: 0, step: targets.satisfaction / totalFrames },
-      experience: { value: 0, step: targets.experience / totalFrames }
-    };
-
-    const timer = setInterval(() => {
-      setAnimatedValues(prev => {
-        const newValues = { ...prev };
-        let updated = false;
-
-        (Object.keys(counters) as Array<keyof typeof counters>).forEach(key => {
-          if (counters[key].value < targets[key]) {
-            counters[key].value += counters[key].step;
-            newValues[key] = Math.min(Math.round(counters[key].value), targets[key]);
-            updated = true;
-          }
-        });
-
-        if (!updated) {
-          clearInterval(timer);
-        }
-
-        return newValues;
-      });
-    }, frameDuration);
-
-    return () => clearInterval(timer);
-  }, []);
+  // Static values instead of animated ones
+  const stats = {
+    projects: 75,
+    clients: 30,
+    satisfaction: 150,
+    experience: 20
+  };
 
   // Features data
   const features = [
     {
       title: "Plain English",
       description: "No confusing tech jargon or complicated explanations. We talk like normal people and explain everything clearly.",
-      icon: <FaBullseye className="w-12 h-12 text-primary" />
+      icon: <FaBullseye className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
     },
     {
       title: "Simple Solutions",
       description: "We create websites and software that make your work less complicated. No more learning curves or steep barriers to entry.",
-      icon: <FaLaptopCode className="w-12 h-12 text-primary" />
+      icon: <FaLaptopCode className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
     },
     {
       title: "We Fix Problems Fast",
       description: "When something breaks, we fix it quickly. No waiting days or weeks for a response. We understand your business can't stop.",
-      icon: <FaTools className="w-12 h-12 text-primary" />
+      icon: <FaTools className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
     },
     {
       title: "Save You Money",
       description: "Our solutions help you work smarter, not harder. Less time wasted on manual tasks means more money in your pocket.",
-      icon: <FaDollarSign className="w-12 h-12 text-primary" />
+      icon: <FaDollarSign className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
     }
   ];
 
@@ -93,28 +47,28 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              ${animatedValues.projects}k+
+              ${stats.projects}k+
             </div>
             <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Saved Clients</div>
           </div>
 
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              {animatedValues.clients}+
+              {stats.clients}+
             </div>
             <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Businesses Helped</div>
           </div>
 
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              {animatedValues.satisfaction}+
+              {stats.satisfaction}+
             </div>
             <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Problems Fixed</div>
           </div>
 
           <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              {animatedValues.experience}+
+              {stats.experience}+
             </div>
             <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Hours Saved Weekly</div>
           </div>

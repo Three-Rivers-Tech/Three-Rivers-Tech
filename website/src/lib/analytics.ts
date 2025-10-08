@@ -2,16 +2,7 @@
  * Google Analytics utilities for tracking events and conversions
  */
 
-// Extend the Window interface to include gtag
-declare global {
-  interface Window {
-    gtag: (
-      command: 'config' | 'event' | 'js' | 'set',
-      targetId: string | Date | Record<string, unknown>,
-      config?: Record<string, unknown>
-    ) => void;
-  }
-}
+
 
 // Analytics configuration
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
@@ -73,7 +64,7 @@ export function initializeAnalytics(): void {
   window.dataLayer = window.dataLayer || [];
 
   // Initialize gtag function
-  window.gtag = function gtag(...args: Parameters<typeof window.gtag>) {
+  window.gtag = function gtag(...args: any[]) {
     window.dataLayer?.push(args as unknown as Record<string, unknown>);
   };
 

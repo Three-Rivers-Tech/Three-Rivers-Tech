@@ -1,12 +1,7 @@
-"use client";
-
-import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 
 export default function EnhancedHero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const currentSlide = 0;
 
   // Auto-rotating banner content
   const slides = [
@@ -39,83 +34,13 @@ export default function EnhancedHero() {
     }
   ];
 
-  // Function to start the auto-rotation
-  const startAutoRotate = useCallback(() => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
 
-    intervalRef.current = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-  }, [slides.length]);
-
-  // Function to stop the auto-rotation
-  const stopAutoRotate = useCallback(() => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  }, []);
-
-  // Auto-rotate slides every 5 seconds, but pause when hovering
-  useEffect(() => {
-    if (!isHovering) {
-      startAutoRotate();
-    } else {
-      stopAutoRotate();
-    }
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [isHovering, startAutoRotate, stopAutoRotate]);
-
-  // Handle mouse enter and leave events
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
-
-  // Handle manual slide change
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  // Handle keyboard navigation for slide indicators
-  const handleSlideKeyDown = (event: React.KeyboardEvent, index: number) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      goToSlide(index);
-    } else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-      event.preventDefault();
-      const nextIndex = event.key === "ArrowLeft" 
-        ? (index > 0 ? index - 1 : slides.length - 1)
-        : (index < slides.length - 1 ? index + 1 : 0);
-      goToSlide(nextIndex);
-      
-      // Focus the new slide indicator
-      setTimeout(() => {
-        const nextButton = document.querySelector(`[aria-controls="slide-${nextIndex}"]`) as HTMLElement;
-        if (nextButton) {
-          nextButton.focus();
-        }
-      }, 0);
-    }
-  };
 
   return (
     <section
       className="relative overflow-hidden"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       role="banner"
-      aria-label="Hero section with rotating content"
+      aria-label="Hero section"
     >
       {/* Background with gradient transition */}
       <div className={`absolute inset-0 bg-gradient-to-r ${slides[currentSlide].bgColor} transition-all duration-1000 ease-in-out`} aria-hidden="true"></div>
@@ -159,29 +84,7 @@ export default function EnhancedHero() {
           </div>
         </div>
 
-        {/* Slide indicators */}
-        <div className="flex justify-center mt-6 sm:mt-8 md:mt-12 space-x-3" role="tablist" aria-label="Hero slide navigation">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => goToSlide(index)}
-              onKeyDown={(e) => handleSlideKeyDown(e, index)}
-              className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[44px] min-w-[44px] flex items-center justify-center ${
-                index === currentSlide ? "bg-white scale-125 shadow-md" : "bg-white/50 shadow"
-              }`}
-              role="tab"
-              aria-selected={index === currentSlide}
-              aria-controls={`slide-${index}`}
-              aria-label={`Go to slide ${index + 1} of ${slides.length}. Use arrow keys to navigate.`}
-              tabIndex={index === currentSlide ? 0 : -1}
-            >
-              <span className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
-                index === currentSlide ? "bg-white" : "bg-white/50"
-              }`} aria-hidden="true"></span>
-            </button>
-          ))}
-        </div>
+
       </div>
 
       {/* Floating elements for visual interest */}
@@ -193,6 +96,7 @@ export default function EnhancedHero() {
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
+          suppressHydrationWarning={true}
         >
           <path
             strokeLinecap="round"
