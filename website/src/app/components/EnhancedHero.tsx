@@ -3,34 +3,25 @@ import Link from "next/link";
 export default function EnhancedHero() {
   const currentSlide = 0;
 
-  // Professional business-focused banner content
-  const slides = [
+  // Community-focused banner content
     {
-      title: "Professional IT Services for Growing Businesses",
-      subtitle: "Expert technology solutions that drive efficiency, security, and growth for your organization",
-      ctaPrimary: "Schedule a Consultation",
-      ctaSecondary: "View Our Services",
-      ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/services",
-      bgColor: "from-blue-700 to-indigo-800"
-    },
-    {
-      title: "Enterprise Software Solutions That Scale",
-      subtitle: "Custom development and system integration services designed to optimize your business operations and enhance productivity",
-      ctaPrimary: "Discuss Your Project",
-      ctaSecondary: "View Case Studies",
-      ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/portfolio",
-      bgColor: "from-blue-600 to-indigo-700"
-    },
-    {
-      title: "Comprehensive IT Infrastructure Support",
-      subtitle: "Reliable technology management and support services that keep your business running smoothly and securely",
-      ctaPrimary: "Get Support Quote",
-      ctaSecondary: "Learn More",
-      ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/services",
-      bgColor: "from-purple-600 to-pink-600"
+   title: ""Your Hometown Tech Partner in Turtle Creek","
+    subtitle: "Making technology simple and affordable for families and small businesses in the 15145 area.",
+    ctaPrimary: "Book a Free Consultation",
+    ctaSecondary: "View Local Services",
+    ctaPrimaryLink: "/contact",
+    ctaSecondaryLink: "/services",
+    bgColor: "from-green-400 via-blue-300 to-teal-400"
+  },
+   {
+    title: "Affordable Computer & Network Support",
+    subtitle: "From computer repair to Wi-Fi troubleshooting, our experts are here to help your home or small business stay connected.",
+    ctaPrimary: "Get Support Now",
+    ctaSecondary: "Explore Support Plans",
+    ctaPrimaryLink: "/contact",
+    ctaSecondaryLink: "/services",
+    bgColor: "from-teal-500 via-green-400 to-emerald-300"
+  }
     }
   ];
 
