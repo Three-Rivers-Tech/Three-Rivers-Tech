@@ -276,7 +276,7 @@ export function PortfolioImage({
   const imageMap = {
     banking: 'portfolio-banking.jpg',
     cloud: 'portfolio-cloud.jpg',
-    ecommerce: 'portfolio-ecommerce.jpg',
+    ecommerce: 'portfolio-ecommerce.png',
     network: 'portfolio-network.jpg',
     repair: 'portfolio-repair.jpg',
     saas: 'portfolio-saas.jpg'
