@@ -14,9 +14,9 @@
     "test:seo": "vitest --run src/test/seo-validation.test.ts",
     "test:accessibility": "vitest --run src/test/accessibility-performance.test.ts",
     "test:content": "vitest --run src/test/content-validation.test.ts",
-    "optimize:images": "node scripts/optimize-images.js",
-    "analyze:images": "node scripts/optimize-images.js",
-    "analyze:bundle": "node scripts/analyze-bundle.js",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "analyze:images": "node scripts/optimize-images.mjs",
+    "analyze:bundle": "node scripts/analyze-bundle.mjs",
     "build:analyze": "npm run build && npm run analyze:bundle"
   },
   "dependencies": {

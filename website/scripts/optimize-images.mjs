@@ -5,10 +5,13 @@
  * Run this script to optimize all images in the public directory
  */
 
-const sharp = require('sharp');
-const fs = require('fs').promises;
-const path = require('path');
+import sharp from 'sharp';
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const SUPPORTED_FORMATS = ['.jpg', '.jpeg', '.png'];
 const OUTPUT_FORMATS = ['webp', 'avif'];
@@ -179,11 +182,11 @@ async function analyzeImages() {
 }
 
 // Run the optimization
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   (async () => {
     await analyzeImages();
     await generateOptimizedImages();
   })();
 }
 
-module.exports = { generateOptimizedImages, analyzeImages };
+export { generateOptimizedImages, analyzeImages };

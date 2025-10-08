@@ -1,3 +1,4 @@
+import React from 'react'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
@@ -23,10 +24,10 @@ const MockHeader = () => (
   <header role="banner">
     <nav role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><span aria-current="page">Home</span></li>
+        <li><span>Services</span></li>
+        <li><span>About</span></li>
+        <li><span>Contact</span></li>
       </ul>
     </nav>
   </header>
@@ -307,8 +308,9 @@ function calculateContrastRatio(color1: string, color2: string): number {
   const darkest = Math.min(lum1, lum2)
   
   return (brightest + 0.05) / (darkest + 0.05)
-}describe('P
-erformance Testing', () => {
+}
+
+describe('Performance Testing', () => {
   describe('Core Web Vitals', () => {
     it('should measure Largest Contentful Paint (LCP)', () => {
       // Mock LCP measurement

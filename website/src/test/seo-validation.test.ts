@@ -447,7 +447,7 @@ describe('Structured Data Validation', () => {
       expect(schemas.length).toBeGreaterThan(2)
       
       // Should include Organization, WebSite, LocalBusiness, and WebPage schemas
-      const types = schemas.map((schema: any) => schema['@type'])
+      const types = schemas.map((schema: { '@type': string }) => schema['@type'])
       expect(types).toContain('Organization')
       expect(types).toContain('WebSite')
       expect(types).toContain('LocalBusiness')
@@ -461,7 +461,7 @@ describe('Structured Data Validation', () => {
       expect(schemas.length).toBeGreaterThan(5)
       
       // Should include all service schemas
-      const serviceSchemas = schemas.filter((schema: any) => schema['@type'] === 'Service')
+      const serviceSchemas = schemas.filter((schema: { '@type': string }) => schema['@type'] === 'Service')
       expect(serviceSchemas.length).toBe(4)
     })
 
@@ -479,7 +479,7 @@ describe('Structured Data Validation', () => {
       })
       
       expect(schemas).toBeInstanceOf(Array)
-      const types = schemas.map((schema: any) => schema['@type'])
+      const types = schemas.map((schema: { '@type': string }) => schema['@type'])
       expect(types).toContain('Service')
       expect(types).toContain('WebPage')
     })

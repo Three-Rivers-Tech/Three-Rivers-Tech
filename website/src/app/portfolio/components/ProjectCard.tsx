@@ -5,7 +5,7 @@ export default function ProjectCard({
   title,
   description,
   category,
-  id
+  id,
 }: {
   title: string;
   description: string;
@@ -13,11 +13,14 @@ export default function ProjectCard({
   id?: string;
 }) {
   // Map categories to portfolio image types
-  const categoryImageMap: Record<string, 'banking' | 'cloud' | 'ecommerce' | 'network' | 'repair' | 'saas'> = {
+  const categoryImageMap: Record<
+    string,
+    "banking" | "cloud" | "ecommerce" | "network" | "repair" | "saas"
+  > = {
     "Software Development": "ecommerce",
-    "IT Consulting": "network", 
+    "IT Consulting": "network",
     "SaaS Products": "saas",
-    "Computer Repair": "repair"
+    "Computer Repair": "repair",
   };
 
   const imageCategory = categoryImageMap[category] || "ecommerce";
@@ -36,7 +39,10 @@ export default function ProjectCard({
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-foreground-secondary mb-4">{description}</p>
         {id ? (
-          <Link href={`/portfolio/${id}`} className="text-primary hover:text-primary-hover font-medium flex items-center">
+          <Link
+            href={`/portfolio/${id}`}
+            className="text-primary hover:text-primary-hover font-medium flex items-center"
+          >
             View Case Study
             <svg
               className="w-4 h-4 ml-1"
@@ -54,7 +60,7 @@ export default function ProjectCard({
             </svg>
           </Link>
         ) : (
-          <button className="text-primary hover:text-primary-hover font-medium flex items-center">
+          <button type="button" className="text-primary hover:text-primary-hover font-medium flex items-center">
             View Case Study
             <svg
               className="w-4 h-4 ml-1"

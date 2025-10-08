@@ -5,8 +5,12 @@
  * Analyzes JavaScript and CSS bundles to identify optimization opportunities
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Analyze JavaScript files in the build output
 function analyzeJavaScript() {
@@ -159,11 +163,11 @@ function main() {
   console.log('💡 Run this script after each build to monitor bundle size changes.');
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = {
+export {
   analyzeJavaScript,
   analyzeCSS,
   generateRecommendations

@@ -117,7 +117,7 @@ describe('Content Validation Tests', () => {
           const services = JSON.parse(readFileSync(servicesPath, 'utf-8'))
           const placeholders: string[] = []
           
-          services.forEach((service: any, index: number) => {
+          services.forEach((service: { name?: string; description?: string }, index: number) => {
             if (service.name) {
               placeholders.push(...checkForPlaceholders(service.name, `service ${index} name`))
             }
