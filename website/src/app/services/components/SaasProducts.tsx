@@ -12,30 +12,34 @@ export default function SaasProducts() {
           />
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4">SaaS Products</h2>
+          <h2 className="text-3xl font-bold mb-4">SaaS Solutions & Integration</h2>
           <p className="text-foreground-secondary mb-6">
-            Innovative software solutions for modern businesses.
+            Enhance business efficiency and data-driven decision making through strategic software-as-a-service implementation, integration, and optimization that connects your business systems seamlessly.
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Overview of available products</span>
+              <span>SaaS platform evaluation and selection based on business needs</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Product features and benefits</span>
+              <span>Custom integration with existing business systems and workflows</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Pricing information</span>
+              <span>Data migration and synchronization across platforms</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Free trial/demo options</span>
+              <span>User training and change management support</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Implementation and support</span>
+              <span>Ongoing optimization and performance monitoring</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">✓</span>
+              <span>ROI tracking and business impact measurement</span>
             </li>
           </ul>
         </div>

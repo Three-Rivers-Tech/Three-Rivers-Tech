@@ -3,33 +3,33 @@ import Link from "next/link";
 export default function EnhancedHero() {
   const currentSlide = 0;
 
-  // Auto-rotating banner content
+  // Professional business-focused banner content
   const slides = [
     {
-      title: "Get Your Technology Working For You",
-      subtitle: "We build websites that actually work, fix slow computers, and create software that saves you time",
-      ctaPrimary: "Get Your Free Tech Checkup",
-      ctaSecondary: "See How We Help",
+      title: "Professional IT Services for Growing Businesses",
+      subtitle: "Expert technology solutions that drive efficiency, security, and growth for your organization",
+      ctaPrimary: "Schedule a Consultation",
+      ctaSecondary: "View Our Services",
       ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/portfolio",
+      ctaSecondaryLink: "/services",
       bgColor: "from-blue-700 to-indigo-800"
     },
     {
-      title: "Stop Losing Customers to Slow Websites",
-      subtitle: "We speed up your website, fix your computers, and automate your boring tasks so you can focus on growing your business",
-      ctaPrimary: "Fix Your Website Today",
-      ctaSecondary: "See Real Results",
+      title: "Enterprise Software Solutions That Scale",
+      subtitle: "Custom development and system integration services designed to optimize your business operations and enhance productivity",
+      ctaPrimary: "Discuss Your Project",
+      ctaSecondary: "View Case Studies",
       ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/portfolio",
       bgColor: "from-blue-600 to-indigo-700"
     },
     {
-      title: "Build Software That Actually Works",
-      subtitle: "Stop wasting time on paperwork and manual tasks. We build simple software that does the work for you.",
-      ctaPrimary: "Get Your Business Software",
-      ctaSecondary: "View Examples",
+      title: "Comprehensive IT Infrastructure Support",
+      subtitle: "Reliable technology management and support services that keep your business running smoothly and securely",
+      ctaPrimary: "Get Support Quote",
+      ctaSecondary: "Learn More",
       ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/portfolio",
+      ctaSecondaryLink: "/services",
       bgColor: "from-purple-600 to-pink-600"
     }
   ];
@@ -57,7 +57,7 @@ export default function EnhancedHero() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 transition-all duration-700 ease-in-out leading-tight px-2">
             {slides[currentSlide].title}
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-slate-900 mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto transition-all duration-700 ease-in-out leading-relaxed px-4 font-medium">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto transition-all duration-700 ease-in-out leading-relaxed px-4 font-medium">
             {slides[currentSlide].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 max-w-2xl mx-auto" role="group" aria-label="Call to action buttons">
@@ -70,7 +70,7 @@ export default function EnhancedHero() {
             </Link>
             <Link
               href={slides[currentSlide].ctaSecondaryLink}
-              className="bg-transparent border-2 border-white text-white font-semibold py-3 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary text-center min-h-[48px] flex items-center justify-center text-base sm:text-lg font-medium"
+              className="bg-white/20 backdrop-blur-sm border-2 border-white text-white font-semibold py-3 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary text-center min-h-[48px] flex items-center justify-center text-base sm:text-lg font-medium"
               aria-describedby="cta-secondary-description"
             >
               {slides[currentSlide].ctaSecondary}

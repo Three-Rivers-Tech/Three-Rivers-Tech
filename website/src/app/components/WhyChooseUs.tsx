@@ -1,93 +1,121 @@
 import { FaBullseye, FaLaptopCode, FaTools, FaDollarSign } from "../components/icons";
 
 export default function WhyChooseUs() {
-  // Static values instead of animated ones
-  const stats = {
-    projects: 75,
-    clients: 30,
-    satisfaction: 150,
-    experience: 20
-  };
+  // Realistic business metrics
+  const stats = [
+    { value: "5+", label: "Years of Experience", icon: "📅" },
+    { value: "25+", label: "Successful Projects", icon: "🚀" },
+    { value: "98%", label: "Client Satisfaction", icon: "⭐" },
+    { value: "24/7", label: "Support Available", icon: "🛟" }
+  ];
 
   // Features data
   const features = [
     {
-      title: "Plain English",
-      description: "No confusing tech jargon or complicated explanations. We talk like normal people and explain everything clearly.",
-      icon: <FaBullseye className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
+      title: "Clear Communication",
+      description: "We provide transparent communication throughout every project, ensuring you understand our approach and progress at every step.",
+      icon: <FaBullseye className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     },
     {
-      title: "Simple Solutions",
-      description: "We create websites and software that make your work less complicated. No more learning curves or steep barriers to entry.",
-      icon: <FaLaptopCode className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
+      title: "Efficient Solutions",
+      description: "We deliver streamlined technology solutions that integrate seamlessly with your existing business processes and workflows.",
+      icon: <FaLaptopCode className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     },
     {
-      title: "We Fix Problems Fast",
-      description: "When something breaks, we fix it quickly. No waiting days or weeks for a response. We understand your business can't stop.",
-      icon: <FaTools className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
+      title: "Rapid Response",
+      description: "Our dedicated support team provides prompt resolution to technical issues, minimizing downtime and maintaining business continuity.",
+      icon: <FaTools className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     },
     {
-      title: "Save You Money",
-      description: "Our solutions help you work smarter, not harder. Less time wasted on manual tasks means more money in your pocket.",
-      icon: <FaDollarSign className="w-12 h-12 text-primary" suppressHydrationWarning={true} />
+      title: "Cost-Effective Results",
+      description: "Our technology solutions optimize your operations and reduce manual processes, delivering measurable ROI for your business.",
+      icon: <FaDollarSign className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-background-secondary">
+    <section className="section-padding bg-gradient-to-b from-background-secondary to-background">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Why Choose Three Rivers Tech</h2>
-          <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
+        <div className="text-center mb-16 sm:mb-20">
+          {/* Section Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 animate-fade-in">
+            <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
+            Why Choose Us
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up text-foreground">
+            Why Choose Three Rivers Tech
+          </h2>
+          
+          <p className="text-lg sm:text-xl md:text-2xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200 font-medium">
             We combine technical expertise with a commitment to excellence to deliver outstanding results
           </p>
         </div>
 
         {/* Statistics section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
-          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              ${stats.projects}k+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20 sm:mb-24">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`group relative bg-background dark:bg-background-secondary rounded-2xl shadow-soft hover:shadow-large transition-all duration-500 border border-border/50 hover:border-primary/20 p-6 sm:p-8 text-center animate-slide-up animation-delay-${400 + index * 100}`}
+            >
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              
+              {/* Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-0 group-hover:opacity-10 blur transition-opacity duration-500"></div>
+              
+              <div className="relative">
+                {/* Icon */}
+                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                
+                {/* Value */}
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-2 group-hover:text-primary-hover transition-colors duration-300">
+                  {stat.value}
+                </div>
+                
+                {/* Label */}
+                <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary font-medium">
+                  {stat.label}
+                </div>
+              </div>
             </div>
-            <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Saved Clients</div>
-          </div>
-
-          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              {stats.clients}+
-            </div>
-            <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Businesses Helped</div>
-          </div>
-
-          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              {stats.satisfaction}+
-            </div>
-            <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Problems Fixed</div>
-          </div>
-
-          <div className="stats-card text-center bg-background-tertiary dark:bg-background-secondary p-4 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border dark:border-border">
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
-              {stats.experience}+
-            </div>
-            <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary">Hours Saved Weekly</div>
-          </div>
+          ))}
         </div>
 
         {/* Features section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="why-choose-card bg-background-tertiary dark:bg-background p-5 sm:p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className={`group relative bg-background dark:bg-background-secondary rounded-2xl shadow-soft hover:shadow-large transition-all duration-500 border border-border/50 hover:border-primary/20 p-6 sm:p-8 animate-slide-up animation-delay-${800 + index * 100}`}
             >
-              <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
-                  {feature.icon}
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              
+              {/* Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-0 group-hover:opacity-10 blur transition-opacity duration-500"></div>
+              
+              <div className="relative">
+                {/* Icon */}
+                <div className="mb-6 flex justify-center sm:justify-start">
+                  <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
                 </div>
+                
+                {/* Title */}
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-center sm:text-left leading-tight group-hover:text-primary transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed text-center sm:text-left">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 sm:mb-4 text-center sm:text-left leading-tight">{feature.title}</h3>
-              <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed text-center sm:text-left">{feature.description}</p>
             </div>
           ))}
         </div>

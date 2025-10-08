@@ -12,8 +12,6 @@ import {
   generateLocalBusinessSchema,
   generateWebSiteSchema,
   generateWebPageSchema,
-  generateBreadcrumbSchema,
-  generateServiceSchema,
   generateSoftwareDevelopmentSchema,
   generateITConsultingSchema,
   generateSaaSProductsSchema,

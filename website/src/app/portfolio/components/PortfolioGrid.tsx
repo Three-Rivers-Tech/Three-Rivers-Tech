@@ -5,6 +5,12 @@ type PortfolioItem = {
   title: string;
   description: string;
   category: string;
+  challenge?: string;
+  solution?: string;
+  outcome?: string;
+  technologies?: string[];
+  timeline?: string;
+  clientSize?: string;
 };
 
 export default function PortfolioGrid({ items }: { items: PortfolioItem[] }) {
@@ -17,6 +23,10 @@ export default function PortfolioGrid({ items }: { items: PortfolioItem[] }) {
           title={item.title}
           description={item.description}
           category={item.category}
+          outcome={item.outcome}
+          technologies={item.technologies}
+          timeline={item.timeline}
+          clientSize={item.clientSize}
         />
       ))}
     </div>

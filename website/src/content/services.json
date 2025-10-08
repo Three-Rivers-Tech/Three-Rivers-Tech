@@ -2,7 +2,7 @@
   {
     "id": "software-development",
     "title": "Custom Software Development",
-    "description": "Transform your business processes with custom software that actually works. We build web applications, mobile apps, and business automation tools that save you time and eliminate manual work. No cookie-cutter solutions – everything is designed specifically for your business needs and workflows.",
+    "description": "Transform your business processes with enterprise-grade custom software solutions. We develop comprehensive web applications, mobile platforms, and business automation systems that streamline operations and enhance productivity. Every solution is tailored specifically to your business requirements and operational workflows.",
     "shortDescription": "Custom web and mobile applications that automate your business processes",
     "icon": "FaCode",
     "features": [
@@ -30,7 +30,7 @@
       "customPricing": true
     },
     "cta": {
-      "text": "Discuss Your Project",
+      "text": "Schedule a Consultation",
       "href": "/contact?service=software-development"
     },
     "image": "/images/services/software-development.jpg"
@@ -38,7 +38,7 @@
   {
     "id": "it-consulting",
     "title": "IT Consulting & Strategy",
-    "description": "Stop throwing money at technology problems that keep coming back. Our IT consulting helps you make smart technology decisions, reduce costs, and eliminate the headaches of managing complex systems. We assess your current setup, identify problems, and create a clear roadmap for improvement.",
+    "description": "Optimize your technology investments with strategic IT consulting services. Our comprehensive approach helps you make informed technology decisions, reduce operational costs, and streamline complex system management. We conduct thorough assessments, identify optimization opportunities, and develop clear implementation roadmaps.",
     "shortDescription": "Strategic IT guidance that reduces costs and eliminates technology headaches",
     "icon": "FaLaptop",
     "features": [
@@ -66,7 +66,7 @@
       "priceRange": "$150-$300/hour"
     },
     "cta": {
-      "text": "Get IT Assessment",
+      "text": "Request Assessment",
       "href": "/contact?service=it-consulting"
     },
     "image": "/images/services/it-consulting.jpg"
@@ -74,7 +74,7 @@
   {
     "id": "saas-products",
     "title": "Business Software Solutions",
-    "description": "Ready-to-use software solutions that solve common business problems without the cost and complexity of custom development. Our SaaS products help you manage customers, track inventory, automate workflows, and grow your business – all with simple monthly pricing and no long-term contracts.",
+    "description": "Comprehensive software-as-a-service solutions designed to address common business challenges with enterprise-level functionality. Our SaaS platforms enable efficient customer management, inventory tracking, workflow automation, and business growth – delivered through flexible subscription models with scalable pricing structures.",
     "shortDescription": "Ready-to-use business software with simple monthly pricing",
     "icon": "FaCloud",
     "features": [
@@ -102,7 +102,7 @@
       "priceRange": "$29-$299/month"
     },
     "cta": {
-      "text": "Try Free for 30 Days",
+      "text": "Explore Solutions",
       "href": "/contact?service=saas-products"
     },
     "image": "/images/services/saas-products.jpg"
@@ -110,7 +110,7 @@
   {
     "id": "computer-repair",
     "title": "Computer Repair & Support",
-    "description": "When your computer breaks down, you need it fixed fast. We provide professional computer repair services for businesses and individuals throughout the Pittsburgh area. From virus removal to hardware replacement, we get you back up and running quickly with a guarantee on all our work.",
+    "description": "Professional hardware support and maintenance services designed to minimize downtime and maximize system reliability. We provide comprehensive computer repair and technical support for businesses throughout the Pittsburgh metropolitan area. From malware remediation to hardware replacement, our certified technicians ensure rapid resolution with guaranteed results.",
     "shortDescription": "Fast, reliable computer repair with guaranteed results",
     "icon": "FaTools",
     "features": [
@@ -138,7 +138,7 @@
       "priceRange": "$75-$200"
     },
     "cta": {
-      "text": "Get Free Estimate",
+      "text": "Request Quote",
       "href": "/contact?service=computer-repair"
     },
     "image": "/images/services/computer-repair.jpg"

@@ -136,7 +136,7 @@ describe('Content Validation Tests', () => {
             console.warn('Placeholder content found in services:', placeholders)
           }
         }
-      } catch (error) {
+      } catch {
         console.warn('Could not load services content for validation')
       }
     })
@@ -168,7 +168,6 @@ describe('Content Validation Tests', () => {
 
     it('should have consistent contact information across pages', () => {
       const contactPage = loadPageContent('contact')
-      const aboutPage = loadPageContent('about')
       const business = businessInfo
       
       // If contact page exists, verify consistency

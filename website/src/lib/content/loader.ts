@@ -376,13 +376,13 @@ function createFallbackBusinessInfo(): BusinessInfo {
   return {
     name: 'Three Rivers Tech',
     description: 'Comprehensive technology solutions for your business',
-    phone: '(555) 123-4567',
+    phone: '(412) 403-5559',
     email: 'info@threeriverstech.com',
     address: {
-      street: '123 Tech Street',
-      city: 'Pittsburgh',
+      street: '124 Grant Street',
+      city: 'Turtle Creek',
       state: 'PA',
-      zipCode: '15201',
+      zipCode: '15145',
       country: 'United States',
     },
     hours: [

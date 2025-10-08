@@ -64,7 +64,7 @@ export function initializeAnalytics(): void {
   window.dataLayer = window.dataLayer || [];
 
   // Initialize gtag function
-  window.gtag = function gtag(...args: any[]) {
+  window.gtag = function gtag(...args: unknown[]) {
     window.dataLayer?.push(args as unknown as Record<string, unknown>);
   };
 

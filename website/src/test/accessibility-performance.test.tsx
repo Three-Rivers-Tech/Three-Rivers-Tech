@@ -1,20 +1,7 @@
 import React from 'react'
-import { describe, it, expect, beforeEach } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
-import { 
-  measureCoreWebVitals,
-  calculateLCP,
-  calculateFID,
-  calculateCLS,
-  optimizePerformance
-} from '@/lib/core-web-vitals'
-import {
-  validateAccessibility,
-  checkColorContrast,
-  validateKeyboardNavigation,
-  checkAriaLabels
-} from '@/lib/accessibility-utils'
 
 // Extend expect with jest-axe matchers
 expect.extend(toHaveNoViolations)

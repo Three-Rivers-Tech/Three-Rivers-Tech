@@ -12,30 +12,34 @@ export default function SoftwareDevelopment() {
           />
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4">Software Development</h2>
+          <h2 className="text-3xl font-bold mb-4">Enterprise Software Solutions</h2>
           <p className="text-foreground-secondary mb-6">
-            Transform your ideas into powerful digital solutions with our custom software development services.
+            Drive operational excellence with custom enterprise software that streamlines processes, reduces costs, and accelerates business growth through scalable, secure technology solutions.
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Custom web applications</span>
+              <span>Enterprise web applications with advanced security and scalability</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Mobile app development</span>
+              <span>Business process automation that reduces manual work by up to 80%</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>API development and integration</span>
+              <span>API development and third-party system integration</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Technology stack expertise</span>
+              <span>Modern technology stacks optimized for performance and maintainability</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Agile development methodology</span>
+              <span>Agile development with continuous delivery and quality assurance</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">✓</span>
+              <span>Comprehensive documentation and ongoing technical support</span>
             </li>
           </ul>
         </div>

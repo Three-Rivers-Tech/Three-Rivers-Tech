@@ -288,7 +288,7 @@ function monitorPerformanceIssues(): void {
     });
 
     longTaskObserver.observe({ entryTypes: ['longtask'] });
-  } catch (error) {
+  } catch {
     console.warn('Long task monitoring not supported');
   }
 
@@ -357,9 +357,9 @@ async function sendToLoggingService(errorReport: ErrorReport): Promise<void> {
     // await sendToSentry(errorReport);
     // await sendToLogRocket(errorReport);
     
-  } catch (error) {
+  } catch {
     // Don't create infinite loops by reporting errors about error reporting
-    console.warn('Failed to send error report:', error);
+    console.warn('Failed to send error report');
   }
 }
 

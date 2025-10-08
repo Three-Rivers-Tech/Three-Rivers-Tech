@@ -1,16 +1,16 @@
 {
   "hero": {
-    "headline": "Technology Solutions That Actually Work",
-    "subheadline": "Custom Software • IT Consulting • SaaS Products • Computer Repair",
-    "description": "Stop losing money to technology problems. Three Rivers Tech delivers reliable solutions that save you time, reduce costs, and help your business grow. We speak plain English, not tech jargon, and we're here when you need us most.",
+    "headline": "Professional IT Services for Growing Businesses",
+    "subheadline": "Enterprise Software Solutions • IT Infrastructure & Support • SaaS Integration • Hardware Maintenance",
+    "description": "Transform your business operations with expert technology solutions that drive efficiency, security, and growth. Our comprehensive IT services are designed to streamline your processes and deliver measurable results.",
     "primaryCTA": {
-      "text": "Get Your Free Tech Assessment",
+      "text": "Schedule a Consultation",
       "href": "/contact",
       "variant": "primary"
     },
     "secondaryCTA": {
-      "text": "See How We Help",
-      "href": "/portfolio",
+      "text": "View Our Services",
+      "href": "/services",
       "variant": "secondary"
     },
     "backgroundImage": "/images/hero/technology-solutions.jpg",
@@ -22,14 +22,14 @@
     ]
   },
   "callToAction": {
-    "headline": "Stop Wasting Time on Technology Problems",
-    "description": "Get a free technology assessment and discover how we can save you time, reduce costs, and eliminate the frustration of dealing with unreliable systems. No obligation, no sales pressure.",
+    "headline": "Ready to Transform Your Business Technology?",
+    "description": "Schedule a comprehensive technology consultation to discover how our expert solutions can optimize your operations, enhance security, and drive sustainable growth for your business.",
     "primaryButton": {
-      "text": "Get Your Free Assessment",
+      "text": "Schedule a Consultation",
       "href": "/contact"
     },
     "secondaryButton": {
-      "text": "Call Us Now: (412) 403-5559",
+      "text": "Contact Our Experts: (412) 403-5559",
       "href": "tel:+14124035559"
     },
     "backgroundType": "gradient",

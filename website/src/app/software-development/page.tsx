@@ -118,7 +118,7 @@ export default function SoftwareDevelopmentSkillsPage() {
               href="/contact"
               className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-hover transition-colors duration-300"
             >
-              Discuss Your Project
+              Schedule a Consultation
             </a>
           </div>
         </div>

@@ -5,30 +5,34 @@ export default function ComputerRepair() {
     <section className="py-16">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4">Computer Repair</h2>
+          <h2 className="text-3xl font-bold mb-4">Hardware Support & Maintenance</h2>
           <p className="text-foreground-secondary mb-6">
-            Fast, reliable computer repair services for all your devices.
+            Minimize business disruption and maximize technology ROI through professional hardware support services that extend equipment lifecycle, prevent costly downtime, and ensure optimal performance.
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Hardware diagnostics and repair</span>
+              <span>Comprehensive hardware diagnostics and professional repair services</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Software troubleshooting</span>
+              <span>Enterprise software troubleshooting and system optimization</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Data recovery services</span>
+              <span>Critical data recovery with industry-standard security protocols</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Preventive maintenance</span>
+              <span>Proactive maintenance programs to prevent system failures</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Remote support options</span>
+              <span>Remote monitoring and support with rapid response times</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">✓</span>
+              <span>Hardware lifecycle management and upgrade planning</span>
             </li>
           </ul>
         </div>
