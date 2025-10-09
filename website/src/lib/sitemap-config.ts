@@ -45,6 +45,11 @@ export const STATIC_PAGES: SitemapPage[] = [
     priority: 0.7,
     changeFrequency: 'yearly',
   },
+  {
+    path: '/community-involvement/',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+  },
 ]
 
 // Pages to exclude from search engine crawling

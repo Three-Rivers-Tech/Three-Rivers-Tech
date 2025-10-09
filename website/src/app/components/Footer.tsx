@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-base text-foreground-secondary mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
-              Comprehensive technology solutions for modern businesses.
+              Serving Turtle Creek and the Mon Valley since 2025.
             </p>
             <nav>
               <ul className="flex justify-center md:justify-start space-x-4">
@@ -84,7 +84,7 @@ export default function Footer() {
                     href="/portfolio"
                     className="text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block"
                   >
-                    Portfolio
+                    Our Work
                   </Link>
                 </li>
                 <li>
@@ -92,7 +92,7 @@ export default function Footer() {
                     href="/about"
                     className="text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block"
                   >
-                    About
+                    About Us
                   </Link>
                 </li>
                 <li>
@@ -101,6 +101,22 @@ export default function Footer() {
                     className="text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block"
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/community-involvement"
+                    className="text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block"
+                  >
+                    Community Involvement
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/learning-center"
+                    className="text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block"
+                  >
+                    Learning Center
                   </Link>
                 </li>
               </ul>

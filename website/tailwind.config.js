@@ -198,6 +198,18 @@ module.exports = {
           'transform': 'translateY(-1px)',
           'box-shadow': '0 4px 15px rgba(37, 99, 235, 0.3)',
         },
+        '.nav-link': {
+          'text-decoration': 'none',
+          'border-bottom': 'none',
+          '-webkit-text-decoration': 'none',
+          '-webkit-border-bottom': 'none',
+        },
+        '.nav-link:hover': {
+          'text-decoration': 'none',
+          'border-bottom': 'none',
+          '-webkit-text-decoration': 'none',
+          '-webkit-border-bottom': 'none',
+        },
         '.section-padding': {
           'padding-top': '4rem',
           'padding-bottom': '4rem',

@@ -151,7 +151,7 @@ console.log(`Loaded ${stats.services} services and ${stats.testimonials} testimo
 {
   "name": "Three Rivers Tech",
   "description": "Comprehensive technology solutions",
-  "phone": "(412) 403-5559",
+  "phone": "Business phone line coming soon",
   "email": "info@threeriverstech.com"
 }
 ```
@@ -160,7 +160,7 @@ console.log(`Loaded ${stats.services} services and ${stats.testimonials} testimo
 ```yaml
 name: Three Rivers Tech
 description: Comprehensive technology solutions
-phone: "(412) 403-5559"
+phone: "Business phone line coming soon"
 email: info@threeriverstech.com
 ```
 

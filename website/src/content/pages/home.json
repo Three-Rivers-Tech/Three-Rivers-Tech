@@ -28,10 +28,7 @@
       "text": "Schedule a Consultation",
       "href": "/contact"
     },
-    "secondaryButton": {
-      "text": "Contact Our Experts: (412) 403-5559",
-      "href": "tel:+14124035559"
-    },
+
     "backgroundType": "gradient",
     "backgroundColor": "from-blue-600 to-purple-600"
   },
@@ -81,11 +78,7 @@
       "description": "Comprehensive technology solutions for businesses",
       "url": "https://threeriverstech.com",
       "logo": "https://threeriverstech.com/images/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-412-403-5559",
-        "contactType": "customer service"
-      },
+
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "124 Grant Street",

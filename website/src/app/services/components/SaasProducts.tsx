@@ -12,34 +12,34 @@ export default function SaasProducts() {
           />
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4">SaaS Solutions & Integration</h2>
+          <h2 className="text-3xl font-bold mb-4">Small Business Software Solutions</h2>
           <p className="text-foreground-secondary mb-6">
-            Enhance business efficiency and data-driven decision making through strategic software-as-a-service implementation, integration, and optimization that connects your business systems seamlessly.
+            Practical software solutions for local businesses. We help you choose and implement the right tools to manage customers, inventory, and day-to-day operations without breaking your budget.
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>SaaS platform evaluation and selection based on business needs</span>
+              <span>Customer relationship management (CRM) for small businesses</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Custom integration with existing business systems and workflows</span>
+              <span>Simple inventory and point-of-sale systems</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Data migration and synchronization across platforms</span>
+              <span>Accounting software setup and training</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>User training and change management support</span>
+              <span>Email marketing and appointment scheduling tools</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>Ongoing optimization and performance monitoring</span>
+              <span>Employee scheduling and time tracking systems</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span>ROI tracking and business impact measurement</span>
+              <span>Training and ongoing support for all software</span>
             </li>
           </ul>
         </div>

@@ -1,146 +1,146 @@
 [
   {
-    "id": "software-development",
-    "title": "Custom Software Development",
-    "description": "Transform your business processes with enterprise-grade custom software solutions. We develop comprehensive web applications, mobile platforms, and business automation systems that streamline operations and enhance productivity. Every solution is tailored specifically to your business requirements and operational workflows.",
-    "shortDescription": "Custom web and mobile applications that automate your business processes",
-    "icon": "FaCode",
-    "features": [
-      "Business Process Automation",
-      "Custom Web Applications",
-      "Mobile Apps (iOS & Android)",
-      "Database Design & Integration",
-      "API Development & Third-Party Integrations",
-      "Cloud-Based Solutions",
-      "Progressive Web Apps (PWA)",
-      "E-commerce Platforms",
-      "Customer Portals & Dashboards"
-    ],
-    "benefits": [
-      "Eliminate repetitive manual tasks",
-      "Reduce human errors and data entry",
-      "Scale operations without hiring more staff",
-      "Real-time reporting and insights",
-      "Secure, reliable, and fast performance",
-      "Ongoing support and feature updates",
-      "Integration with existing systems"
-    ],
-    "pricing": {
-      "startingPrice": "$5,000",
-      "customPricing": true
-    },
-    "cta": {
-      "text": "Schedule a Consultation",
-      "href": "/contact?service=software-development"
-    },
-    "image": "/images/services/software-development.jpg"
-  },
-  {
-    "id": "it-consulting",
-    "title": "IT Consulting & Strategy",
-    "description": "Optimize your technology investments with strategic IT consulting services. Our comprehensive approach helps you make informed technology decisions, reduce operational costs, and streamline complex system management. We conduct thorough assessments, identify optimization opportunities, and develop clear implementation roadmaps.",
-    "shortDescription": "Strategic IT guidance that reduces costs and eliminates technology headaches",
-    "icon": "FaLaptop",
-    "features": [
-      "Complete IT Infrastructure Assessment",
-      "Cloud Migration Planning & Execution",
-      "Cybersecurity Risk Assessment",
-      "Technology Budget Planning",
-      "Vendor Selection & Management",
-      "Digital Transformation Strategy",
-      "Network Design & Optimization",
-      "Disaster Recovery Planning",
-      "Compliance & Regulatory Guidance"
-    ],
-    "benefits": [
-      "Reduce IT costs by 20-40%",
-      "Eliminate recurring technology problems",
-      "Improve system reliability and uptime",
-      "Enhance security and data protection",
-      "Get expert guidance without hiring full-time IT staff",
-      "Make informed technology investment decisions",
-      "Prepare for business growth and scaling"
-    ],
-    "pricing": {
-      "startingPrice": "$150/hour",
-      "priceRange": "$150-$300/hour"
-    },
-    "cta": {
-      "text": "Request Assessment",
-      "href": "/contact?service=it-consulting"
-    },
-    "image": "/images/services/it-consulting.jpg"
-  },
-  {
-    "id": "saas-products",
-    "title": "Business Software Solutions",
-    "description": "Comprehensive software-as-a-service solutions designed to address common business challenges with enterprise-level functionality. Our SaaS platforms enable efficient customer management, inventory tracking, workflow automation, and business growth – delivered through flexible subscription models with scalable pricing structures.",
-    "shortDescription": "Ready-to-use business software with simple monthly pricing",
-    "icon": "FaCloud",
-    "features": [
-      "Customer Relationship Management (CRM)",
-      "Inventory & Order Management",
-      "Project Management & Time Tracking",
-      "Automated Invoicing & Billing",
-      "Team Collaboration Tools",
-      "Business Analytics & Reporting",
-      "Mobile Access & Apps",
-      "Third-Party Integrations",
-      "Automated Backups & Security"
-    ],
-    "benefits": [
-      "Start using immediately – no setup fees",
-      "Pay only for what you use",
-      "Automatic updates and new features",
-      "Works on any device, anywhere",
-      "Secure cloud hosting included",
-      "Cancel anytime – no contracts",
-      "Expert support included"
-    ],
-    "pricing": {
-      "startingPrice": "$29/month",
-      "priceRange": "$29-$299/month"
-    },
-    "cta": {
-      "text": "Explore Solutions",
-      "href": "/contact?service=saas-products"
-    },
-    "image": "/images/services/saas-products.jpg"
-  },
-  {
-    "id": "computer-repair",
-    "title": "Computer Repair & Support",
-    "description": "Professional hardware support and maintenance services designed to minimize downtime and maximize system reliability. We provide comprehensive computer repair and technical support for businesses throughout the Pittsburgh metropolitan area. From malware remediation to hardware replacement, our certified technicians ensure rapid resolution with guaranteed results.",
-    "shortDescription": "Fast, reliable computer repair with guaranteed results",
+    "id": "home-support",
+    "title": "Home & Personal Tech Support",
+    "description": "Computer repair, virus removal, Wi-Fi setup, smartphone training for seniors, and on-site visits in Turtle Creek and surrounding areas.",
+    "shortDescription": "Computer repair and tech support right in your home",
     "icon": "FaTools",
     "features": [
-      "Complete Hardware Diagnostics",
-      "Virus & Malware Removal",
-      "Data Recovery & Backup",
-      "Hardware Replacement & Upgrades",
+      "Computer Repair & Virus Removal",
+      "Wi-Fi Network Setup & Optimization",
+      "Smartphone Setup & Training",
+      "Senior Computer Classes",
+      "On-Site Home Visits",
       "Software Installation & Updates",
-      "Network Setup & Troubleshooting",
-      "On-Site Service Available",
-      "Remote Support & Maintenance",
-      "Business IT Support Contracts"
+      "Data Backup & Recovery",
+      "Printer Troubleshooting",
+      "Email Setup & Management"
     ],
     "benefits": [
+      "No need to transport devices",
+      "Patient, helpful service",
+      "Senior-friendly instruction",
+      "Local, reliable support",
       "Same-day service available",
-      "Free diagnostics and estimates",
-      "90-day warranty on all repairs",
-      "Data protection guarantee",
-      "Competitive, upfront pricing",
-      "Experienced, certified technicians",
-      "Pickup and delivery service available"
+      "Personal attention to your needs",
+      "Secure handling of personal data"
     ],
     "pricing": {
-      "startingPrice": "$75",
-      "priceRange": "$75-$200"
+      "startingPrice": "$60",
+      "priceRange": "$60-$150"
     },
     "cta": {
-      "text": "Request Quote",
-      "href": "/contact?service=computer-repair"
+      "text": "Book Home Visit",
+      "href": "/contact?service=home-support"
     },
-    "image": "/images/services/computer-repair.jpg"
+    "image": "/images/services/home-support.jpg"
+  },
+  {
+    "id": "small-business-it",
+    "title": "Small Business IT Packages",
+    "description": "Affordable IT solutions for local businesses including website packages, office setup, and managed care plans with transparent pricing.",
+    "shortDescription": "IT support designed for small local businesses",
+    "icon": "FaLaptop",
+    "features": [
+      "Starter Website Package ($500)",
+      "Small Office IT Setup",
+      "Managed Care Plan ($75/month)",
+      "Local Business SEO",
+      "Email Setup & Management",
+      "Point of Sale Systems",
+      "Simple Inventory Tracking",
+      "Basic Cybersecurity Package",
+      "Monthly System Maintenance"
+    ],
+    "benefits": [
+      "Transparent, upfront pricing",
+      "No long-term contracts",
+      "Local support when you need it",
+      "Solutions tailored for small businesses",
+      "Help with technology decisions",
+      "Peace of mind with managed service",
+      "Cost-effective alternatives to expensive services"
+    ],
+    "pricing": {
+      "startingPrice": "$500",
+      "priceRange": "$75-$500"
+    },
+    "cta": {
+      "text": "Get Business Quote",
+      "href": "/contact?service=small-business-it"
+    },
+    "image": "/images/services/small-business-it.jpg"
+  },
+  {
+    "id": "community-education",
+    "title": "Community Education",
+    "description": "Free workshops on basic computer skills, online safety, and digital marketing for local businesses and residents.",
+    "shortDescription": "Free tech workshops for the community",
+    "icon": "FaBook",
+    "features": [
+      "Free Basic Computer Classes",
+      "Online Safety Workshops",
+      "Digital Marketing for Small Businesses",
+      "Social Media for Local Shops",
+      "Email and Internet Basics",
+      "Smartphone Training",
+      "Online Shopping and Banking",
+      "Understanding Tech Terms",
+      "Downloadable Guides & Tutorials"
+    ],
+    "benefits": [
+      "No cost to community members",
+      "Small, helpful group sizes",
+      "Patient instruction for beginners",
+      "Practical, everyday applications",
+      "Build confidence with technology",
+      "Connect with other community members",
+      "Ongoing support after classes"
+    ],
+    "pricing": {
+      "startingPrice": "Free",
+      "customPricing": false
+    },
+    "cta": {
+      "text": "View Workshop Schedule",
+      "href": "/contact?service=community-education"
+    },
+    "image": "/images/services/community-education.jpg"
+  },
+  {
+    "id": "web-development",
+    "title": "Simple Website Design",
+    "description": "Professional, affordable websites for local businesses and community organizations. WordPress, SEO, and ongoing support included.",
+    "shortDescription": "Simple, effective websites for local businesses",
+    "icon": "FaCode",
+    "features": [
+      "Basic Business Website",
+      "WordPress Content Management",
+      "Local SEO Optimization",
+      "Mobile-Responsive Design",
+      "Social Media Integration",
+      "Contact Form Setup",
+      "Google My Business Setup",
+      "Basic Training on Updates",
+      "Ongoing Support Options"
+    ],
+    "benefits": [
+      "Affordable for small businesses",
+      "You can easily update content",
+      "Appears in local searches",
+      "Professional look & feel",
+      "Mobile-friendly for customers",
+      "Built with your needs in mind",
+      "Ongoing support available"
+    ],
+    "pricing": {
+      "startingPrice": "$400",
+      "priceRange": "$400-$800"
+    },
+    "cta": {
+      "text": "Get Your Website",
+      "href": "/contact?service=web-development"
+    },
+    "image": "/images/services/web-development.jpg"
   }
 ]

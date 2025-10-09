@@ -234,7 +234,7 @@ export function ServiceIcon({
   className = "",
   size = "medium" 
 }: { 
-  service: 'dev' | 'consulting' | 'saas' | 'repair';
+  service: 'dev' | 'consulting' | 'saas' | 'repair' | 'education';
   className?: string;
   size?: 'small' | 'medium' | 'large';
 }) {
@@ -248,7 +248,8 @@ export function ServiceIcon({
     dev: 'service-icon-dev.png',
     consulting: 'service-icon-consulting.png',
     saas: 'service-icon-saas.png',
-    repair: 'service-icon-repair.png'
+    repair: 'service-icon-repair.png',
+    education: 'service-icon-education.png'
   };
 
   const { width, height } = sizeMap[size];

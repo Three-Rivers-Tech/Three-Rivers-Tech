@@ -118,10 +118,10 @@ export default function CallToAction() {
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 max-w-6xl">
         <header className="mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
-            Ready to Transform Your Business Technology?
+            Ready for Honest Tech Support?
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200">
-            Schedule a comprehensive technology consultation to discover how our expert solutions can optimize your operations and drive growth
+            Request a free consultation with a hardworking startup committed to your community. We'll help you with home tech issues, small business solutions, and straightforward pricing.
           </p>
         </header>
 
@@ -191,11 +191,11 @@ export default function CallToAction() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full bg-white text-primary font-bold py-4 px-8 rounded-xl hover:bg-gray-50 hover:shadow-glow transform hover:-translate-y-1 transition-all duration-300 shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[48px] text-lg ${
+              className={`w-full bg-white text-primary font-bold py-4 px-8 rounded-xl hover:bg-gray-50 hover:shadow-glow transform hover:-translate-y-1 transition-all duration-300 shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[48px] text-lg border border-primary/30 focus:border-primary ${
                 isSubmitting ? "opacity-70 cursor-not-allowed transform-none" : ""
               }`}
             >
-              {isSubmitting ? "Sending..." : "Request Consultation"}
+              {isSubmitting ? "Sending..." : "Request Your Free Assessment"}
             </button>
           </form>
           )}
@@ -204,9 +204,9 @@ export default function CallToAction() {
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-600">
           <Link
             href="/services"
-            className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white/20 hover:shadow-glow transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary text-center min-h-[48px] flex items-center justify-center text-lg backdrop-blur-sm"
+            className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white/20 hover:shadow-glow transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary text-center min-h-[48px] flex items-center justify-center text-lg backdrop-blur-sm shadow-lg hover:shadow-xl"
           >
-            View Our Services
+            Explore Our Services
           </Link>
         </div>
       </div>

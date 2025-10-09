@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { GoogleCalendarIframe } from "@/components/OptimizedIframe";
 import { useAnalytics } from "@/components/Analytics";
 
@@ -97,18 +97,18 @@ export default function ContactPage() {
       />
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 max-w-7xl">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Contact Us</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Get in Touch</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            Get in touch with our team. We&apos;re here to help and answer any questions you might have.
+            We're your hometown tech partners here in Turtle Creek. Contact us for a free consultation about your tech needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto">
           <div className="order-2 lg:order-1">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Schedule a Meeting</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Book Your Visit</h2>
             <div className="mb-6 sm:mb-8">
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 sm:mb-6 leading-relaxed">
-                Book a consultation or meeting with our team using Google Bookings scheduling.
+                Schedule a free consultation with our local team. Business phone line coming soon. Contact us via email or schedule a visit below.
               </p>
               {/* Google Bookings Embed */}
               <div className="rounded-lg overflow-hidden shadow-lg">
@@ -205,7 +205,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary text-base transition-colors min-h-[48px]"
-                    placeholder="How can we help you?"
+                    placeholder="What tech help do you need?"
                     aria-describedby="subject-help"
                     aria-invalid="false"
                   />
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary text-base transition-colors resize-vertical min-h-[120px]"
-                    placeholder="Please provide details about your project or question..."
+                    placeholder="Tell us about your tech issue or question..."
                     aria-describedby="message-help"
                     aria-invalid="false"
                   ></textarea>
@@ -241,7 +241,7 @@ export default function ContactPage() {
                   className="w-full sm:w-auto bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 min-h-[48px] text-base sm:text-lg"
                   aria-describedby="submit-help"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Request Help"}
                 </button>
                 <div id="submit-help" className="sr-only">
                   {isSubmitting ? "Your message is being sent" : "Click to send your message to Three Rivers Tech"}
@@ -256,17 +256,15 @@ export default function ContactPage() {
             <div className="space-y-6 sm:space-y-8">
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 sm:p-4 mr-3 sm:mr-4 flex-shrink-0">
-                  <FaPhoneAlt className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                 </div>
                 <div className="flex-grow">
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Phone</h3>
-                  <a 
-                    href="tel:+14124035559"
-                    onClick={() => analytics.trackPhoneClick('(412) 403-5559')}
-                    className="text-sm sm:text-base lg:text-lg text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1 -m-1"
-                  >
-                    (412) 403-5559
-                  </a>
+                  <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary">
+                    Business phone line coming soon
+                  </p>
                 </div>
               </div>
 

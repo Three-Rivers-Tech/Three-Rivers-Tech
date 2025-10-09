@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  /* Modern Light Theme - Enhanced Color System */
+  /* Modern Light Theme - Community-Focused Color System */
   --background: #ffffff;
   --background-secondary: #f8fafc;
   --background-tertiary: #f1f5f9;
-  --background-accent: #e0f2fe;
+  --background-accent: #e0f7fa;
 
   /* Foreground colors with improved hierarchy */
   --foreground: #0f172a;
@@ -24,22 +24,22 @@
   --border-hover: #cbd5e1;
   --border-focus: #94a3b8;
 
-  /* Enhanced primary color system */
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --primary-dark: #1e40af;
-  --primary-light: #60a5fa;
-  --primary-50: #eff6ff;
-  --primary-100: #dbeafe;
-  --primary-500: #3b82f6;
-  --primary-900: #1e3a8a;
+  /* Community-focused primary color system (teal) */
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --primary-dark: #0f5d55;
+  --primary-light: #54d1bd;
+  --primary-50: #ecfdf9;
+  --primary-100: #d1fae9;
+  --primary-500: #0d9488;
+  --primary-900: #0f5d55;
 
-  /* Modern secondary colors */
-  --secondary: #7c3aed;
-  --secondary-hover: #6d28d9;
-  --secondary-light: #a78bfa;
-  --secondary-50: #f5f3ff;
-  --secondary-100: #ede9fe;
+  /* Community-focused secondary colors (amber) */
+  --secondary: #d97706;
+  --secondary-hover: #b45309;
+  --secondary-light: #fbbf24;
+  --secondary-50: #fffbeb;
+  --secondary-100: #fef3c7;
 
   /* Semantic colors */
   --success: #059669;
@@ -71,8 +71,8 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
-  --shadow-glow-lg: 0 0 30px rgba(37, 99, 235, 0.2);
+  --shadow-glow: 0 0 20px rgba(13, 148, 136, 0.15);
+  --shadow-glow-lg: 0 0 30px rgba(13, 148, 136, 0.2);
 
   /* Glass morphism effects */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -81,7 +81,7 @@
   --glass-backdrop-webkit: blur(10px);
 
   /* High contrast variants for accessibility */
-  --primary-contrast: #1e40af;
+  --primary-contrast: #0f5d55;
   --text-on-primary: #ffffff;
   --text-on-secondary: #ffffff;
   --text-on-success: #ffffff;
@@ -94,7 +94,7 @@
   --background: #0f172a;
   --background-secondary: #1e293b;
   --background-tertiary: #334155;
-  --background-accent: #1e3a8a;
+  --background-accent: #0d5d55;
 
   /* Enhanced foreground hierarchy for dark mode */
   --foreground: #f8fafc;
@@ -113,22 +113,22 @@
   --border-hover: #475569;
   --border-focus: #64748b;
 
-  /* Adjusted primary colors for dark mode */
-  --primary: #60a5fa;
-  --primary-hover: #3b82f6;
-  --primary-dark: #2563eb;
-  --primary-light: #93c5fd;
-  --primary-50: #1e3a8a;
-  --primary-100: #1e40af;
-  --primary-500: #3b82f6;
-  --primary-900: #dbeafe;
+  /* Community-focused primary colors for dark mode */
+  --primary: #54d1bd;
+  --primary-hover: #2dd4bf;
+  --primary-dark: #0d9488;
+  --primary-light: #7eddd6;
+  --primary-50: #0d5d55;
+  --primary-100: #0f5d55;
+  --primary-500: #2dd4bf;
+  --primary-900: #d1fae9;
 
   /* Dark mode secondary colors */
-  --secondary: #a78bfa;
-  --secondary-hover: #8b5cf6;
-  --secondary-light: #c4b5fd;
-  --secondary-50: #4c1d95;
-  --secondary-100: #5b21b6;
+  --secondary: #fbbf24;
+  --secondary-hover: #fcd34d;
+  --secondary-light: #fde68a;
+  --secondary-50: #78350f;
+  --secondary-100: #92400e;
 
   /* Dark mode semantic colors */
   --success: #34d399;
@@ -160,8 +160,8 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 20px rgba(96, 165, 250, 0.2);
-  --shadow-glow-lg: 0 0 30px rgba(96, 165, 250, 0.3);
+  --shadow-glow: 0 0 20px rgba(84, 209, 189, 0.2);
+  --shadow-glow-lg: 0 0 30px rgba(84, 209, 189, 0.3);
 
   /* Dark mode glass morphism */
   --glass-bg: rgba(0, 0, 0, 0.2);
@@ -170,7 +170,7 @@
   --glass-backdrop-webkit: blur(10px);
 
   /* High contrast variants for dark mode */
-  --primary-contrast: #3b82f6;
+  --primary-contrast: #2dd4bf;
   --text-on-primary: #0f172a;
   --text-on-secondary: #0f172a;
   --text-on-success: #0f172a;

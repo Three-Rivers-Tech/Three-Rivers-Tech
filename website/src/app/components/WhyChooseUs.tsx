@@ -1,34 +1,34 @@
 import { FaBullseye, FaLaptopCode, FaTools, FaDollarSign } from "../components/icons";
 
 export default function WhyChooseUs() {
-  // Realistic business metrics
-  const stats = [
-    { value: "5+", label: "Years of Experience", icon: "📅" },
-    { value: "25+", label: "Successful Projects", icon: "🚀" },
-    { value: "98%", label: "Client Satisfaction", icon: "⭐" },
-    { value: "24/7", label: "Support Available", icon: "🛟" }
+  // Honest business approach
+  const approach = [
+    { value: "New", label: "Startup Focus", icon: "🚀" },
+    { value: "Honest", label: "Transparent Pricing", icon: "💰" },
+    { value: "Local", label: "Community Focused", icon: "🏘️" },
+    { value: "Dedicated", label: "Hard Working", icon: "💪" }
   ];
 
   // Features data
   const features = [
     {
-      title: "Clear Communication",
-      description: "We provide transparent communication throughout every project, ensuring you understand our approach and progress at every step.",
+      title: "Upfront Pricing",
+      description: "No hidden fees or surprise charges. We provide clear, honest pricing estimates before starting any work.",
       icon: <FaBullseye className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     },
     {
-      title: "Efficient Solutions",
-      description: "We deliver streamlined technology solutions that integrate seamlessly with your existing business processes and workflows.",
+      title: "Honest Assessment",
+      description: "We'll tell you what you actually need, not try to sell you unnecessary services. No pressure, just practical solutions.",
       icon: <FaLaptopCode className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     },
     {
-      title: "Rapid Response",
-      description: "Our dedicated support team provides prompt resolution to technical issues, minimizing downtime and maintaining business continuity.",
+      title: "Reliable Service",
+      description: "As a startup, we're committed to building our reputation through reliable, dependable service to our neighbors.",
       icon: <FaTools className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     },
     {
-      title: "Cost-Effective Results",
-      description: "Our technology solutions optimize your operations and reduce manual processes, delivering measurable ROI for your business.",
+      title: "Community Focused",
+      description: "We're invested in our community's success, not just our bottom line. Supporting Turtle Creek residents and businesses.",
       icon: <FaDollarSign className="w-8 h-8 text-primary" suppressHydrationWarning={true} />
     }
   ];
@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
           {/* Section Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 animate-fade-in">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-            Why Choose Us
+            Our Approach
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up text-foreground">
@@ -48,13 +48,13 @@ export default function WhyChooseUs() {
           </h2>
           
           <p className="text-lg sm:text-xl md:text-2xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200 font-medium">
-            We combine technical expertise with a commitment to excellence to deliver outstanding results
+            We're a startup focused on providing honest, straightforward tech services to our community
           </p>
         </div>
 
-        {/* Statistics section */}
+        {/* Honest approach section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20 sm:mb-24">
-          {stats.map((stat, index) => (
+          {approach.map((item, index) => (
             <div
               key={index}
               className={`group relative bg-background dark:bg-background-secondary rounded-2xl shadow-soft hover:shadow-large transition-all duration-500 border border-border/50 hover:border-primary/20 p-6 sm:p-8 text-center animate-slide-up animation-delay-${400 + index * 100}`}
@@ -68,17 +68,17 @@ export default function WhyChooseUs() {
               <div className="relative">
                 {/* Icon */}
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  {item.icon}
                 </div>
                 
                 {/* Value */}
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-2 group-hover:text-primary-hover transition-colors duration-300">
-                  {stat.value}
+                  {item.value}
                 </div>
                 
                 {/* Label */}
                 <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary font-medium">
-                  {stat.label}
+                  {item.label}
                 </div>
               </div>
             </div>

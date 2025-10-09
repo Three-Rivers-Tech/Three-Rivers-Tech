@@ -8,7 +8,7 @@ export default function Header() {
         {/* Logo */}
         <Link 
           href="/" 
-          className="group flex items-center text-xl sm:text-2xl font-bold text-primary hover:text-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg p-2 -m-2 transition-all duration-300"
+          className="group flex items-center text-xl sm:text-2xl font-bold text-primary hover:text-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg p-2 -m-2 transition-all duration-300 border border-transparent hover:border-primary/20"
           aria-label="Three Rivers Tech - Go to homepage"
         >
           <div className="relative">
@@ -30,21 +30,28 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-1">
             <Link
               href="/services"
-              className="relative px-4 py-2 text-foreground-secondary hover:text-primary transition-colors text-base font-medium rounded-lg group"
+              className="relative px-4 py-2 text-foreground hover:text-primary-dark transition-colors text-base font-medium rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 nav-link bg-transparent hover:bg-background-secondary border border-transparent hover:border-border"
             >
               <span className="relative z-10">Services</span>
               <div className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link
               href="/portfolio"
-              className="relative px-4 py-2 text-foreground-secondary hover:text-primary transition-colors text-base font-medium rounded-lg group"
+              className="relative px-4 py-2 text-foreground hover:text-primary-dark transition-colors text-base font-medium rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 nav-link bg-transparent hover:bg-background-secondary border border-transparent hover:border-border"
             >
               <span className="relative z-10">Portfolio</span>
               <div className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link
+              href="/community-involvement"
+              className="relative px-4 py-2 text-foreground hover:text-primary-dark transition-colors text-base font-medium rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 nav-link bg-transparent hover:bg-background-secondary border border-transparent hover:border-border"
+            >
+              <span className="relative z-10">Community</span>
+              <div className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Link>
+            <Link
               href="/about"
-              className="relative px-4 py-2 text-foreground-secondary hover:text-primary transition-colors text-base font-medium rounded-lg group"
+              className="relative px-4 py-2 text-foreground hover:text-primary-dark transition-colors text-base font-medium rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 nav-link bg-transparent hover:bg-background-secondary border border-transparent hover:border-border"
             >
               <span className="relative z-10">About</span>
               <div className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -54,7 +61,7 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/contact"
-            className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:from-primary-hover hover:to-primary hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[44px] text-base"
+            className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:from-primary-hover hover:to-primary dark:hover:from-primary dark:hover:to-primary-hover shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 min-h-[44px] text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
             <span className="relative z-10">Contact</span>
             {/* Shine effect */}
@@ -64,7 +71,7 @@ export default function Header() {
           {/* Mobile Menu Button (for future implementation) */}
           <button
             type="button"
-            className="md:hidden p-2 text-foreground-secondary hover:text-primary transition-colors rounded-lg"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             aria-label="Open mobile menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

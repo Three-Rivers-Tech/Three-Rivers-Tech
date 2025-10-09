@@ -109,6 +109,8 @@ export const IMAGE_ALT_TEXT = {
   'service-icon-saas.png': 'SaaS Products - Innovative business solutions and software products icon',
   'service-icon-repair.png': 'Computer Repair Services - Hardware diagnostics and data recovery icon',
   'service-icon-1.png': 'Technology services icon representing comprehensive IT solutions',
+  'it_consult.png': 'Small Business IT Consultation Services - Professional IT solutions for local businesses',
+  'simple-web-design.png': 'Simple Website Design - Custom web design solution for local businesses',
   
   // Feature icons
   'feature-icon-1.png': 'Technology feature icon representing advanced capabilities',

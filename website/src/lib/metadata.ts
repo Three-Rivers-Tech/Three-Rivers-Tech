@@ -24,7 +24,7 @@ export const siteConfig = {
 // Business information for consistent contact details
 export const businessInfo = {
   name: "Three Rivers Tech",
-  phone: "+1-412-403-5559",
+  phone: "Business phone line coming soon",
   email: "info@threeriverstech.com",
   address: {
     street: "124 Grant Street",

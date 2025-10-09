@@ -19,10 +19,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://threeriverstech.com'),
   title: {
-    default: "Three Rivers Tech - Professional Technology Solutions",
+    default: "Three Rivers Tech - Your Hometown Tech Partner in Turtle Creek",
     template: "%s | Three Rivers Tech"
   },
-  description: "Professional technology solutions for modern businesses. Expert software development, IT consulting, SaaS products, and computer repair services.",
+  description: "Your hometown tech partner in Turtle Creek, PA. Big-city know-how at small-town prices. Expert computer repair, website design, and IT support for families and small businesses.",
 };
 
 export const viewport = {

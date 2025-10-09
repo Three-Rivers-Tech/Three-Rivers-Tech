@@ -65,7 +65,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/services"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px]"
+              className="group inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
             >
               <span>Explore Our Services</span>
               <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

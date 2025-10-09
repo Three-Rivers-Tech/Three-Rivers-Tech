@@ -1,0 +1,13 @@
+{
+  "showMemoryUsage": true,
+  "showLineNumbers": true,
+  "selectedAuthType": "qwen-oauth",
+  "enableOpenAILogging": false,
+  "approvalMode": "default",
+  "mcpServers": {
+    "context7": {
+      "command": "context7-mcp",
+      "args": ["--transport", "stdio"]
+    }
+  }
+}

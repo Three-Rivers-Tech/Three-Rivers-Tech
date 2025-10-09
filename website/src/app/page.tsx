@@ -3,6 +3,7 @@ import Services from "@/app/components/Services";
 import WhyChooseUs from "@/app/components/WhyChooseUs";
 import Testimonials from "@/app/components/Testimonials";
 import CallToAction from "@/app/components/CallToAction";
+import PortfolioSection from "@/app/components/PortfolioSection";
 import { generateStaticPageMetadata, generateLocalSeoMetadata } from "@/lib/metadata-generators";
 import StructuredData from "@/components/StructuredData";
 import { generatePageStructuredData } from "@/lib/structured-data";
@@ -17,6 +18,7 @@ export default function Home() {
         <EnhancedHero />
         <Services />
         <WhyChooseUs />
+        <PortfolioSection />
         <Testimonials />
         <CallToAction />
       </div>

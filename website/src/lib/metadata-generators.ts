@@ -205,19 +205,27 @@ export function generateMetadataWithBreadcrumbs(
   };
 }
 
-/**
+/** 
  * Generate location-specific metadata for local SEO
  */
 export function generateLocalSeoMetadata(baseMetadata: Metadata): Metadata {
   const localKeywords = [
-    "Pittsburgh technology services",
-    "Mon Valley tech company", 
-    "Pennsylvania software development",
-    "Turtle Creek IT services",
-    "Western PA computer repair"
+    "Turtle Creek PA computer repair",
+    "Mon Valley IT services",
+    "Western Pennsylvania tech support",
+    "Turtle Creek website design",
+    "local computer help PA",
+    "small business IT Turtle Creek",
+    "computer repair home visit",
+    "tech support for seniors",
+    "local website development PA",
+    "Turtle Creek business solutions",
+    "Monroeville area tech services",
+    "Pittsburgh suburb IT help"
   ];
 
-  const enhancedDescription = `${baseMetadata.description} Serving Pittsburgh, Mon Valley, and Western Pennsylvania.`;
+  // Enhanced description with local focus
+  const enhancedDescription = `${baseMetadata.description} Serving Turtle Creek, Mon Valley, and surrounding Pennsylvania communities with personalized tech solutions.`;
 
   return {
     ...baseMetadata,
