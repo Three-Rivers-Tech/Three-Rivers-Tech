@@ -130,7 +130,7 @@ export default function MobileNavigation() {
           <div
             ref={menuRef}
             id="mobile-menu"
-            className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ease-in-out"
+            className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-background dark:bg-background-secondary border-l border-border shadow-2xl transform transition-transform duration-300 ease-in-out"
             onKeyDown={handleKeyDown as any}
           >
             {/* Header */}
