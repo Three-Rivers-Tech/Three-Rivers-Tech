@@ -61,11 +61,11 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
 
   // About page
   about: {
-    title: "About Three Rivers Tech Turtle Creek PA | Local Tech Partners Since 2019",
-    description: "Meet Alex Johnson, founder of Three Rivers Tech in Turtle Creek PA. Local tech partner serving Mon Valley with computer repair, IT support, and community involvement since 2019.",
+    title: "About Three Rivers Tech Turtle Creek PA | Local Tech Partners",
+    description: "Meet Christian Penrod, founder of Three Rivers Tech in Turtle Creek PA. Local tech partner serving Mon Valley with computer repair, IT support, and community involvement. Penn State cybersecurity graduate.",
     keywords: [
       "about Three Rivers Tech Turtle Creek",
-      "Alex Johnson founder Turtle Creek PA",
+      "Christian Penrod founder Turtle Creek PA",
       "local tech company Mon Valley",
       "Turtle Creek resident tech support",
       "community involvement technology PA",

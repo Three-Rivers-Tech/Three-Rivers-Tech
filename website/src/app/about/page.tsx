@@ -38,7 +38,7 @@ export default function AboutPage() {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">About Three Rivers Tech</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            Your trusted local technology partners serving Turtle Creek and the Mon Valley since 2019
+            Your trusted local technology partners serving Turtle Creek and the Mon Valley
           </p>
         </div>
 
@@ -139,16 +139,17 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
-                  When Mrs. Patterson's grandson went off to college and she wanted to video chat with him, we set up her tablet for $25. 
-                  When Tony's Pizza needed a website but was struggling after the pandemic, we worked out a deal that fit his budget.
+                  My Help Desk experience has taught me to solve real problems quickly and explain technical solutions in plain English. 
+                  I&apos;ve also worked on various projects during my cybersecurity studies, including network security assessments 
+                  and web application security analysis that I can showcase on my GitHub.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Understanding Our Community's Real Needs</h3>
-                <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 leading-relaxed">
-                  Living in Turtle Creek for six years has taught me what our community really needs from technology. 
-                  It's not the latest gadgets or complex systems - it's reliable solutions that make daily life easier and more connected.
+                <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Understanding Our Community&apos;s Real Needs</h3>
+                <p className="text-sm sm:text-base text-foreground-secondary mb-4 leading-relaxed">
+                  Since moving to Turtle Creek in 2025, I&apos;ve been getting to know what our community really needs from technology. 
+                  It&apos;s not the latest gadgets or complex systems - it&apos;s reliable solutions that make daily life easier and more connected.
                 </p>
                 <div className="bg-background rounded-lg p-4 mb-4">
                   <h4 className="font-semibold mb-2 text-primary">What I've Learned About Our Community:</h4>
@@ -246,6 +247,78 @@ export default function AboutPage() {
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Fair, transparent pricing that serves the community</span>
               </li>
             </ul>
+          </div>
+
+          {/* Skills & Projects Section */}
+          <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Skills & Real-World Experience</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Cybersecurity Background</h3>
+                <p className="text-sm sm:text-base text-foreground-secondary mb-4 leading-relaxed">
+                  My Penn State education in Cybersecurity Analytics & Operations gives me a strong foundation in:
+                </p>
+                <ul className="space-y-2 text-sm text-foreground-secondary">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Network security assessment and monitoring
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Web application security analysis
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Risk assessment and vulnerability management
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Security policy development and implementation
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Help Desk & Technical Skills</h3>
+                <p className="text-sm sm:text-base text-foreground-secondary mb-4 leading-relaxed">
+                  Daily hands-on experience solving real technical problems:
+                </p>
+                <ul className="space-y-2 text-sm text-foreground-secondary">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Windows/Mac troubleshooting and system optimization
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Network configuration and connectivity issues
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Software installation and user training
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Remote support and clear technical communication
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/10 rounded-lg border-l-4 border-primary">
+              <h3 className="text-lg font-bold mb-2 text-primary">Projects & Portfolio</h3>
+              <p className="text-sm sm:text-base text-foreground-secondary leading-relaxed mb-3">
+                Check out my GitHub for examples of cybersecurity projects, automation scripts, and web development work. 
+                I believe in continuous learning and documenting my progress - you can see the real code behind my solutions.
+              </p>
+              <div className="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <a href="#" className="text-primary hover:text-primary-dark transition-colors">
+                  github.com/Zzzero-hash (Coming Soon)
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Community Involvement Section */}

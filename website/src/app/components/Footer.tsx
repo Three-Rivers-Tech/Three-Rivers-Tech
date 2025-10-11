@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-base text-foreground-secondary mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
-              Serving Turtle Creek and the Mon Valley since 2020.
+              Serving Turtle Creek and the Mon Valley.
             </p>
             <nav>
               <ul className="flex justify-center md:justify-start space-x-4">

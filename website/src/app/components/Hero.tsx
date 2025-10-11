@@ -26,7 +26,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse-soft"></span>
-            Serving Turtle Creek and the Mon Valley since 2020
+            Serving Turtle Creek and the Mon Valley
           </div>
 
           {/* Main Heading */}
