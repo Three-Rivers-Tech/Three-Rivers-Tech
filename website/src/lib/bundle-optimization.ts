@@ -12,6 +12,7 @@ type Reporter = (metric: BundleMetric) => void;
 
 // Internal no-op reporter; can be swapped later with analytics integration
 let reporter: Reporter = () => {};
+let initialized = false;
 
 export function setBundleMetricReporter(fn: Reporter) {
 	reporter = fn;
@@ -26,6 +27,9 @@ export function setBundleMetricReporter(fn: Reporter) {
  */
 export function monitorBundlePerformance() {
 	if (typeof window === 'undefined' || !('performance' in window)) return;
+
+	if (initialized) return; // prevent double reporting
+	initialized = true;
 
 	try {
 		const perf = window.performance as Performance & { getEntriesByType?: (type: string) => PerformanceEntry[] };
@@ -48,14 +52,35 @@ export function monitorBundlePerformance() {
 				reporter({ name: 'navigation-duration', value: loadEventEnd - navigationStart });
 			}
 		}
+  	// Optionally try to observe long tasks (if supported)
+  	try {
+      if ('PerformanceObserver' in window) {
+        const LongTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'longtask') {
+              reporter({ name: 'long-task', value: entry.duration });
+            }
+          }
+        });
+        // Some browsers may throw if 'longtask' unsupported
+	// Cast via unknown to satisfy strict typing without broad any usage
+	LongTaskObserver.observe({ entryTypes: ['longtask'] as unknown as PerformanceObserverInit['entryTypes'] });
+      }
+    } catch {/* ignore */}
+
 	} catch (err) {
-		// Silently ignore; this should never break the app
-			if (process.env.NODE_ENV !== 'production') {
-				console.debug('[bundle-optimization] monitor failed', err);
-			}
+		if (process.env.NODE_ENV !== 'production') {
+			console.debug('[bundle-optimization] monitor failed', err);
+		}
 	}
 }
 
-	// Default export object (kept minimal now)
-	const bundleOptimization = { monitorBundlePerformance, setBundleMetricReporter };
-	export default bundleOptimization;
+// Helper to reset internal state (test convenience only)
+export function __resetForTests() {
+  initialized = false;
+  reporter = () => {};
+}
+
+// Default export object (kept minimal now)
+const bundleOptimization = { monitorBundlePerformance, setBundleMetricReporter };
+export default bundleOptimization;

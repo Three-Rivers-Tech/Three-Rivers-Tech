@@ -60,26 +60,27 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Alex Johnson</h3>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Christian Penrod</h3>
                 <p className="text-sm sm:text-base text-primary font-semibold mb-2">Founder & Owner</p>
-                <p className="text-xs sm:text-sm text-foreground-secondary">Turtle Creek Resident Since 2018</p>
+                <p className="text-xs sm:text-sm text-foreground-secondary">Turtle Creek Resident Since 2025</p>
               </div>
               
               <div className="lg:col-span-2">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Meet Your Local Tech Partner</h2>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 sm:mb-6 leading-relaxed">
-                  Hi, I'm Alex, and I'm proud to call Turtle Creek home. After working in corporate IT for over a decade in Pittsburgh, 
-                  I realized that the same high-quality technology solutions available to big companies should be accessible to everyone in our community.
+                  Hi, I&apos;m Christian, and I&apos;m proud to call Turtle Creek home. I grew up in nearby Braddock Hills 
+                  and graduated from Penn State Greater Allegheny in 2025 with a degree in Cybersecurity Analytics & Operations. 
+                  Shortly after graduation, I was able to purchase 124 Grant Street and establish Three Rivers Tech right here in our community.
                 </p>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 sm:mb-6 leading-relaxed">
-                  I moved to Turtle Creek in 2018 and quickly fell in love with the tight-knit community spirit. When my neighbor Mrs. Patterson 
-                  asked for help with her computer, and then her friend needed Wi-Fi setup, I realized there was a real need for patient, 
-                  affordable tech support right here in our neighborhood.
+                  Currently, I work as a Help Desk Technician during the day while building Three Rivers Tech as my side business. 
+                  My goal is to grow this into a full-time operation that serves our community&apos;s technology needs with the same 
+                  care and attention I&apos;d want for my own family.
                 </p>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
-                  I have a degree in Computer Science and certifications in network administration, but what matters most is that I speak 
-                  plain English, not tech jargon. Whether you're a senior learning to video chat with grandkids or a local shop owner 
-                  needing a simple website, I'm here to help make technology work for you, not against you.
+                  Having grown up in this area, I understand the unique challenges our community faces. I speak 
+                  plain English, not tech jargon. Whether you&apos;re a senior learning to video chat with grandkids or a local business 
+                  owner needing reliable IT support, I&apos;m here to help make technology work for you, not against you.
                 </p>
               </div>
             </div>
@@ -92,12 +93,14 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">The Beginning</h3>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 leading-relaxed">
-                  After years of commuting to downtown Pittsburgh for corporate IT work, I was looking for a place to call home. 
-                  Turtle Creek's affordable housing, friendly neighbors, and strong community values drew me in immediately.
+                  After growing up in Braddock Hills and completing my Cybersecurity degree at Penn State Greater Allegheny, 
+                  I knew I wanted to stay in this area. The Mon Valley has always been home, and I wanted to contribute 
+                  to our community&apos;s growth and technological advancement.
                 </p>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
-                  What started as informal help for neighbors quickly grew into something bigger. People kept asking, "Do you know 
-                  anyone who can help with computers?" The answer was always me, and I realized our community needed a local tech partner.
+                  When I graduated in 2025, I was able to purchase 124 Grant Street and saw an opportunity to provide 
+                  professional IT services right here in Turtle Creek. What started as helping neighbors and local businesses 
+                  is growing into a full-time technology partner for our community.
                 </p>
               </div>
               
@@ -105,11 +108,11 @@ export default function AboutPage() {
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Why Turtle Creek?</h3>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 leading-relaxed">
                   This community has everything I value: neighbors who look out for each other, local businesses that care about their customers, 
-                  and families who've been here for generations. It's the perfect place to build a business based on relationships, not transactions.
+                  and families who&apos;ve been here for generations. It&apos;s the perfect place to build a business based on relationships, not transactions.
                 </p>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
                   I chose to set up shop at 124 Grant Street because I wanted to be right in the heart of our community. 
-                  When you need help, you shouldn't have to drive to some corporate office park - your tech support should be right down the street.
+                  When you need help, you shouldn&apos;t have to drive to some corporate office park - your tech support should be right down the street.
                 </p>
               </div>
             </div>
@@ -166,10 +169,10 @@ export default function AboutPage() {
             
             <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/10 rounded-lg border-l-4 border-primary">
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed italic">
-                "Technology should serve people, not the other way around. My job is to make sure it works for you, 
-                in your home, for your business, at a price that makes sense for your situation. That's my commitment to Turtle Creek."
+                &quot;Technology should serve people, not the other way around. My job is to make sure it works for you, 
+                in your home, for your business, at a price that makes sense for your situation. That&apos;s my commitment to Turtle Creek.&quot;
               </p>
-              <p className="text-sm font-semibold text-primary mt-2">- Alex Johnson, Founder</p>
+              <p className="text-sm font-semibold text-primary mt-2">- Christian Penrod, Founder</p>
             </div>
           </div>
 
@@ -290,14 +293,14 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Technical Expertise Made Simple</h3>
                 <p className="text-sm sm:text-base text-foreground-secondary mb-4 leading-relaxed">
-                  With over 12 years in IT and certifications in network administration, web development, and cybersecurity, 
-                  I bring enterprise-level expertise to everyday problems.
+                  With a degree in Cybersecurity Analytics & Operations from Penn State Greater Allegheny and experience as a Help Desk Technician, 
+                  I bring professional-level expertise to everyday problems while growing Three Rivers Tech into a full-time local technology partner.
                 </p>
                 <div className="bg-background rounded-lg p-4">
                   <h4 className="font-semibold mb-2 text-primary">What This Means for You:</h4>
                   <ul className="text-sm text-foreground-secondary space-y-1">
                     <li>• Your computer problems get solved right the first time</li>
-                    <li>• Your business gets the same quality IT as big companies</li>
+                    <li>• Your business gets quality IT support from someone who understands our community</li>
                     <li>• You get honest advice about what you actually need</li>
                     <li>• Complex tech gets explained in plain English</li>
                   </ul>
