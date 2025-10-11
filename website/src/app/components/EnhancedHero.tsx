@@ -1,34 +1,52 @@
 import Link from "next/link";
 
+/**
+ * Enhanced hero section with community-focused messaging
+ * 
+ * Features:
+ * - Rotating slide content (currently showing first slide)
+ * - Local business address badge
+ * - Warm, community-focused color gradients
+ * - Responsive typography and spacing
+ * - Dual CTA buttons for phone and booking
+ * - Animated background elements
+ * - Accessibility-compliant structure
+ * 
+ * @returns JSX element containing the hero section
+ */
 export default function EnhancedHero() {
-  // Startup-focused banner content with honest messaging
+  /**
+   * Slide configuration for hero content rotation
+   * Currently displays first slide only - can be made dynamic later
+   * Each slide contains community-focused messaging and consistent CTAs
+   */
   const slides = [
     {
-      title: "Hardworking Tech Startup Serving Turtle Creek",
-      subtitle: "Dedicated to providing honest, straightforward tech services to our community. New business with a commitment to excellence.",
-      ctaPrimary: "Contact Us for Free Consultation",
-      ctaSecondary: "View Our Services",
-      ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/services",
-      bgColor: "from-blue-600 to-blue-800" // Blue gradient
+      title: "Your Hometown Tech Partner in Turtle Creek",
+      subtitle: "Big-city know-how at small-town prices. We live here, work here, and understand your needs.",
+      ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+      ctaSecondary: "Book Your Home Visit Today",
+      ctaPrimaryLink: "tel:+14124035559",
+      ctaSecondaryLink: "/contact",
+      bgColor: "from-teal-600 to-emerald-700" // Warm, earthy tones
     },
     {
       title: "Simple Tech Solutions for Families and Small Businesses",
       subtitle: "From computer repairs to website design, we make technology accessible and affordable for everyone in our community.",
-      ctaPrimary: "Request a Free Assessment",
-      ctaSecondary: "View Our Services",
-      ctaPrimaryLink: "/contact",
-      ctaSecondaryLink: "/services",
-      bgColor: "from-cyan-600 to-cyan-800" // Cyan gradient
+      ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+      ctaSecondary: "Book Your Home Visit Today",
+      ctaPrimaryLink: "tel:+14124035559",
+      ctaSecondaryLink: "/contact",
+      bgColor: "from-emerald-600 to-teal-700" // Warm, earthy tones
     },
     {
-      title: "Startup Focused on Community Value",
-      subtitle: "As a new business in Turtle Creek, we're committed to providing genuine value to our neighbors and local businesses.",
-      ctaPrimary: "Learn About Our Services",
-      ctaSecondary: "Get Started Today",
-      ctaPrimaryLink: "/services",
+      title: "Serving Turtle Creek and the Mon Valley",
+      subtitle: "Your neighbors providing reliable tech support with personal service. We're here when you need us most.",
+      ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+      ctaSecondary: "Book Your Home Visit Today",
+      ctaPrimaryLink: "tel:+14124035559",
       ctaSecondaryLink: "/contact",
-      bgColor: "from-sky-600 to-sky-800" // Sky blue gradient
+      bgColor: "from-teal-700 to-green-700" // Warm, earthy tones
     }
   ];
 

@@ -1,37 +1,60 @@
 import ServiceCard from "./ServiceCard";
-import ComputerRepairIcon from "./icons/ComputerRepairIcon";
-import ITConsultingIcon from "./icons/ITConsultingIcon";
-import SaasProductsIcon from "./icons/SaasProductsIcon";
-import SoftwareDevelopmentIcon from "./icons/SoftwareDevelopmentIcon";
+import HomeTechSupportIcon from "./icons/HomeTechSupportIcon";
+import SmallBusinessIcon from "./icons/SmallBusinessIcon";
+import CommunityEducationIcon from "./icons/CommunityEducationIcon";
+import WebsiteDesignIcon from "./icons/WebsiteDesignIcon";
+import { PrimaryButton } from "@/components/ui";
 
-// Updated startup-focused services data with pricing
+/**
+ * Main services section showcasing community-focused offerings
+ * 
+ * Features:
+ * - Grid layout with responsive columns (1-3 columns)
+ * - Service cards with icons, descriptions, and CTAs
+ * - Community-focused service descriptions
+ * - Animated section badge and staggered card animations
+ * - Bottom CTA for general inquiries
+ * 
+ * Services displayed:
+ * - Home & Personal Tech Support
+ * - Small Business IT Packages  
+ * - Community Education
+ * - Simple Website Design
+ * 
+ * @returns JSX element containing the services section
+ */
+
+/**
+ * Service configuration array
+ * Each service includes icon component, description, and contact link
+ */
 const services = [
   {
     id: "home-support",
     title: "Home & Personal Tech Support",
-    description: "Computer repair ($75+), virus removal, Wi-Fi setup ($100), smartphone training ($60/hour) for seniors, and on-site visits ($25 fee) in Turtle Creek and surrounding areas.",
-    icon: ComputerRepairIcon,
+    description: "Computer repair, virus removal, Wi-Fi setup, and smartphone training for seniors. We come to you in Turtle Creek and surrounding areas.",
+    icon: HomeTechSupportIcon,
     link: "/contact?service=home-support",
   },
   {
     id: "small-business-it",
     title: "Small Business IT Packages",
-    description: "Affordable IT solutions for local businesses: network setup ($200+), cybersecurity ($300+ setup), website maintenance ($150/mo) with transparent pricing.",
-    icon: ITConsultingIcon,
+    description: "Affordable IT solutions for local businesses including network setup, cybersecurity, and website maintenance with transparent pricing.",
+    icon: SmallBusinessIcon,
     link: "/contact?service=small-business-it",
   },
   {
     id: "community-education",
     title: "Community Education",
     description: "Free workshops on basic computer skills, online safety, and digital marketing for local businesses and residents.",
-    icon: SaasProductsIcon,
+    icon: CommunityEducationIcon,
     link: "/contact?service=community-education",
   },
   {
     id: "web-development",
     title: "Simple Website Design",
-    description: "Professional, affordable websites starting at $499 for local businesses. Includes WordPress, SEO, and ongoing support ($50/mo).",
-    icon: SoftwareDevelopmentIcon,
+    description: "Professional, affordable websites starting at $499 for local businesses. Includes WordPress, SEO, and ongoing support.",
+    icon: WebsiteDesignIcon,
     link: "/contact?service=web-development",
   },
 ];
@@ -61,33 +84,63 @@ export default function Services() {
           </div>
         </header>
 
-        {/* Simplified layout with better accessibility - 2 columns for better readability */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto" role="list" aria-label="Our community services">
+        {/* Community-focused layout - 2-3 columns with friendly imagery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto" role="list" aria-label="Our community services">
           {services.map((service, index) => (
-            <div 
+            <article 
               key={service.id} 
               role="listitem"
-              className={`animate-slide-up animation-delay-${600 + index * 100} bg-white rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-shadow duration-300`}
+              className={`animate-slide-up animation-delay-${600 + index * 100} group`}
+              aria-labelledby={`service-title-${service.id}`}
+              aria-describedby={`service-desc-${service.id}`}
             >
-              <div className="flex items-start">
-                <div className="bg-primary rounded-lg p-3 mr-4 flex-shrink-0">
-                  <service.icon className="h-6 w-6 text-white" />
+              <div className="bg-background border-2 border-border rounded-2xl p-6 shadow-soft hover:shadow-large hover:border-primary/30 transition-all duration-300 h-full flex flex-col">
+                {/* Friendly, approachable icon */}
+                <div 
+                  className="bg-gradient-to-br from-primary to-primary-dark rounded-xl p-4 mb-4 w-fit group-hover:scale-110 transition-transform duration-300"
+                  aria-hidden="true"
+                >
+                  <service.icon className="h-8 w-8 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-                  <p className="text-foreground-secondary mb-4">{service.description}</p>
-                  <a
-                    href={service.link}
-                    className="inline-flex items-center text-primary font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1"
+                
+                <div className="flex-grow">
+                  <h3 
+                    id={`service-title-${service.id}`}
+                    className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300"
                   >
-                    Learn More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
+                    {service.title}
+                  </h3>
+                  
+                  {/* Shorter description with "Learn More" link */}
+                  <p 
+                    id={`service-desc-${service.id}`}
+                    className="text-foreground-secondary mb-4 leading-relaxed"
+                  >
+                    {service.description.length > 120 
+                      ? `${service.description.substring(0, 120)}...` 
+                      : service.description
+                    }
+                  </p>
                 </div>
+                
+                <a
+                  href={service.link}
+                  className="inline-flex items-center text-primary font-semibold hover:text-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-2 mt-auto group-hover:translate-x-1 transition-all duration-300 min-h-[44px]"
+                  aria-label={`Learn more about ${service.title}`}
+                >
+                  Learn More
+                  <svg 
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -96,15 +149,16 @@ export default function Services() {
           <p className="text-foreground-secondary mb-6 text-lg">
             Need help with a tech issue? We&apos;d love to assist you locally.
           </p>
-          <a
+          <PrimaryButton 
             href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            icon={
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            }
           >
-            <span>Request a Free Assessment</span>
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+            Request a Free Assessment
+          </PrimaryButton>
         </div>
       </div>
     </section>

@@ -5,26 +5,30 @@ import { getSocialImage } from "./social-images";
 // Base configuration for consistent metadata across the site
 export const siteConfig = {
   name: "Three Rivers Tech",
-  description: "Professional technology solutions for modern businesses. Expert software development, IT consulting, SaaS products, and computer repair services.",
+  description: "Your hometown tech partner in Turtle Creek, PA. Big-city know-how at small-town prices. Expert computer repair, website design, and IT support for families and small businesses.",
   url: "https://threeriverstech.com",
   ogImage: "/company_logo.png",
   creator: "Three Rivers Tech",
   keywords: [
-    "technology solutions",
-    "software development", 
-    "IT consulting",
-    "SaaS products",
-    "computer repair",
-    "business technology",
-    "custom software",
-    "tech support"
+    "computer repair Turtle Creek PA",
+    "IT services Turtle Creek 15145",
+    "web design Monroeville area",
+    "tech support Mon Valley",
+    "computer help Turtle Creek",
+    "small business IT Turtle Creek",
+    "website design Western Pennsylvania",
+    "home computer repair PA",
+    "tech support for seniors",
+    "local computer services",
+    "Turtle Creek technology",
+    "Mon Valley IT support"
   ]
 };
 
 // Business information for consistent contact details
 export const businessInfo = {
   name: "Three Rivers Tech",
-  phone: "Business phone line coming soon",
+  phone: "(412) 403-5559",
   email: "info@threeriverstech.com",
   address: {
     street: "124 Grant Street",
@@ -42,7 +46,15 @@ export const businessInfo = {
     linkedin: "https://www.linkedin.com/company/three-rivers-tech",
     twitter: "https://twitter.com/three_rivers_tech",
     facebook: "https://www.facebook.com/threeriverstech"
-  }
+  },
+  serviceAreas: [
+    "Turtle Creek, PA",
+    "Monroeville, PA", 
+    "Wilmerding, PA",
+    "Mon Valley",
+    "Western Pennsylvania",
+    "Pittsburgh Metro Area"
+  ]
 };
 
 // Interface for page-specific metadata configuration

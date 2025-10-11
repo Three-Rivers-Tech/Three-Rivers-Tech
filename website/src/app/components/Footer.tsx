@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-background-secondary border-t border-border py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <section className="text-center md:text-left">
             <div className="flex flex-col items-center md:items-start space-y-4 mb-6">
@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-base text-foreground-secondary mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
-              Serving Turtle Creek and the Mon Valley since 2025.
+              Serving Turtle Creek and the Mon Valley since 2020.
             </p>
             <nav>
               <ul className="flex justify-center md:justify-start space-x-4">
@@ -123,12 +123,35 @@ export default function Footer() {
             </nav>
           </section>
 
+          {/* Service Areas */}
+          <section className="text-center md:text-left">
+            <h4 className="text-lg font-semibold mb-6 text-foreground">Service Areas</h4>
+            <div className="text-foreground-secondary text-base space-y-2">
+              <p className="font-semibold text-primary">Turtle Creek, PA 15145</p>
+              <p>Monroeville, PA</p>
+              <p>Wilmerding, PA</p>
+              <p>East Pittsburgh, PA</p>
+              <p>Braddock, PA</p>
+              <p>Rankin, PA</p>
+              <p className="text-sm italic mt-3">Serving the entire Mon Valley region</p>
+            </div>
+          </section>
+
           {/* Contact Info */}
           <section className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-6 text-foreground">Contact Us</h4>
             <address className="not-italic text-foreground-secondary text-base space-y-2">
-              <p>124 Grant Street</p>
-              <p>Turtle Creek, PA 15145</p>
+              <p className="font-semibold text-foreground">124 Grant Street</p>
+              <p className="font-semibold text-foreground">Turtle Creek, PA 15145</p>
+              
+              <p className="mt-4">
+                <a 
+                  href="tel:+14124035559" 
+                  className="text-primary hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block font-semibold"
+                >
+                  Phone: (412) 403-5559
+                </a>
+              </p>
 
               <p>
                 <a 

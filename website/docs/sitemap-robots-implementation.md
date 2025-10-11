@@ -1,83 +1,15 @@
-# Automated Sitemap and Robots.txt Implementation
 
-## Overview
+# Automated Sitemap and Robots.txt Summary
 
-This implementation provides automated generation of `sitemap.xml` and `robots.txt` files using Next.js 15's built-in metadata API. The system is designed to be maintainable, SEO-optimized, and compatible with static export for Cloudflare Pages deployment.
+The Three Rivers Tech website uses automated generation of `sitemap.xml` and `robots.txt` via Next.js 15 metadata APIs. The system is SEO-optimized, maintainable, and compatible with static export for Cloudflare Pages.
 
-## Implementation Details
+Key features:
+- Automated, extensible sitemap and robots.txt generation
+- Centralized, type-safe configuration for pages and exclusions
+- SEO priorities and change frequencies set for all major pages
+- Proper exclusion of internal and API routes
 
-### Files Created
-
-1. **`src/app/sitemap.ts`** - Automated sitemap generation
-2. **`src/app/robots.ts`** - Automated robots.txt generation  
-3. **`src/lib/sitemap-config.ts`** - Centralized configuration
-4. **`scripts/test-sitemap.js`** - Validation script
-
-### Key Features
-
-#### Sitemap Generation (`sitemap.ts`)
-- Uses Next.js 15's `MetadataRoute.Sitemap` type
-- Automatically generates current timestamps
-- SEO-optimized priorities and change frequencies
-- Configured for static export compatibility
-- Extensible for dynamic content (portfolio items)
-
-#### Robots.txt Generation (`robots.ts`)
-- Uses Next.js 15's `MetadataRoute.Robots` type
-- Search engine specific rules (Googlebot, Bingbot)
-- Proper exclusion of API routes and internal directories
-- Automatic sitemap reference
-- Configured for static export compatibility
-
-#### Configuration System (`sitemap-config.ts`)
-- Centralized site configuration
-- Type-safe page definitions
-- Reusable utility functions
-- Easy maintenance and updates
-
-## Configuration
-
-### Site Configuration
-```typescript
-export const SITE_CONFIG = {
-  baseUrl: 'https://threeriverstech.com',
-  name: 'Three Rivers Tech',
-  description: 'Comprehensive Technology Solutions for Your Business',
-}
-```
-
-### Static Pages
-```typescript
-export const STATIC_PAGES: SitemapPage[] = [
-  { path: '/', priority: 1.0, changeFrequency: 'weekly' },
-  { path: '/services/', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/about/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/portfolio/', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/software-development/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/contact/', priority: 0.7, changeFrequency: 'yearly' },
-]
-```
-
-### Excluded Paths
-```typescript
-export const EXCLUDED_PATHS = [
-  '/api/',
-  '/_next/',
-  '/admin/',
-  '/private/',
-  '/search/', // Search results don't need indexing
-  '*.json',
-  '*.xml$',
-]
-```
-
-## SEO Optimization
-
-### Priority Settings
-- **Homepage (/)**: 1.0 - Highest priority
-- **Services**: 0.9 - High priority for business pages
-- **About/Portfolio/Software Development**: 0.8 - Important content pages
-- **Contact**: 0.7 - Lower priority, static information
+All configuration and validation scripts are maintained for easy updates and reliable deployment.
 
 ### Change Frequencies
 - **Homepage**: Weekly - Regular content updates

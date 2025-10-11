@@ -1,5 +1,28 @@
 import { businessInfo, siteConfig } from "./metadata";
 
+/**
+ * Structured data (Schema.org) generation utilities
+ * 
+ * This module provides comprehensive structured data generation for SEO
+ * and rich snippets in search results. All schemas follow Schema.org
+ * specifications and are optimized for local business search.
+ * 
+ * Key features:
+ * - Organization and LocalBusiness schemas
+ * - Service-specific structured data
+ * - WebPage and WebSite schemas with search functionality
+ * - Breadcrumb navigation markup
+ * - Local SEO optimization for Turtle Creek, PA
+ * - JSON-LD format output for search engines
+ * 
+ * Usage:
+ * ```tsx
+ * import { generateOrganizationSchema } from '@/lib/structured-data';
+ * 
+ * const orgSchema = generateOrganizationSchema();
+ * ```
+ */
+
 // Base structured data interfaces
 export interface StructuredDataBase {
   "@context": string;
@@ -170,7 +193,12 @@ export function generateOrganizationSchema(): OrganizationSchema {
     foundingDate: "2014",
     numberOfEmployees: "2-10",
     areaServed: [
-      "Pittsburgh, PA",
+      "Turtle Creek, PA 15145",
+      "Monroeville, PA",
+      "Wilmerding, PA",
+      "Mon Valley, PA", 
+      "Western Pennsylvania",
+      "Pittsburgh Metro Area",
       "Pennsylvania",
       "United States"
     ]
@@ -178,13 +206,29 @@ export function generateOrganizationSchema(): OrganizationSchema {
 }
 
 /**
- * Generate LocalBusiness structured data
+ * Generate LocalBusiness structured data with enhanced local SEO
  */
-export function generateLocalBusinessSchema(): LocalBusinessSchema {
+export function generateLocalBusinessSchema(): LocalBusinessSchema & {
+  description: string;
+  areaServed: string[];
+  hasOfferCatalog?: {
+    "@type": "OfferCatalog";
+    name: string;
+    itemListElement: Array<{
+      "@type": "Offer";
+      itemOffered: {
+        "@type": "Service";
+        name: string;
+        description: string;
+      };
+    }>;
+  };
+} {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: businessInfo.name,
+    description: "Your hometown tech partner in Turtle Creek, PA offering computer repair, website design, and IT support with big-city expertise at small-town prices.",
     image: `${siteConfig.url}${siteConfig.ogImage}`,
     telephone: businessInfo.phone,
     email: businessInfo.email,
@@ -196,6 +240,14 @@ export function generateLocalBusinessSchema(): LocalBusinessSchema {
       postalCode: businessInfo.address.zipCode,
       addressCountry: businessInfo.address.country
     },
+    areaServed: [
+      "Turtle Creek, PA 15145",
+      "Monroeville, PA",
+      "Wilmerding, PA", 
+      "Mon Valley, PA",
+      "Western Pennsylvania",
+      "Pittsburgh Metro Area"
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -227,6 +279,36 @@ export function generateLocalBusinessSchema(): LocalBusinessSchema {
       reviewCount: 25,
       bestRating: 5,
       worstRating: 1
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Three Rivers Tech Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Computer Repair Turtle Creek PA",
+            description: "Professional computer repair services including virus removal, hardware diagnostics, and system optimization for Turtle Creek residents."
+          }
+        },
+        {
+          "@type": "Offer", 
+          itemOffered: {
+            "@type": "Service",
+            name: "Website Design Monroeville Area",
+            description: "Affordable website design and development services for small businesses in Monroeville and surrounding Mon Valley communities."
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service", 
+            name: "IT Support Mon Valley",
+            description: "Comprehensive IT support services for small businesses and home users throughout the Mon Valley region."
+          }
+        }
+      ]
     }
   };
 }

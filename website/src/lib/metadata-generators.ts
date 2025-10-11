@@ -3,6 +3,22 @@ import { generatePageMetadata, siteConfig } from "./metadata";
 import { getPageSeoConfig, getServiceSeoConfig } from "./seo-config";
 
 /**
+ * Metadata generation utilities for consistent SEO across the site
+ * 
+ * This module provides functions to generate Next.js metadata objects
+ * for different page types with proper SEO optimization, local search
+ * enhancement, and structured data integration.
+ * 
+ * Key features:
+ * - Static page metadata generation
+ * - Service-specific metadata with enhanced descriptions
+ * - Portfolio and blog page metadata
+ * - Local SEO optimization for Turtle Creek, PA
+ * - Error page metadata
+ * - Search page metadata
+ */
+
+/**
  * Generate metadata for static pages using predefined configurations
  */
 export function generateStaticPageMetadata(pageKey: string): Metadata {
@@ -210,26 +226,47 @@ export function generateMetadataWithBreadcrumbs(
  */
 export function generateLocalSeoMetadata(baseMetadata: Metadata): Metadata {
   const localKeywords = [
-    "Turtle Creek PA computer repair",
-    "Mon Valley IT services",
-    "Western Pennsylvania tech support",
-    "Turtle Creek website design",
-    "local computer help PA",
-    "small business IT Turtle Creek",
-    "computer repair home visit",
-    "tech support for seniors",
-    "local website development PA",
-    "Turtle Creek business solutions",
-    "Monroeville area tech services",
-    "Pittsburgh suburb IT help"
+    "computer repair Turtle Creek PA 15145",
+    "IT services Turtle Creek Pennsylvania", 
+    "web design Monroeville area",
+    "tech support Mon Valley PA",
+    "computer help Turtle Creek residents",
+    "small business IT Turtle Creek PA",
+    "home computer repair visits PA",
+    "tech support seniors Turtle Creek",
+    "website development Mon Valley",
+    "Turtle Creek business technology",
+    "Monroeville area computer services",
+    "Wilmerding PA tech support",
+    "Pittsburgh suburb IT help",
+    "Western Pennsylvania computer repair",
+    "local tech services 15145",
+    "affordable IT support Turtle Creek"
   ];
 
-  // Enhanced description with local focus
-  const enhancedDescription = `${baseMetadata.description} Serving Turtle Creek, Mon Valley, and surrounding Pennsylvania communities with personalized tech solutions.`;
+  // Enhanced description with local focus and phone number
+  const enhancedDescription = `${baseMetadata.description} Serving Turtle Creek PA 15145, Monroeville, Wilmerding, and Mon Valley communities. Call (412) 403-5559 for local tech support.`;
+
+  // Combine existing keywords with local keywords
+  const existingKeywords = typeof baseMetadata.keywords === 'string' ? baseMetadata.keywords : '';
+  const combinedKeywords = existingKeywords ? `${existingKeywords}, ${localKeywords.join(', ')}` : localKeywords.join(', ');
+
+  // Filter out undefined values from baseMetadata.other
+  const filteredOther = baseMetadata.other ? 
+    Object.fromEntries(
+      Object.entries(baseMetadata.other).filter(([_, value]) => value !== undefined)
+    ) : {};
 
   return {
     ...baseMetadata,
     description: enhancedDescription,
-    keywords: `${baseMetadata.keywords}, ${localKeywords.join(', ')}`,
+    keywords: combinedKeywords,
+    other: {
+      ...filteredOther,
+      "geo.region": "PA-US",
+      "geo.placename": "Turtle Creek",
+      "geo.position": "40.4058;-79.8214",
+      "ICBM": "40.4058, -79.8214"
+    }
   };
 }

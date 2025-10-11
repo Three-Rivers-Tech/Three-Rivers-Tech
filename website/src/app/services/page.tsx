@@ -15,9 +15,9 @@ export default function ServicesPage() {
       <StructuredData data={generatePageStructuredData("services")} />
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 max-w-7xl">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Serving Turtle Creek & Local Businesses</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Serving Turtle Creek & Mon Valley Communities</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            Honest, straightforward technology solutions from a hardworking startup committed to our community
+            Computer repair, IT support, and website design for Turtle Creek, Monroeville, Wilmerding, and surrounding Mon Valley communities
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function ServicesPage() {
         <div className="text-center mt-16 sm:mt-20">
           <p className="text-foreground-secondary mb-6 text-lg max-w-2xl mx-auto">
             Can't find what you need? We offer custom solutions for your specific tech challenges. 
-            Business phone line coming soon. Contact us through our form to discuss your needs.
+            Serving Turtle Creek PA 15145, Monroeville, Wilmerding, and the entire Mon Valley region. Call (412) 403-5559.
           </p>
           <a
             href="/contact"

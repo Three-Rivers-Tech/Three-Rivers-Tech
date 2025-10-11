@@ -208,6 +208,77 @@ export function announceToScreenReader(message: string, priority: 'polite' | 'as
   
   // Remove the announcement after a short delay
   setTimeout(() => {
-    document.body.removeChild(announcement);
+    if (document.body.contains(announcement)) {
+      document.body.removeChild(announcement);
+    }
   }, 1000);
+}
+
+/**
+ * Create a skip link for keyboard navigation
+ */
+export function createSkipLink(targetId: string, text: string): HTMLAnchorElement {
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'sr-only-focusable';
+  skipLink.style.position = 'absolute';
+  skipLink.style.top = '0';
+  skipLink.style.left = '0';
+  skipLink.style.zIndex = '9999';
+  
+  return skipLink;
+}
+
+/**
+ * Manage focus for modal dialogs
+ */
+export function manageFocusForModal(modalElement: HTMLElement, previouslyFocusedElement?: HTMLElement): () => void {
+  const focusableElements = getFocusableElements(modalElement);
+  
+  // Focus the first focusable element
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+  
+  // Return cleanup function
+  return () => {
+    if (previouslyFocusedElement) {
+      restoreFocus(previouslyFocusedElement);
+    }
+  };
+}
+
+/**
+ * Check if user is using keyboard navigation
+ */
+export function isUsingKeyboard(): boolean {
+  return document.body.classList.contains('keyboard-navigation');
+}
+
+/**
+ * Initialize keyboard navigation detection
+ */
+export function initKeyboardNavigation(): void {
+  let isUsingKeyboard = false;
+  
+  // Detect keyboard usage
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab') {
+      isUsingKeyboard = true;
+      document.body.classList.add('keyboard-navigation');
+    }
+  });
+  
+  // Detect mouse usage
+  document.addEventListener('mousedown', () => {
+    isUsingKeyboard = false;
+    document.body.classList.remove('keyboard-navigation');
+  });
+  
+  // Detect touch usage
+  document.addEventListener('touchstart', () => {
+    isUsingKeyboard = false;
+    document.body.classList.remove('keyboard-navigation');
+  });
 }

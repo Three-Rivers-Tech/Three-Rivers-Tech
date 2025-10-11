@@ -1,68 +1,7 @@
-"use client";
-
-import { useState } from "react";
 import { FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { GoogleCalendarIframe } from "@/components/OptimizedIframe";
-import { useAnalytics } from "@/components/Analytics";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-  const analytics = useAnalytics();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        await response.json(); // Consume the response but don't store it
-        setSubmitStatus("success");
-        
-        // Track successful form submission
-        analytics.trackFormSubmission('contact_form', true);
-        
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setSubmitStatus("idle"), 5000); // Reset after 5 seconds
-      } else {
-        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-        setSubmitStatus("error");
-        
-        // Track form submission error
-        analytics.trackFormSubmission('contact_form', false, errorData.error || 'API error');
-      }
-    } catch (error) {
-      setSubmitStatus("error");
-      
-      // Track form submission error
-      analytics.trackFormSubmission('contact_form', false, error instanceof Error ? error.message : 'Network error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -99,7 +38,7 @@ export default function ContactPage() {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Get in Touch</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            We're your hometown tech partners here in Turtle Creek. Contact us for a free consultation about your tech needs.
+            We're your hometown tech partners here in Turtle Creek. Request a free assessment of your tech needs - we're here to help with simple, affordable solutions.
           </p>
         </div>
 
@@ -108,7 +47,7 @@ export default function ContactPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Book Your Visit</h2>
             <div className="mb-6 sm:mb-8">
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 sm:mb-6 leading-relaxed">
-                Schedule a free consultation with our local team. Business phone line coming soon. Contact us via email or schedule a visit below.
+                Schedule a free assessment with our local team. We'll come to your home or business in Turtle Creek and surrounding areas. Contact us via email or schedule a visit below.
               </p>
               {/* Google Bookings Embed */}
               <div className="rounded-lg overflow-hidden shadow-lg">
@@ -120,134 +59,42 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {submitStatus === "error" && (
-              <div 
-                className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6"
-                role="alert"
-                aria-live="polite"
-              >
-                <p>
-                  <strong>Error:</strong> Failed to send message. Please try again or contact us directly.
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                <h3 className="text-xl font-semibold text-blue-800 mb-4">Ready to Get Started?</h3>
+                <p className="text-blue-700 mb-4">
+                  The easiest way to get help is to call us directly or schedule a visit using the calendar below. 
+                  We'll discuss your tech needs and provide a free assessment.
                 </p>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <span className="font-semibold text-blue-800 mr-2">📞</span>
+                    <span className="text-blue-700">Call us: (412) 403-5559</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="font-semibold text-blue-800 mr-2">📧</span>
+                    <a 
+                      href="mailto:info@threeriverstech.com?subject=Tech Help Request&body=Hi! I need help with:%0D%0A%0D%0ADevice Type: %0D%0AProblem: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
+                      className="text-blue-700 hover:text-blue-900 underline"
+                    >
+                      Email us: info@threeriverstech.com
+                    </a>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="font-semibold text-blue-800 mr-2">📅</span>
+                    <span className="text-blue-700">Or schedule below using our calendar</span>
+                  </div>
+                </div>
               </div>
-            )}
 
-            {submitStatus === "success" && (
-              <div 
-                className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6"
-                role="alert"
-                aria-live="polite"
-              >
-                <p>
-                  <strong>Success:</strong> Message sent successfully! We&apos;ll get back to you soon.
-                </p>
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" noValidate>
-              <fieldset className="space-y-4 sm:space-y-6">
-                <legend className="sr-only">Contact form</legend>
-                
-                <div>
-                  <label htmlFor="name" className="block text-foreground-secondary mb-2 font-medium text-sm sm:text-base">
-                    Name <span className="text-red-500" aria-label="required">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    autoComplete="name"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary text-base transition-colors min-h-[48px]"
-                    placeholder="Your full name"
-                    aria-describedby="name-help"
-                    aria-invalid="false"
-                  />
-                  <div id="name-help" className="sr-only">
-                    Enter your full name for us to address you properly
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-foreground-secondary mb-2 font-medium text-sm sm:text-base">
-                    Email <span className="text-red-500" aria-label="required">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    autoComplete="email"
-                    inputMode="email"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary text-base transition-colors min-h-[48px]"
-                    placeholder="your.email@example.com"
-                    aria-describedby="email-help"
-                    aria-invalid="false"
-                  />
-                  <div id="email-help" className="sr-only">
-                    Enter a valid email address so we can respond to your message
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-foreground-secondary mb-2 font-medium text-sm sm:text-base">
-                    Subject <span className="text-red-500" aria-label="required">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary text-base transition-colors min-h-[48px]"
-                    placeholder="What tech help do you need?"
-                    aria-describedby="subject-help"
-                    aria-invalid="false"
-                  />
-                  <div id="subject-help" className="sr-only">
-                    Brief description of what you need help with
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-foreground-secondary mb-2 font-medium text-sm sm:text-base">
-                    Message <span className="text-red-500" aria-label="required">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background-secondary text-base transition-colors resize-vertical min-h-[120px]"
-                    placeholder="Tell us about your tech issue or question..."
-                    aria-describedby="message-help"
-                    aria-invalid="false"
-                  ></textarea>
-                  <div id="message-help" className="sr-only">
-                    Provide detailed information about your request or question
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 min-h-[48px] text-base sm:text-lg"
-                  aria-describedby="submit-help"
-                >
-                  {isSubmitting ? "Sending..." : "Request Help"}
-                </button>
-                <div id="submit-help" className="sr-only">
-                  {isSubmitting ? "Your message is being sent" : "Click to send your message to Three Rivers Tech"}
-                </div>
-              </fieldset>
-            </form>
+            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+              <h3 className="text-lg font-semibold text-green-800 mb-2">Response Time</h3>
+              <p className="text-green-700 text-sm">
+                We typically respond to all emails within 24 hours during business days. 
+                For urgent issues, please call us directly at (412) 403-5559.
+              </p>
+            </div>
+            </div>
           </div>
 
           <div className="order-1 lg:order-2">
@@ -263,7 +110,12 @@ export default function ContactPage() {
                 <div className="flex-grow">
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Phone</h3>
                   <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary">
-                    Business phone line coming soon
+                    <a 
+                      href="tel:+14124035559"
+                      className="text-primary hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 -m-1"
+                    >
+                      (412) 403-5559
+                    </a>
                   </p>
                 </div>
               </div>
@@ -276,7 +128,6 @@ export default function ContactPage() {
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Email</h3>
                   <a 
                     href="mailto:info@threeriverstech.com"
-                    onClick={() => analytics.trackEmailClick('info@threeriverstech.com')}
                     className="text-sm sm:text-base lg:text-lg text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1 -m-1 break-all"
                   >
                     info@threeriverstech.com

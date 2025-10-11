@@ -1,5 +1,24 @@
 import { structuredDataToJsonLd } from "@/lib/structured-data";
 
+/**
+ * React component for injecting structured data (JSON-LD) into pages
+ * 
+ * This component handles the safe injection of Schema.org structured data
+ * into the document head for SEO and rich snippet generation.
+ * 
+ * Features:
+ * - Supports single schema or array of schemas
+ * - Safe HTML injection using dangerouslySetInnerHTML
+ * - Unique IDs for multiple schemas on same page
+ * - Specialized components for common schema types
+ * 
+ * @example
+ * ```tsx
+ * <StructuredData data={organizationSchema} />
+ * <StructuredData data={[orgSchema, localBusinessSchema]} />
+ * ```
+ */
+
 interface StructuredDataProps {
   data: unknown | unknown[];
   id?: string;

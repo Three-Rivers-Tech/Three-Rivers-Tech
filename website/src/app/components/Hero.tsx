@@ -1,8 +1,16 @@
-import Link from "next/link";
+import CommunityImagery from "./CommunityImagery";
+import { SecondaryButton } from "@/components/ui";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-secondary min-h-[80vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[80vh] flex items-center">
+      {/* Community Background Image */}
+      <CommunityImagery 
+        type="hero-background"
+        alt="Turtle Creek community with modern technology - representing local roots and technical expertise"
+        className="absolute inset-0"
+        priority={true}
+      />
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
@@ -18,30 +26,30 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse-soft"></span>
-            Trusted by 25+ businesses across Pennsylvania
+            Serving Turtle Creek and the Mon Valley since 2020
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-slide-up">
-            Professional IT Services for{" "}
-            <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Growing Businesses
+            Your Hometown Tech Partner in{" "}
+            <span className="bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent">
+              Turtle Creek
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Transform your business with enterprise-grade technology solutions. 
-            From custom software development to comprehensive IT support, we deliver results that drive growth.
+            Big-city know-how at small-town prices. We live here, work here, and understand your needs.
+            From home computer repair to small business websites, we make technology accessible for everyone.
           </p>
 
           {/* Service Pills */}
           <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             {[
-              "Enterprise Software Solutions",
-              "IT Infrastructure & Support", 
-              "SaaS Integration",
-              "Hardware Maintenance"
+              "Home & Personal Tech Support",
+              "Small Business IT Packages", 
+              "Computer Repair & Setup",
+              "Community Education"
             ].map((service, index) => (
               <span 
                 key={index}
@@ -52,41 +60,55 @@ export default function Hero() {
             ))}
           </div>
 
+          {/* Local Address Badge */}
+          <div className="inline-flex items-center px-6 py-3 rounded-xl bg-white/15 backdrop-blur-sm border border-white/30 text-white mb-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span className="font-medium">124 Grant Street, Turtle Creek, PA 15145</span>
+          </div>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-            <Link
+            <SecondaryButton 
               href="/contact"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-50 hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px]"
+              variant="outline-white"
+              className="bg-white text-primary hover:bg-gray-50 border-white hover:border-white hover:text-primary"
+              icon={
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              }
             >
-              <span>Schedule a Consultation</span>
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              href="/services"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
+              Call (412) 403-5559 for Free Consultation
+            </SecondaryButton>
+            <SecondaryButton
+              href="/contact"
+              variant="outline-white"
+              icon={
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              }
             >
-              <span>Explore Our Services</span>
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+              Book Your Home Visit Today
+            </SecondaryButton>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-white/20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <p className="text-white/70 text-sm mb-4">Trusted by businesses across industries</p>
+            <p className="text-white/70 text-sm mb-4">Proudly serving our neighbors in</p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="text-white/60 text-xs font-medium">Healthcare</div>
+              <div className="text-white/60 text-xs font-medium">Turtle Creek</div>
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="text-white/60 text-xs font-medium">Manufacturing</div>
+              <div className="text-white/60 text-xs font-medium">Wilmerding</div>
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="text-white/60 text-xs font-medium">Finance</div>
+              <div className="text-white/60 text-xs font-medium">Monroeville</div>
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="text-white/60 text-xs font-medium">Legal</div>
+              <div className="text-white/60 text-xs font-medium">East Pittsburgh</div>
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="text-white/60 text-xs font-medium">Retail</div>
+              <div className="text-white/60 text-xs font-medium">Mon Valley</div>
             </div>
           </div>
         </div>

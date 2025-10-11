@@ -6,15 +6,15 @@
     "shortDescription": "Computer repair and tech support right in your home",
     "icon": "FaTools",
     "features": [
-      "Computer Repair & Virus Removal",
-      "Wi-Fi Network Setup & Optimization",
-      "Smartphone Setup & Training",
-      "Senior Computer Classes",
-      "On-Site Home Visits",
+      "Computer Repair & Virus Removal ($75-200)",
+      "Wi-Fi Optimization & Setup ($100)",
+      "Smartphone Setup & Training for Seniors ($60/hour)",
+      "Data Backup & Recovery ($100-300)",
       "Software Installation & Updates",
-      "Data Backup & Recovery",
+      "Email Setup & Management",
+      "On-Site Visits (Turtle Creek & surrounding areas)",
       "Printer Troubleshooting",
-      "Email Setup & Management"
+      "Patient, step-by-step instruction"
     ],
     "benefits": [
       "No need to transport devices",
@@ -23,11 +23,12 @@
       "Local, reliable support",
       "Same-day service available",
       "Personal attention to your needs",
-      "Secure handling of personal data"
+      "Secure handling of personal data",
+      "On-site fee waived for seniors 65+"
     ],
     "pricing": {
       "startingPrice": "$60",
-      "priceRange": "$60-$150"
+      "priceRange": "$60-$300"
     },
     "cta": {
       "text": "Book Home Visit",
@@ -42,15 +43,15 @@
     "shortDescription": "IT support designed for small local businesses",
     "icon": "FaLaptop",
     "features": [
-      "Starter Website Package ($500)",
-      "Small Office IT Setup",
-      "Managed Care Plan ($75/month)",
-      "Local Business SEO",
+      "Starter Website Package ($500) - WordPress, SEO, domain registration",
+      "Small Office IT Setup ($300-600) - routers, security, printer integration",
+      "Managed Care Plan ($75/month) - maintenance and help desk support",
+      "Local Business SEO & Google My Business",
       "Email Setup & Management",
-      "Point of Sale Systems",
-      "Simple Inventory Tracking",
+      "Point of Sale Systems Integration",
       "Basic Cybersecurity Package",
-      "Monthly System Maintenance"
+      "Monthly System Maintenance",
+      "Priority Support for Managed Care clients"
     ],
     "benefits": [
       "Transparent, upfront pricing",
@@ -59,34 +60,36 @@
       "Solutions tailored for small businesses",
       "Help with technology decisions",
       "Peace of mind with managed service",
-      "Cost-effective alternatives to expensive services"
+      "Cost-effective alternatives to expensive services",
+      "No hidden fees policy"
     ],
     "pricing": {
-      "startingPrice": "$500",
-      "priceRange": "$75-$500"
+      "startingPrice": "$300",
+      "priceRange": "$75-$600"
     },
     "cta": {
-      "text": "Get Business Quote",
+      "text": "Request a Free Assessment",
       "href": "/contact?service=small-business-it"
     },
     "image": "/images/services/small-business-it.jpg"
   },
   {
     "id": "community-education",
-    "title": "Community Education",
-    "description": "Free workshops on basic computer skills, online safety, and digital marketing for local businesses and residents.",
-    "shortDescription": "Free tech workshops for the community",
+    "title": "Community Education & Learning Center",
+    "description": "Free workshops on basic computer skills, online safety, and digital marketing for local businesses and residents, plus downloadable guides and tutorials.",
+    "shortDescription": "Free tech workshops and learning resources for the community",
     "icon": "FaBook",
     "features": [
-      "Free Basic Computer Classes",
-      "Online Safety Workshops",
+      "Free Basic Computer Skills Classes",
+      "Online Safety & Security Training",
+      "Smartphone & Tablet Training Sessions",
+      "Email & Internet Basics",
       "Digital Marketing for Small Businesses",
       "Social Media for Local Shops",
-      "Email and Internet Basics",
-      "Smartphone Training",
-      "Online Shopping and Banking",
-      "Understanding Tech Terms",
-      "Downloadable Guides & Tutorials"
+      "Google My Business Training",
+      "Downloadable Guides & Tutorials",
+      "Video Learning Resources",
+      "Monthly Tech Tips Newsletter"
     ],
     "benefits": [
       "No cost to community members",
@@ -95,7 +98,8 @@
       "Practical, everyday applications",
       "Build confidence with technology",
       "Connect with other community members",
-      "Ongoing support after classes"
+      "Ongoing support after classes",
+      "Learn at your own pace with resources"
     ],
     "pricing": {
       "startingPrice": "Free",
@@ -103,7 +107,7 @@
     },
     "cta": {
       "text": "View Workshop Schedule",
-      "href": "/contact?service=community-education"
+      "href": "/learning-center"
     },
     "image": "/images/services/community-education.jpg"
   },
