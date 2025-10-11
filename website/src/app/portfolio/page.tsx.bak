@@ -1,0 +1,198 @@
+import { generateStaticPageMetadata, generateLocalSeoMetadata } from "@/lib/metadata-generators";
+import Link from "next/link";
+
+export const metadata = generateLocalSeoMetadata(generateStaticPageMetadata("portfolio"));
+
+export default function PortfolioPage() {
+  // Local community-focused projects showcasing range of services
+  const projects: PortfolioProject[] = [
+    {
+      id: "turtle-creek-hardware",
+      title: "Turtle Creek Hardware Website",
+      description: "Designed and developed a professional website for the local hardware store to help them reach more customers online.",
+      services: ["Website Design", "Local SEO", "Ongoing Support"],
+      image: "/images/projects/turtle-creek-hardware.jpg",
+      client: "Turtle Creek Hardware",
+      location: "Turtle Creek, PA",
+      year: "2024",
+      category: "website",
+      clientType: "local-business",
+      challenge: "Local hardware store needed online presence to compete with big box stores and reach younger customers.",
+      solution: "Created mobile-friendly website with product catalog, store hours, and local SEO optimization.",
+      outcome: "40% increase in foot traffic from online searches, improved customer engagement with younger demographics.",
+      technologies: ["WordPress", "Local SEO", "Google My Business"]
+    },
+    {
+      id: "wilmerding-bakery",
+      title: "Wilmerding Bakery Online Presence",
+      description: "Created a simple but effective website and social media strategy for a local family-owned bakery.",
+      services: ["Website Development", "Social Media Setup", "Email Marketing"],
+      image: "/images/projects/wilmerding-bakery.jpg",
+      client: "Wilmerding Bakery",
+      location: "Wilmerding, PA",
+      year: "2023",
+      category: "website",
+      clientType: "local-business",
+      challenge: "Family bakery relied only on walk-in customers and word-of-mouth marketing.",
+      solution: "Built simple website with daily specials, online ordering, and social media integration.",
+      outcome: "25% increase in daily orders, expanded customer base beyond immediate neighborhood.",
+      technologies: ["WordPress", "WooCommerce", "Facebook Integration"]
+    },
+    {
+      id: "mon-valley-tutoring",
+      title: "Mon Valley Tutoring Platform",
+      description: "Built an online platform for local tutors to connect with students in the Mon Valley area.",
+      services: ["Web Application", "Database Design", "User Management"],
+      image: "/images/projects/mon-valley-tutoring.jpg",
+      client: "Mon Valley Tutoring",
+      location: "Monroeville, PA",
+      year: "2024",
+      category: "software",
+      clientType: "local-business",
+      challenge: "Local tutoring service needed way to manage students, schedules, and payments efficiently.",
+      solution: "Custom web application with student profiles, scheduling system, and payment processing.",
+      outcome: "Streamlined operations, reduced administrative time by 50%, improved parent communication.",
+      technologies: ["React", "Node.js", "Stripe", "Calendar API"]
+    },
+    {
+      id: "penn-ave-auto",
+      title: "Penn Ave Auto Repair System",
+      description: "Developed a simple booking and inventory system for a local auto repair shop.",
+      services: ["Custom Software", "Database Integration", "Mobile Solution"],
+      image: "/images/projects/penn-ave-auto.jpg",
+      client: "Penn Ave Auto Repair",
+      location: "Turtle Creek, PA",
+      year: "2023",
+      category: "software",
+      clientType: "local-business",
+      challenge: "Auto shop used paper scheduling and struggled with parts inventory management.",
+      solution: "Simple booking system with inventory tracking and customer communication tools.",
+      outcome: "Eliminated double-bookings, improved parts ordering efficiency, better customer service.",
+      technologies: ["PHP", "MySQL", "SMS Integration"]
+    },
+    {
+      id: "community-center",
+      title: "Turtle Creek Community Center Portal",
+      description: "A web portal for community members to access event calendars, register for classes, and communicate with staff.",
+      services: ["Web Portal", "User Authentication", "Event Management"],
+      image: "/images/projects/community-center.jpg",
+      client: "Turtle Creek Community Center",
+      location: "Turtle Creek, PA",
+      year: "2024",
+      category: "community",
+      clientType: "community-org",
+      challenge: "Community center relied on phone calls and bulletin boards for event registration and communication.",
+      solution: "User-friendly portal with event calendar, online registration, and community announcements.",
+      outcome: "Increased event participation by 60%, reduced administrative workload, improved community engagement.",
+      technologies: ["WordPress", "Event Management Plugin", "User Registration"]
+    },
+    {
+      id: "senior-center",
+      title: "Turtle Creek Senior Center Resources",
+      description: "Digital resources hub for local seniors with information on services, activities, and technology training.",
+      services: ["Web Design", "Accessibility Optimization", "Content Management"],
+      image: "/images/projects/senior-center.jpg",
+      client: "Turtle Creek Senior Center",
+      location: "Turtle Creek, PA",
+      year: "2023",
+      category: "community",
+      clientType: "community-org",
+      challenge: "Senior center needed accessible website to share resources and connect with seniors and their families.",
+      solution: "High-contrast, large-text website with easy navigation and accessibility features.",
+      outcome: "Improved information access for seniors and families, increased program participation.",
+      technologies: ["WordPress", "Accessibility Plugins", "Large Font Design"]
+    },
+    {
+      id: "home-computer-repair",
+      title: "Residential Computer Repair Services",
+      description: "On-site computer repair and setup services for Turtle Creek families and seniors.",
+      services: ["Computer Repair", "Virus Removal", "Senior Training"],
+      image: "/images/projects/home-computer-repair.jpg",
+      client: "Local Residents",
+      location: "Turtle Creek Area",
+      year: "2023-2024",
+      category: "support",
+      clientType: "resident",
+      challenge: "Many residents struggled with slow computers, viruses, and technology setup without local support options.",
+      solution: "Door-to-door computer repair service with patient, friendly support and senior-focused training.",
+      outcome: "Helped 50+ families with computer issues, provided ongoing tech support to local seniors.",
+      technologies: ["Hardware Diagnostics", "Antivirus Software", "Windows/Mac Support"]
+    },
+    {
+      id: "small-business-it",
+      title: "Small Business IT Support Package",
+      description: "Affordable IT support and setup services for local shops and small businesses.",
+      services: ["Network Setup", "POS Integration", "Ongoing Support"],
+      image: "/images/projects/small-business-it.jpg",
+      client: "Various Local Businesses",
+      location: "Turtle Creek & Mon Valley",
+      year: "2023-2024",
+      category: "support",
+      clientType: "local-business",
+      challenge: "Small businesses needed reliable IT support but couldn't afford expensive corporate IT services.",
+      solution: "Affordable monthly support packages with network setup, POS integration, and help desk services.",
+      outcome: "Provided IT support to 15+ local businesses, improved their technology reliability and efficiency.",
+      technologies: ["Network Hardware", "POS Systems", "Remote Support Tools"]
+    }
+  ];
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Our Portfolio - Local Projects & Community Impact",
+            "description": "Explore our featured technology projects and case studies for businesses and organizations in Turtle Creek and the Mon Valley area.",
+            "url": "https://threeriverstech.com/portfolio",
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://threeriverstech.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Portfolio",
+                  "item": "https://threeriverstech.com/portfolio"
+                }
+              ]
+            }
+          })
+        }}
+      />
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 max-w-7xl">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Our Local Impact</h1>
+          <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
+            Projects we've completed for businesses and organizations right here in Turtle Creek and the Mon Valley
+          </p>
+        </div>
+
+        {/* Portfolio Projects with Filtering */}
+        <CommunityPortfolioClient projects={projects} />
+
+        <div className="text-center mt-16 sm:mt-20">
+          <p className="text-foreground-secondary mb-6 text-lg max-w-2xl mx-auto">
+            Interested in working with us? We'd love to discuss your project and how we can help your business or organization succeed in our community.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px]"
+          >
+            <span>Start Your Project</span>
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
