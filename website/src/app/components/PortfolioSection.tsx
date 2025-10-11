@@ -50,17 +50,19 @@ export default function PortfolioSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
           {serviceCapabilities.map((service, index) => (
-            <div 
+            <article 
               key={service.id} 
-              className={`bg-white rounded-xl overflow-hidden shadow-lg border border-border transition-all duration-300 hover:shadow-xl animate-slide-up animation-delay-${400 + index * 100}`}
+              className={`bg-background dark:bg-background-secondary rounded-2xl overflow-hidden shadow-soft hover:shadow-large border border-border/50 dark:border-border hover:border-primary/20 dark:hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 animate-slide-up animation-delay-${400 + index * 100}`}
+              role="article"
+              aria-labelledby={`service-${service.id}-title`}
             >
               <div className="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white text-6xl">
                 {service.icon}
               </div>
               
-              <div className="p-6">
+              <div className="p-6 sm:p-8">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
+                  <h3 id={`service-${service.id}-title`} className="text-xl font-bold text-foreground">{service.title}</h3>
                   <span className="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">
                     {service.category}
                   </span>
@@ -78,14 +80,15 @@ export default function PortfolioSection() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
         <div className="text-center mt-12 sm:mt-16">
           <Link
             href="/services"
-            className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover hover:shadow-glow transition-all duration-300 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover hover:shadow-glow hover:scale-105 transition-all duration-300 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            aria-label="View all available services"
           >
             <span>View All Services</span>
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

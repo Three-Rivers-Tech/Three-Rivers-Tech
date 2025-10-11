@@ -10,7 +10,37 @@ db.sqlite3
 .roo/
 .roo
 
+# Node modules
 node_modules/
 node_modules
+**/node_modules/
+
+# Build output
+.next/
+out/
+dist/
+build/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Images (source files kept in public/)
 img/
-img

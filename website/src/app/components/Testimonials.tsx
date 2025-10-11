@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { PrimaryButton } from "@/components/ui";
 
 const testimonials = [
   {
@@ -39,9 +39,11 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div 
+            <article 
               key={testimonial.id}
-              className="bg-background border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
+              className="bg-background dark:bg-background-secondary border border-border/50 dark:border-border rounded-2xl p-6 sm:p-8 hover:border-primary/20 dark:hover:border-primary/30 hover:shadow-large hover:-translate-y-1 transition-all duration-300"
+              role="article"
+              aria-label={`Testimonial from ${testimonial.name}`}
             >
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -64,25 +66,21 @@ export default function Testimonials() {
                 <p className="font-bold text-foreground">{testimonial.name}</p>
                 <p className="text-sm text-foreground-secondary">{testimonial.role}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
         <div className="text-center mt-16">
-          <Link
+          <PrimaryButton 
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:from-primary-hover hover:to-primary hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px] text-base"
+            icon={
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            }
           >
             Join Our Satisfied Clients
-            <svg 
-              className="w-5 h-5 ml-2" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          </PrimaryButton>
         </div>
       </div>
     </section>
