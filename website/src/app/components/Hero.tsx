@@ -32,7 +32,7 @@ export default function Hero() {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-slide-up">
             Your Hometown Tech Partner in{" "}
-            <span className="bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Turtle Creek
             </span>
           </h1>

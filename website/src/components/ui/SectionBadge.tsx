@@ -84,10 +84,10 @@ export default function SectionBadge({
       'text-green-700'
     ],
     warning: [
-      'bg-yellow-50',
+      'bg-blue-50',
       'border',
-      'border-yellow-200',
-      'text-yellow-700'
+      'border-blue-200',
+      'text-blue-700'
     ]
   };
 
@@ -96,7 +96,7 @@ export default function SectionBadge({
     primary: 'bg-primary',
     secondary: 'bg-secondary',
     success: 'bg-green-500',
-    warning: 'bg-yellow-500'
+    warning: 'bg-blue-500'
   };
 
   // Combine all classes

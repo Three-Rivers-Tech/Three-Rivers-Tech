@@ -29,7 +29,7 @@ export default function CommunityProjectCard({ project }: CommunityProjectCardPr
       case 'software':
         return 'bg-green-100 text-green-800';
       case 'support':
-        return 'bg-orange-100 text-orange-800';
+        return 'bg-sky-100 text-sky-800';
       case 'community':
         return 'bg-purple-100 text-purple-800';
       default:

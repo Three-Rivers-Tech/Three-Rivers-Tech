@@ -49,7 +49,7 @@ export default function Testimonials() {
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg 
                     key={i} 
-                    className="w-5 h-5 text-yellow-400" 
+                    className="w-5 h-5 text-blue-400" 
                     fill="currentColor" 
                     viewBox="0 0 20 20"
                   >

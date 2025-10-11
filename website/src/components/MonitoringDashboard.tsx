@@ -115,14 +115,14 @@ export default function MonitoringDashboard() {
         
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-300">API Errors:</span>
-          <span className="font-medium text-orange-600 dark:text-orange-400">
+          <span className="font-medium text-blue-600 dark:text-blue-400">
             {errorSummary.apiErrors}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-300">JS Errors:</span>
-          <span className="font-medium text-yellow-600 dark:text-yellow-400">
+          <span className="font-medium text-sky-600 dark:text-sky-400">
             {errorSummary.jsErrors}
           </span>
         </div>
@@ -142,19 +142,19 @@ export default function MonitoringDashboard() {
             </button>
             <button
               onClick={() => testError('api')}
-              className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded hover:bg-orange-200"
+              className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded hover:bg-blue-200"
             >
               API Error
             </button>
             <button
               onClick={() => testError('network')}
-              className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded hover:bg-yellow-200"
+              className="text-xs bg-sky-100 text-sky-800 px-2 py-1 rounded hover:bg-sky-200"
             >
               Network
             </button>
             <button
               onClick={() => testError('custom')}
-              className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded hover:bg-blue-200"
+              className="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded hover:bg-indigo-200"
             >
               Custom
             </button>

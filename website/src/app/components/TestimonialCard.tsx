@@ -16,7 +16,7 @@ export default function TestimonialCard({
         key={index}
         className={`text-lg transition-colors duration-300 ${
           index < rating 
-            ? "text-yellow-400 group-hover:text-yellow-300" 
+            ? "text-blue-400 group-hover:text-blue-300" 
             : "text-gray-300 dark:text-gray-600"
         }`}
         aria-hidden="true"

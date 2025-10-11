@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 
 import BackButton from './BackButton';
 
-export default function CaseStudyPage({ params }: { params: { id: string } }) {
+export default async function CaseStudyPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   // Community-focused case studies with detailed project information
   interface CaseStudy {
     id: string;
@@ -237,8 +238,8 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
     }
   };
 
-  const caseStudy = caseStudies[params.id] || {
-    id: params.id,
+  const caseStudy = caseStudies[id] || {
+    id: id,
     title: "Case Study Not Found",
     description: "The requested case study could not be found.",
     category: "Unknown",
