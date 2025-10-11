@@ -4,8 +4,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "./components/Footer";
 import StructuredData from "@/components/StructuredData";
-import AccessibilityControls from "@/components/AccessibilityControls";
-import AccessibilityInitializer from "@/components/AccessibilityInitializer";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebSiteSchema } from "@/lib/structured-data";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -23,7 +21,7 @@ export const metadata: Metadata = {
   description: 'Straightforward, community-focused technology services: web design, IT support, repairs, and custom software for small business & neighbors.',
   applicationName: 'Three Rivers Tech',
   keywords: [
-    'IT support','web design','software development','computer repair','Mon Valley','small business tech','accessibility','performance'
+    'IT support','web design','software development','computer repair','Mon Valley','small business tech'
   ],
   authors: [{ name: 'Three Rivers Tech' }],
   creator: 'Three Rivers Tech',
@@ -71,12 +69,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">Skip to main content</a>
-        <AccessibilityInitializer />
         <Header />
         <main id="main-content" role="main">{children}</main>
         <Footer />
-        <AccessibilityControls />
         <StructuredData data={[generateOrganizationSchema(), generateLocalBusinessSchema(), generateWebSiteSchema()]} />
       </body>
     </html>

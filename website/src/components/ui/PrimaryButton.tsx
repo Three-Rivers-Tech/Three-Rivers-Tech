@@ -44,14 +44,7 @@ export interface PrimaryButtonProps {
 
 /**
  * Primary CTA button with consistent styling across the site
- * 
- * Features:
- * - Gradient or solid background options
- * - Shine effect on hover
- * - Scale transform on hover
- * - Shadow effects
- * - Optional icon support
- * - Renders as Link or button element based on props
+ * Uses pure Tailwind classes for styling
  */
 export default function PrimaryButton({ 
   children, 
@@ -63,7 +56,7 @@ export default function PrimaryButton({
   gradient = true,
   type = 'button'
 }: PrimaryButtonProps) {
-  const baseClasses = "group relative inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 min-h-[48px] text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2";
+  const baseClasses = "group relative inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 min-h-[48px] text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 overflow-hidden";
   
   const backgroundClasses = gradient
     ? "bg-gradient-to-r from-primary to-primary-dark hover:from-primary-hover hover:to-primary dark:hover:from-primary dark:hover:to-primary-hover"
@@ -79,8 +72,8 @@ export default function PrimaryButton({
           {icon}
         </span>
       )}
-      {/* Shine effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-700 rounded-xl"></div>
+      {/* Shine effect on hover */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-700 rounded-xl"></div>
     </>
   );
   

@@ -26,8 +26,6 @@ export function createDynamicImport<T extends ComponentType<unknown>>(
 // Lazy load non-critical components
 export const LazySearch = lazy(() => import('@/app/components/Search'));
 
-export const LazyAccessibilityChecker = lazy(() => import('@/components/AccessibilityChecker'));
-
 export const LazyOpenGraphPreview = lazy(() => import('@/components/OpenGraphPreview'));
 
 export const LazySocialShare = lazy(() => import('@/components/SocialShare'));

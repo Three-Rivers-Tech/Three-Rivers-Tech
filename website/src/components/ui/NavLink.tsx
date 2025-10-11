@@ -24,12 +24,7 @@ export interface NavLinkProps {
 
 /**
  * Reusable navigation link component with consistent hover effects and accessibility
- * 
- * Features:
- * - Consistent styling across all navigation links
- * - Hover effects with background and border transitions
- * - Focus ring for keyboard navigation
- * - Responsive text sizing
+ * Uses pure Tailwind classes for modern styling
  */
 export default function NavLink({ 
   href, 
@@ -40,11 +35,10 @@ export default function NavLink({
   return (
     <Link
       href={href}
-      className={`relative px-4 py-2 text-foreground hover:text-primary-dark transition-colors text-base font-medium rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 nav-link bg-transparent hover:bg-background-secondary border border-transparent hover:border-border ${className}`}
+      className={`px-4 py-2.5 text-foreground font-medium rounded-lg transition-colors duration-200 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 no-underline ${className}`}
       aria-label={ariaLabel}
     >
-      <span className="relative z-10">{children}</span>
-      <div className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      {children}
     </Link>
   );
 }
