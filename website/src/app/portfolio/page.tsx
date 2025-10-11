@@ -1,159 +1,9 @@
 import { generateStaticPageMetadata, generateLocalSeoMetadata } from "@/lib/metadata-generators";
-import CommunityPortfolioClient from "./components/CommunityPortfolioClient";
+import Link from "next/link";
 
 export const metadata = generateLocalSeoMetadata(generateStaticPageMetadata("portfolio"));
 
-// Portfolio project interface for type safety
-interface PortfolioProject {
-  id: string;
-  title: string;
-  description: string;
-  services: string[];
-  image: string;
-  client: string;
-  location: string;
-  year: string;
-  category: 'website' | 'software' | 'support' | 'community';
-  challenge?: string;
-  solution?: string;
-  outcome?: string;
-  technologies?: string[];
-  clientType: 'local-business' | 'community-org' | 'resident';
-}
-
 export default function PortfolioPage() {
-  // Local community-focused projects showcasing range of services
-  const projects: PortfolioProject[] = [
-    {
-      id: "turtle-creek-hardware",
-      title: "Turtle Creek Hardware Website",
-      description: "Designed and developed a professional website for the local hardware store to help them reach more customers online.",
-      services: ["Website Design", "Local SEO", "Ongoing Support"],
-      image: "/images/projects/turtle-creek-hardware.jpg",
-      client: "Turtle Creek Hardware",
-      location: "Turtle Creek, PA",
-      year: "2024",
-      category: "website",
-      clientType: "local-business",
-      challenge: "Local hardware store needed online presence to compete with big box stores and reach younger customers.",
-      solution: "Created mobile-friendly website with product catalog, store hours, and local SEO optimization.",
-      outcome: "40% increase in foot traffic from online searches, improved customer engagement with younger demographics.",
-      technologies: ["WordPress", "Local SEO", "Google My Business"]
-    },
-    {
-      id: "wilmerding-bakery",
-      title: "Wilmerding Bakery Online Presence",
-      description: "Created a simple but effective website and social media strategy for a local family-owned bakery.",
-      services: ["Website Development", "Social Media Setup", "Email Marketing"],
-      image: "/images/projects/wilmerding-bakery.jpg",
-      client: "Wilmerding Bakery",
-      location: "Wilmerding, PA",
-      year: "2023",
-      category: "website",
-      clientType: "local-business",
-      challenge: "Family bakery relied only on walk-in customers and word-of-mouth marketing.",
-      solution: "Built simple website with daily specials, online ordering, and social media integration.",
-      outcome: "25% increase in daily orders, expanded customer base beyond immediate neighborhood.",
-      technologies: ["WordPress", "WooCommerce", "Facebook Integration"]
-    },
-    {
-      id: "mon-valley-tutoring",
-      title: "Mon Valley Tutoring Platform",
-      description: "Built an online platform for local tutors to connect with students in the Mon Valley area.",
-      services: ["Web Application", "Database Design", "User Management"],
-      image: "/images/projects/mon-valley-tutoring.jpg",
-      client: "Mon Valley Tutoring",
-      location: "Monroeville, PA",
-      year: "2024",
-      category: "software",
-      clientType: "local-business",
-      challenge: "Local tutoring service needed way to manage students, schedules, and payments efficiently.",
-      solution: "Custom web application with student profiles, scheduling system, and payment processing.",
-      outcome: "Streamlined operations, reduced administrative time by 50%, improved parent communication.",
-      technologies: ["React", "Node.js", "Stripe", "Calendar API"]
-    },
-    {
-      id: "penn-ave-auto",
-      title: "Penn Ave Auto Repair System",
-      description: "Developed a simple booking and inventory system for a local auto repair shop.",
-      services: ["Custom Software", "Database Integration", "Mobile Solution"],
-      image: "/images/projects/penn-ave-auto.jpg",
-      client: "Penn Ave Auto Repair",
-      location: "Turtle Creek, PA",
-      year: "2023",
-      category: "software",
-      clientType: "local-business",
-      challenge: "Auto shop used paper scheduling and struggled with parts inventory management.",
-      solution: "Simple booking system with inventory tracking and customer communication tools.",
-      outcome: "Eliminated double-bookings, improved parts ordering efficiency, better customer service.",
-      technologies: ["PHP", "MySQL", "SMS Integration"]
-    },
-    {
-      id: "community-center",
-      title: "Turtle Creek Community Center Portal",
-      description: "A web portal for community members to access event calendars, register for classes, and communicate with staff.",
-      services: ["Web Portal", "User Authentication", "Event Management"],
-      image: "/images/projects/community-center.jpg",
-      client: "Turtle Creek Community Center",
-      location: "Turtle Creek, PA",
-      year: "2024",
-      category: "community",
-      clientType: "community-org",
-      challenge: "Community center relied on phone calls and bulletin boards for event registration and communication.",
-      solution: "User-friendly portal with event calendar, online registration, and community announcements.",
-      outcome: "Increased event participation by 60%, reduced administrative workload, improved community engagement.",
-      technologies: ["WordPress", "Event Management Plugin", "User Registration"]
-    },
-    {
-      id: "senior-center",
-      title: "Turtle Creek Senior Center Resources",
-      description: "Digital resources hub for local seniors with information on services, activities, and technology training.",
-      services: ["Web Design", "Accessibility Optimization", "Content Management"],
-      image: "/images/projects/senior-center.jpg",
-      client: "Turtle Creek Senior Center",
-      location: "Turtle Creek, PA",
-      year: "2023",
-      category: "community",
-      clientType: "community-org",
-      challenge: "Senior center needed accessible website to share resources and connect with seniors and their families.",
-      solution: "High-contrast, large-text website with easy navigation and accessibility features.",
-      outcome: "Improved information access for seniors and families, increased program participation.",
-      technologies: ["WordPress", "Accessibility Plugins", "Large Font Design"]
-    },
-    {
-      id: "home-computer-repair",
-      title: "Residential Computer Repair Services",
-      description: "On-site computer repair and setup services for Turtle Creek families and seniors.",
-      services: ["Computer Repair", "Virus Removal", "Senior Training"],
-      image: "/images/projects/home-computer-repair.jpg",
-      client: "Local Residents",
-      location: "Turtle Creek Area",
-      year: "2023-2024",
-      category: "support",
-      clientType: "resident",
-      challenge: "Many residents struggled with slow computers, viruses, and technology setup without local support options.",
-      solution: "Door-to-door computer repair service with patient, friendly support and senior-focused training.",
-      outcome: "Helped 50+ families with computer issues, provided ongoing tech support to local seniors.",
-      technologies: ["Hardware Diagnostics", "Antivirus Software", "Windows/Mac Support"]
-    },
-    {
-      id: "small-business-it",
-      title: "Small Business IT Support Package",
-      description: "Affordable IT support and setup services for local shops and small businesses.",
-      services: ["Network Setup", "POS Integration", "Ongoing Support"],
-      image: "/images/projects/small-business-it.jpg",
-      client: "Various Local Businesses",
-      location: "Turtle Creek & Mon Valley",
-      year: "2023-2024",
-      category: "support",
-      clientType: "local-business",
-      challenge: "Small businesses needed reliable IT support but couldn't afford expensive corporate IT services.",
-      solution: "Affordable monthly support packages with network setup, POS integration, and help desk services.",
-      outcome: "Provided IT support to 15+ local businesses, improved their technology reliability and efficiency.",
-      technologies: ["Network Hardware", "POS Systems", "Remote Support Tools"]
-    }
-  ];
-
   return (
     <>
       <script
@@ -162,8 +12,8 @@ export default function PortfolioPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Our Portfolio - Local Projects & Community Impact",
-            "description": "Explore our featured technology projects and case studies for businesses and organizations in Turtle Creek and the Mon Valley area.",
+            "name": "Portfolio - Building Our Community Together",
+            "description": "As Three Rivers Tech grows, this page will showcase real projects completed for Turtle Creek businesses and residents.",
             "url": "https://threeriverstech.com/portfolio",
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -185,30 +35,168 @@ export default function PortfolioPage() {
           })
         }}
       />
-      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 max-w-5xl">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Our Local Impact</h1>
-          <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            Projects we've completed for businesses and organizations right here in Turtle Creek and the Mon Valley
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 animate-fade-in">
+            <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
+            Building Together
+          </div>
+          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            Portfolio Coming Soon
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-3xl mx-auto leading-relaxed px-2">
+            Growing Three Rivers Tech one project at a time
           </p>
         </div>
 
-        {/* Portfolio Projects with Filtering */}
-        <CommunityPortfolioClient projects={projects} />
+        <div className="bg-background-secondary rounded-2xl shadow-lg p-8 sm:p-10 lg:p-12 mb-12">
+          <div className="max-w-3xl mx-auto">
+            <div className="mb-8 text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 mb-6">
+                <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+                Building My First Clients
+              </h2>
+            </div>
 
-        <div className="text-center mt-16 sm:mt-20">
-          <p className="text-foreground-secondary mb-6 text-lg max-w-2xl mx-auto">
-            Interested in working with us? We'd love to discuss your project and how we can help your business or organization succeed in our community.
+            <div className="space-y-6 text-foreground-secondary leading-relaxed">
+              <p className="text-base sm:text-lg">
+                Hey there! Christian here, founder of Three Rivers Tech. I wanted to be honest with you - I'm just getting started building my client base here in Turtle Creek.
+              </p>
+
+              <p className="text-base sm:text-lg">
+                Rather than show you fake projects or borrowed work, I'd rather tell you the truth: <strong className="text-foreground">I'm actively looking for my first local clients</strong> to build real relationships with. When I complete projects for our community, you'll see genuine case studies here - not stock photos or made-up stories.
+              </p>
+
+              <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6 my-8">
+                <h3 className="text-lg font-bold mb-3 text-primary">What You Can Expect:</h3>
+                <ul className="space-y-3 text-foreground-secondary">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span><strong>Honest work:</strong> I'll never claim credit for projects I didn't do</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span><strong>Real experience:</strong> My Penn State cybersecurity degree and help desk job give me the technical skills</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span><strong>Competitive pricing:</strong> As I build my portfolio, I can offer great rates for quality work</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span><strong>Personal attention:</strong> You won't be just another ticket number - you'll work directly with me</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-base sm:text-lg">
+                I'm working on personal projects and continuing education that I can share on my <a href="https://github.com/Zzzero-hash" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>, but I'm excited to start working with real Turtle Creek businesses and residents to solve actual problems.
+              </p>
+
+              <p className="text-base sm:text-lg font-medium text-foreground">
+                If you're willing to give a local tech guy a chance to prove himself, I promise to work hard, be transparent, and deliver quality results at a fair price.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Available */}
+        <div className="bg-background-secondary rounded-2xl shadow-lg p-8 sm:p-10 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-foreground">
+            Services I Can Provide
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="bg-background rounded-lg p-6 border border-border">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-foreground">Computer Repair & Setup</h3>
+              </div>
+              <p className="text-sm text-foreground-secondary">Home visits for virus removal, upgrades, new computer setup, and troubleshooting</p>
+            </div>
+
+            <div className="bg-background rounded-lg p-6 border border-border">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-foreground">Website Development</h3>
+              </div>
+              <p className="text-sm text-foreground-secondary">Modern, mobile-friendly websites for small businesses with local SEO</p>
+            </div>
+
+            <div className="bg-background rounded-lg p-6 border border-border">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-foreground">Cybersecurity Basics</h3>
+              </div>
+              <p className="text-sm text-foreground-secondary">Security assessments, password management, and protection advice</p>
+            </div>
+
+            <div className="bg-background rounded-lg p-6 border border-border">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-foreground">Senior Tech Training</h3>
+              </div>
+              <p className="text-sm text-foreground-secondary">Patient, respectful help learning tablets, smartphones, and video calling</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+            Let's Work Together
+          </h2>
+          <p className="text-foreground-secondary mb-8 text-lg max-w-2xl mx-auto">
+            Whether you need help now or just want to chat about technology, I'd love to hear from you. 
+            Let's build something real for our community.
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px]"
-          >
-            <span>Start Your Project</span>
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover hover:shadow-glow transform hover:scale-105 transition-all duration-300 min-h-[48px]"
+            >
+              <span>Get in Touch</span>
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 min-h-[48px]"
+            >
+              <span>Learn More About Me</span>
+            </Link>
+          </div>
         </div>
       </div>
     </>

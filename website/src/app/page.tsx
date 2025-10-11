@@ -1,7 +1,7 @@
 import EnhancedHero from "@/app/components/EnhancedHero";
 import Services from "@/app/components/Services";
 import WhyChooseUs from "@/app/components/WhyChooseUs";
-import Testimonials from "@/app/components/Testimonials";
+import ExperienceSection from "@/app/components/ExperienceSection";
 import CallToAction from "@/app/components/CallToAction";
 import PortfolioSection from "@/app/components/PortfolioSection";
 import StructuredData from "@/components/StructuredData";
@@ -15,7 +15,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <PortfolioSection />
-      <Testimonials />
+      <ExperienceSection />
       <CallToAction />
     </>
   );
