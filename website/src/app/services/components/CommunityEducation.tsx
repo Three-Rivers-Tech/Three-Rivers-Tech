@@ -1,4 +1,4 @@
-import { ServiceIcon } from "@/components/OptimizedImage";
+import OptimizedImage from "@/components/OptimizedImage";
 
 export default function CommunityEducation() {
   return (
@@ -7,11 +7,11 @@ export default function CommunityEducation() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">Community Education & Learning Center</h2>
           <p className="text-foreground-secondary mb-6">
-            We believe technology should be accessible to everyone in our community. That's why we offer free workshops and educational programs specifically designed for Turtle Creek residents and local small businesses.
+            We believe technology should be accessible to everyone in our community. That&apos;s why we offer free workshops and educational programs specifically designed for Turtle Creek residents and local small businesses.
           </p>
           
           <div className="space-y-4 mb-6">
-            <div>
+            <div className="bg-white border border-border p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-primary mb-2">Free Workshops & Training</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
@@ -33,7 +33,7 @@ export default function CommunityEducation() {
               </ul>
             </div>
 
-            <div>
+            <div className="bg-white border border-border p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-primary mb-2">Small Business Digital Marketing</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
@@ -55,7 +55,7 @@ export default function CommunityEducation() {
               </ul>
             </div>
 
-            <div>
+            <div className="bg-white border border-border p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-primary mb-2">Learning Resources</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
@@ -99,11 +99,37 @@ export default function CommunityEducation() {
           </div>
         </div>
         <div className="md:w-1/2">
-          <ServiceIcon 
-            service="education"
-            size="large"
-            className="rounded-xl w-full h-64 md:h-80 object-cover"
-          />
+          <div className="bg-gradient-to-br from-indigo-50 to-blue-100 p-4 rounded-xl relative overflow-hidden">
+            {/* Education/Learning themed animated elements */}
+            <div className="absolute top-6 right-5 w-7 h-8 bg-indigo-200/40 rounded animate-pulse [animation-delay:0.3s]">
+              <div className="w-full h-1 bg-indigo-400/60 mt-1"></div>
+              <div className="w-5 h-1 bg-indigo-300/40 mt-1"></div>
+              <div className="w-4 h-1 bg-indigo-300/40 mt-1"></div>
+              <div className="w-6 h-1 bg-indigo-300/40 mt-1"></div>
+              <div className="w-3 h-1 bg-indigo-300/40 mt-1"></div>
+            </div>
+            <div className="absolute bottom-7 left-5 w-6 h-6 bg-blue-300/30 rounded animate-bounce [animation-delay:1.8s] [animation-duration:2.6s] border border-blue-400/40">
+              <div className="absolute inset-1 bg-blue-400/30 rounded"></div>
+              <div className="absolute top-2 left-2 w-2 h-1 bg-blue-500/60"></div>
+            </div>
+            <div className="absolute top-1/2 left-8 w-8 h-5 bg-indigo-300/50 rounded animate-ping [animation-delay:2.2s]">
+              <div className="flex justify-between items-center h-full p-1">
+                <div className="w-1 h-3 bg-indigo-400/60"></div>
+                <div className="w-1 h-2 bg-indigo-400/60"></div>
+                <div className="w-1 h-4 bg-indigo-400/60"></div>
+                <div className="w-1 h-1 bg-indigo-400/60"></div>
+              </div>
+            </div>
+            <OptimizedImage
+              src="/community_ed.png"
+              alt="Community Education & Learning Center - Free technology workshops and training for Turtle Creek residents"
+              width={600}
+              height={400}
+              className="rounded-lg w-full h-64 md:h-80 object-contain relative z-10"
+              priority={false}
+              quality={90}
+            />
+          </div>
         </div>
       </div>
     </section>
