@@ -21,28 +21,28 @@ export default function SoftwareDevelopment() {
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Custom websites for local businesses starting at $499</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Custom websites for local businesses starting at $499</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Local SEO to help customers find you online</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Local SEO to help customers find you online</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Responsive design that works on all devices</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Responsive design that works on all devices</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Simple Content Management System so you can update your own site</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Simple Content Management System so you can update your own site</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Integration with social media and Google Business</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Integration with social media and Google Business</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Ongoing support and maintenance packages: $50/month</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Ongoing support and maintenance packages: $50/month</span>
             </li>
           </ul>
         </div>

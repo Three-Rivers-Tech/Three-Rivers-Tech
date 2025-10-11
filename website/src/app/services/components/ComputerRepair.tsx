@@ -14,35 +14,35 @@ export default function ComputerRepair() {
             <h3 className="text-xl font-semibold mb-3 text-primary">Our Home Tech Services</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span><strong>Computer Repair & Virus Removal:</strong> Fix slow computers, remove malware, and restore performance - $75-200</span>
+                <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                <span className="text-foreground"><strong>Computer Repair & Virus Removal:</strong> Fix slow computers, remove malware, and restore performance - $75-200</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span><strong>Wi-Fi Optimization & Setup:</strong> Get your home network running smoothly and securely - $100</span>
+                <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                <span className="text-foreground"><strong>Wi-Fi Optimization & Setup:</strong> Get your home network running smoothly and securely - $100</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span><strong>Smartphone Setup & Training for Seniors:</strong> Patient, step-by-step help with phones and tablets - $60/hour</span>
+                <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                <span className="text-foreground"><strong>Smartphone Setup & Training for Seniors:</strong> Patient, step-by-step help with phones and tablets - $60/hour</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span><strong>Data Backup & Recovery:</strong> Protect your photos, documents, and memories - $100-300</span>
+                <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                <span className="text-foreground"><strong>Data Backup & Recovery:</strong> Protect your photos, documents, and memories - $100-300</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span><strong>Software Installation & Updates:</strong> Keep your programs current and secure</span>
+                <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                <span className="text-foreground"><strong>Software Installation & Updates:</strong> Keep your programs current and secure</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span><strong>Email Setup & Management:</strong> Get your email working on all your devices</span>
+                <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                <span className="text-foreground"><strong>Email Setup & Management:</strong> Get your email working on all your devices</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-background-secondary p-4 rounded-lg mb-6">
+          <div className="bg-background-secondary border border-border p-5 rounded-lg mb-6 shadow-sm">
             <h4 className="font-semibold text-primary mb-2">On-Site Visits in Turtle Creek & Surrounding Areas</h4>
-            <p className="text-sm text-foreground-secondary">
+            <p className="text-sm text-foreground">
               We come to you! Serving Turtle Creek, Wilmerding, Monroeville, and the entire Mon Valley. 
               On-site service fee: $25 (waived for seniors 65+)
             </p>

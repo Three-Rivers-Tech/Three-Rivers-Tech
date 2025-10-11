@@ -18,28 +18,28 @@ export default function SaasProducts() {
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Customer relationship management (CRM) for small businesses</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Customer relationship management (CRM) for small businesses</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Simple inventory and point-of-sale systems</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Simple inventory and point-of-sale systems</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Accounting software setup and training</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Accounting software setup and training</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Email marketing and appointment scheduling tools</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Email marketing and appointment scheduling tools</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Employee scheduling and time tracking systems</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Employee scheduling and time tracking systems</span>
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-2">✓</span>
-              <span>Training and ongoing support for all software</span>
+              <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+              <span className="text-foreground">Training and ongoing support for all software</span>
             </li>
           </ul>
         </div>

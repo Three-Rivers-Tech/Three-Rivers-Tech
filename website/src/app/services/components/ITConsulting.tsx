@@ -12,82 +12,82 @@ export default function ITConsulting() {
           
           <div className="space-y-6">
             {/* Starter Website Package */}
-            <div className="bg-background-secondary p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-primary mb-2">Starter Website Package - $500</h3>
+            <div className="bg-background-secondary border border-border p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-primary mb-3">Starter Website Package - $500</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>WordPress website with professional design</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">WordPress website with professional design</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Domain registration and hosting setup</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Domain registration and hosting setup</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Local SEO optimization for Turtle Creek area</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Local SEO optimization for Turtle Creek area</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Google My Business setup and optimization</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Google My Business setup and optimization</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Basic training on content updates</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Basic training on content updates</span>
                 </li>
               </ul>
             </div>
 
             {/* Small Office IT Setup */}
-            <div className="bg-background-secondary p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-primary mb-2">Small Office IT Setup - $300-600</h3>
+            <div className="bg-background-secondary border border-border p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-primary mb-3">Small Office IT Setup - $300-600</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Router and network security configuration</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Router and network security configuration</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Printer integration and wireless setup</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Printer integration and wireless setup</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Basic cybersecurity package</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Basic cybersecurity package</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Email setup for business accounts</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Email setup for business accounts</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Point-of-sale system integration (if needed)</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Point-of-sale system integration (if needed)</span>
                 </li>
               </ul>
             </div>
 
             {/* Managed Care Plan */}
-            <div className="bg-background-secondary p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-primary mb-2">Managed Care Plan - $75/month</h3>
+            <div className="bg-background-secondary border border-border p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-primary mb-3">Managed Care Plan - $75/month</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Monthly system maintenance and updates</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Monthly system maintenance and updates</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Priority help desk support via phone/email</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Priority help desk support via phone/email</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Backup monitoring and data protection</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Backup monitoring and data protection</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Security monitoring and updates</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Security monitoring and updates</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Discounted rates on additional services</span>
+                  <span className="text-primary mr-2 flex-shrink-0 font-bold">✓</span>
+                  <span className="text-foreground">Discounted rates on additional services</span>
                 </li>
               </ul>
             </div>
