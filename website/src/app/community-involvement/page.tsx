@@ -27,7 +27,7 @@ export default function CommunityInvolvementPage() {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Our Commitment to Turtle Creek</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            "We're more than just a tech company - we're your neighbors who care about this community"
+            {`"We're more than just a tech company - we're your neighbors who care about this community"`}
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function CommunityInvolvementPage() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">Local Partnerships</h3>
                 <p className="text-sm text-foreground-secondary">
-                  Partnering with other local businesses to strengthen our community's economic foundation
+                  {"Partnering with other local businesses to strengthen our community's economic foundation"}
                 </p>
               </div>
               
@@ -75,9 +75,7 @@ export default function CommunityInvolvementPage() {
             </div>
             
             <p className="text-foreground-secondary text-center max-w-3xl mx-auto">
-              At Three Rivers Tech, we believe in giving back to the community that has given us so much. 
-              Our commitment goes beyond providing technology services - we're invested in the long-term 
-              success and well-being of Turtle Creek and the entire Mon Valley.
+              {`At Three Rivers Tech, we believe in giving back to the community that has given us so much. Our commitment goes beyond providing technology services - we're invested in the long-term success and well-being of Turtle Creek and the entire Mon Valley.`}
             </p>
           </div>
 
@@ -189,8 +187,7 @@ export default function CommunityInvolvementPage() {
           <div className="bg-gradient-to-r from-primary to-secondary rounded-xl shadow-lg p-8 sm:p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Join Our Community Initiative</h2>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Are you a local organization or community group looking for technology support? 
-              We're always looking for ways to support our neighborhood.
+              {`Are you a local organization or community group looking for technology support? We're always looking for ways to support our neighborhood.`}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <Link

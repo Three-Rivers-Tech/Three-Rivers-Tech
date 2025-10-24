@@ -1,5 +1,5 @@
 // Checkmark icon component for reuse
-function CheckmarkIcon({ className = "" }) {
+function CheckmarkIcon({ className = "" }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
