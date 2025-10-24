@@ -17,7 +17,7 @@ import { NavLink, PrimaryButton } from "@/components/ui";
  */
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background backdrop-blur-md border-b border-border/50 py-4 px-4 sm:px-6 transition-all duration-300" role="banner">
+    <header className="sticky top-0 z-50 bg-background border-b border-border/50 py-4 px-4 sm:px-6 transition-all duration-300" role="banner">
       <div className="container mx-auto flex justify-between items-center max-w-7xl">
         {/* Logo */}
         <Link 
