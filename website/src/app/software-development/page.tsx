@@ -116,7 +116,7 @@ export default function SoftwareDevelopmentSkillsPage() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-hover hover:shadow-glow hover:scale-105 transition-all duration-300 min-h-[48px]"
+              className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-hover hover:shadow-glow hover:scale-105 transition-all duration-300 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-focus"
             >
               Schedule a Consultation
             </a>

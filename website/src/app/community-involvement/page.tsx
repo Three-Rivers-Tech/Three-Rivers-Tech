@@ -141,7 +141,7 @@ export default function CommunityInvolvementPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center">Our Local Impact</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-shadow duration-300">
                 <h3 className="text-lg font-bold mb-3">Sponsorships & Support</h3>
                 <p className="text-foreground-secondary mb-4">
                   We proudly sponsor local initiatives including:
@@ -162,7 +162,7 @@ export default function CommunityInvolvementPage() {
                 </ul>
               </div>
               
-              <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-shadow duration-300">
                 <h3 className="text-lg font-bold mb-3">Community Partnerships</h3>
                 <p className="text-foreground-secondary mb-4">
                   We work closely with:
@@ -195,13 +195,13 @@ export default function CommunityInvolvementPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="bg-white text-primary font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 text-center min-h-[48px] flex items-center justify-center"
+                className="bg-white text-primary font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 hover:shadow-large transform hover:-translate-y-1 transition-[shadow,transform,background-color] duration-300 text-center min-h-[48px] flex items-center justify-center"
               >
                 Partner With Us
               </Link>
               <Link
                 href="/learning-center"
-                className="bg-white/20 backdrop-blur-sm border-2 border-white text-white font-semibold py-3 px-6 rounded-xl hover:bg-white hover:text-primary transform hover:-translate-y-1 transition-all duration-300 text-center min-h-[48px] flex items-center justify-center"
+                className="bg-white/20 backdrop-blur-sm border-2 border-white text-white font-semibold py-3 px-6 rounded-xl hover:bg-white hover:text-primary transform hover:-translate-y-1 transition-[shadow,transform,background-color,color] duration-300 text-center min-h-[48px] flex items-center justify-center"
               >
                 Learn About Workshops
               </Link>
