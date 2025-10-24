@@ -60,13 +60,13 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Christian Penrod</h3>
+                <h3 className="text-foreground text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Christian Penrod</h3>
                 <p className="text-sm sm:text-base text-primary font-semibold mb-2">Founder & Owner</p>
                 <p className="text-xs sm:text-sm text-foreground-secondary">Turtle Creek Resident Since 2025</p>
               </div>
               
               <div className="lg:col-span-2">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Meet Your Local Tech Partner</h2>
+                <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Meet Your Local Tech Partner</h2>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 sm:mb-6 leading-relaxed">
                   Hi, I&apos;m Christian, and I&apos;m proud to call Turtle Creek home. I grew up in nearby Braddock Hills 
                   and graduated from Penn State Greater Allegheny in 2025 with a degree in Cybersecurity Analytics & Operations. 
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
           {/* Business Story Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">How Three Rivers Tech Came to Turtle Creek</h2>
+            <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">How Three Rivers Tech Came to Turtle Creek</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">The Beginning</h3>
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
           {/* Community Commitment Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">My Promise to Turtle Creek</h2>
+            <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">My Promise to Turtle Creek</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Making Technology Accessible & Affordable</h3>
@@ -179,7 +179,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-12 lg:mb-16">
             <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Our Mission</h3>
+              <h3 className="text-foreground text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Our Mission</h3>
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
                 To provide accessible, reliable technology solutions that empower Turtle Creek residents and local businesses. 
                 We believe everyone deserves tech support that's both professional and personal.
@@ -187,7 +187,7 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Our Vision</h3>
+              <h3 className="text-foreground text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Our Vision</h3>
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
                 To be the tech partner that our neighbors trust, where technology serves the community's needs and helps everyone thrive. 
                 We envision a digitally empowered Turtle Creek where every resident and business can leverage technology to succeed.
@@ -196,7 +196,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Why Choose Local?</h2>
+            <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Why Choose Local?</h2>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
@@ -251,7 +251,7 @@ export default function AboutPage() {
 
           {/* Skills & Projects Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Skills & Real-World Experience</h2>
+            <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Skills & Real-World Experience</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Cybersecurity Background</h3>
@@ -323,7 +323,7 @@ export default function AboutPage() {
 
           {/* Community Involvement Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Active in Our Community</h2>
+            <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Active in Our Community</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Local Partnerships</h3>
@@ -383,7 +383,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Our Values</h2>
+            <h2 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Community First</h3>
