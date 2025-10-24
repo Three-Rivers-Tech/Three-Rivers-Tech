@@ -44,6 +44,8 @@ function checkBundleSize() {
     return false;
   }
 
+  let hasIssues = false;
+
   // Check static assets
   const staticDir = path.join(outDir, '_next', 'static');
   if (fs.existsSync(staticDir)) {
@@ -67,6 +69,7 @@ function checkBundleSize() {
       console.log(`${type} total size: ${(totalSize / 1024).toFixed(1)}KB`);
       if (issues.length > 0) {
         console.log(`⚠️  Large ${type.toLowerCase()} files:`, issues);
+        hasIssues = true;
       }
 
       return totalSize;
@@ -85,7 +88,7 @@ function checkBundleSize() {
     }
   }
 
-  return true;
+  return !hasIssues;
 }
 
 function checkImageOptimization() {
@@ -160,10 +163,15 @@ function checkCriticalResourcePreloading() {
   const layoutContent = fs.readFileSync(layoutPath, 'utf8');
   
   // Check for preload links
-  const hasPreloads = CRITICAL_RESOURCES.some(resource => 
-    layoutContent.includes(`rel="preload"`) && layoutContent.includes(resource)
-  );
-
+  const hasPreloads = CRITICAL_RESOURCES.some(resource => {
+    // Check if resource appears in a preload link (within ~100 chars of rel="preload")
+    const preloadIndex = layoutContent.indexOf('rel="preload"');
+    if (preloadIndex === -1) return false;
+    const searchStart = Math.max(0, preloadIndex - 50);
+    const searchEnd = Math.min(layoutContent.length, preloadIndex + 150);
+    const preloadSection = layoutContent.substring(searchStart, searchEnd);
+    return preloadSection.includes(resource);
+  });
   if (!hasPreloads) {
     console.log('💡 Consider adding preload links for critical resources in layout.tsx');
     console.log('   Example: <link rel="preload" href="/company_logo.png" as="image" />');
@@ -179,10 +187,15 @@ function checkMobileOptimization() {
   
   // Check viewport meta tag
   const layoutPath = path.join(__dirname, '..', 'src', 'app', 'layout.tsx');
+  if (!fs.existsSync(layoutPath)) {
+    console.log('⚠️  layout.tsx not found. Cannot check viewport meta tag.');
+    // Optionally log a notice for mobile optimization check
+    return false;
+  }
   const layoutContent = fs.readFileSync(layoutPath, 'utf8');
-  
+
   const hasViewport = layoutContent.includes('viewport') || layoutContent.includes('device-width');
-  
+
   if (hasViewport) {
     console.log('✅ Viewport meta tag configured');
   } else {

@@ -65,11 +65,11 @@ export default function PortfolioPage() {
 
             <div className="space-y-6 text-foreground-secondary leading-relaxed">
               <p className="text-base sm:text-lg">
-                Hey there! Christian here, founder of Three Rivers Tech. I wanted to be honest with you - I&apos;m just getting started building my client base here in Turtle Creek.
+                Hey there! Christian here, founder of Three Rivers Tech. I wanted to be honest with you - I'm just getting started building my client base here in Turtle Creek.
               </p>
 
               <p className="text-base sm:text-lg">
-                Rather than show you fake projects or borrowed work, I&apos;d rather tell you the truth: <strong className="text-foreground">I&apos;m actively looking for my first local clients</strong> to build real relationships with. When I complete projects for our community, you&apos;ll see genuine case studies here - not stock photos or made-up stories.
+                Rather than show you fake projects or borrowed work, I'd rather tell you the truth: <strong className="text-foreground">I'm actively looking for my first local clients</strong> to build real relationships with. When I complete projects for our community, you'll see genuine case studies here - not stock photos or made-up stories.
               </p>
 
               <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6 my-8">
@@ -79,7 +79,7 @@ export default function PortfolioPage() {
                     <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span><strong>Honest work:</strong> I&apos;ll never claim credit for projects I didn&apos;t do</span>
+                    <span><strong>Honest work:</strong> I'll never claim credit for projects I didn't do</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,17 +97,17 @@ export default function PortfolioPage() {
                     <svg className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span><strong>Personal attention:</strong> You won&apos;t be just another ticket number - you&apos;ll work directly with me</span>
+                    <span><strong>Personal attention:</strong> You won't be just another ticket number - you'll work directly with me</span>
                   </li>
                 </ul>
               </div>
 
               <p className="text-base sm:text-lg">
-                I&apos;m working on personal projects and continuing education that I can share on my <a href="https://github.com/Zzzero-hash" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>, but I&apos;m excited to start working with real Turtle Creek businesses and residents to solve actual problems.
+                I'm working on personal projects and continuing education that I can share on my <a href="https://github.com/Zzzero-hash" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>, but I'm excited to start working with real Turtle Creek businesses and residents to solve actual problems.
               </p>
 
               <p className="text-base sm:text-lg font-medium text-foreground">
-                If you&apos;re willing to give a local tech guy a chance to prove himself, I promise to work hard, be transparent, and deliver quality results at a fair price.
+                If you're willing to give a local tech guy a chance to prove himself, I promise to work hard, be transparent, and deliver quality results at a fair price.
               </p>
             </div>
           </div>
@@ -172,11 +172,11 @@ export default function PortfolioPage() {
         {/* CTA */}
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-            Let&apos;s Work Together
+            Let's Work Together
           </h2>
           <p className="text-foreground-secondary mb-8 text-lg max-w-2xl mx-auto">
-            Whether you need help now or just want to chat about technology, I&apos;d love to hear from you. 
-            Let&apos;s build something real for our community.
+            Whether you need help now or just want to chat about technology, I'd love to hear from you. 
+            Let's build something real for our community.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

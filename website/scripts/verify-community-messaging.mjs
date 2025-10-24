@@ -54,21 +54,21 @@ function checkFile(filePath) {
   const issues = [];
 
   // Check for business name consistency
-  if (content.includes('Three Rivers Tech')) {
+  if (content.includes(expectedElements.businessName)) {
     console.log(`✅ Business name found in: ${filePath}`);
   } else if (filePath.includes('component') || filePath.includes('page')) {
     issues.push('Missing business name');
   }
 
   // Check for location information
-  if (content.includes('Turtle Creek') || content.includes('15145')) {
+  if (content.includes(expectedElements.location) || content.includes(expectedElements.zipCode)) {
     console.log(`✅ Location info found in: ${filePath}`);
   } else if (filePath.includes('Hero') || filePath.includes('Footer') || filePath.includes('Contact')) {
     issues.push('Missing location information');
   }
 
   // Check for phone number consistency
-  if (content.includes('(412) 403-5559')) {
+  if (content.includes(expectedElements.phone)) {
     console.log(`✅ Phone number found in: ${filePath}`);
   } else if (filePath.includes('Contact') || filePath.includes('Footer') || filePath.includes('Hero')) {
     issues.push('Missing or inconsistent phone number');

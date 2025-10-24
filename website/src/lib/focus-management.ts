@@ -259,21 +259,28 @@ export function isUsingKeyboard(): boolean {
 /**
  * Initialize keyboard navigation detection
  */
-export function initKeyboardNavigation(): void {
-  // Detect keyboard usage
-  document.addEventListener('keydown', (event) => {
+export function initKeyboardNavigation(): () => void {
+  // Named handler functions
+  const handleKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Tab') {
       document.body.classList.add('keyboard-navigation');
     }
-  });
-  
-  // Detect mouse usage
-  document.addEventListener('mousedown', () => {
+  };
+  const handleMousedown = () => {
     document.body.classList.remove('keyboard-navigation');
-  });
-  
-  // Detect touch usage
-  document.addEventListener('touchstart', () => {
+  };
+  const handleTouchstart = () => {
     document.body.classList.remove('keyboard-navigation');
-  });
+  };
+
+  document.addEventListener('keydown', handleKeydown);
+  document.addEventListener('mousedown', handleMousedown);
+  document.addEventListener('touchstart', handleTouchstart);
+
+  // Return cleanup function
+  return () => {
+    document.removeEventListener('keydown', handleKeydown);
+    document.removeEventListener('mousedown', handleMousedown);
+    document.removeEventListener('touchstart', handleTouchstart);
+  };
 }
