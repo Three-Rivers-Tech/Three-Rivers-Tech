@@ -50,7 +50,7 @@ export default function ContactPage() {
                 Schedule a free assessment with our local team. We'll come to your home or business in Turtle Creek and surrounding areas. Contact us via email or schedule a visit below.
               </p>
               {/* Google Bookings Embed */}
-              <div className="rounded-lg overflow-hidden shadow-lg">
+              <div className="rounded-2xl overflow-hidden shadow-soft">
                 <GoogleCalendarIframe 
                   src="https://calendar.app.google/1EwGScdmrC1dcwMR8"
                   className="google-calendar-iframe w-full"
@@ -60,7 +60,7 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4 sm:space-y-6">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-semibold text-blue-800 mb-4">Ready to Get Started?</h3>
                 <p className="text-blue-700 mb-4">
                   The easiest way to get help is to call us directly or schedule a visit using the calendar below. 
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl">
               <h3 className="text-lg font-semibold text-green-800 mb-2">Response Time</h3>
               <p className="text-green-700 text-sm">
                 We typically respond to all emails within 24 hours during business days. 

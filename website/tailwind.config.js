@@ -62,6 +62,8 @@ module.exports = {
       boxShadow: {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07)',
         'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1)',
+        'large': '0 10px 40px -10px rgba(0, 0, 0, 0.15)',
+        'glow': '0 0 20px rgba(13, 148, 136, 0.3)',
       },
     },
   },

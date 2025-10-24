@@ -21,7 +21,7 @@ export default function CallToAction() {
           </p>
         </header>
 
-        <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/20 animate-scale-in animation-delay-400">
+        <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-large border border-white/20 animate-scale-in animation-delay-400">
           {/* Glass card for CTA - follows card standards with rounded-2xl */}
           <div className="text-center space-y-6">
             <p className="text-white/90 text-lg mb-6">
@@ -31,7 +31,7 @@ export default function CallToAction() {
             <div className="space-y-4">
               <a
                 href="mailto:info@threeriverstech.com?subject=Free Tech Assessment Request&body=Hi! I'd like to request a free assessment for:%0D%0A%0D%0ADevice/Service Type: %0D%0AProblem Description: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
-                className="block w-full bg-white text-primary font-bold py-4 px-8 rounded-xl hover:bg-gray-50 hover:shadow-glow transform hover:-translate-y-1 transition-all duration-300 shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[48px] text-lg border border-primary/30 focus:border-primary"
+                className="block w-full bg-white text-primary font-bold py-4 px-8 rounded-xl hover:bg-gray-50 hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[48px] text-lg border border-primary/30 focus:border-primary"
                 aria-label="Send email for free tech assessment"
               >
                 📧 Email for Free Assessment
@@ -48,7 +48,7 @@ export default function CallToAction() {
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-600">
           <Link
             href="/contact"
-            className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white/20 hover:shadow-glow transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary text-center min-h-[48px] flex items-center justify-center text-lg backdrop-blur-sm shadow-lg hover:shadow-xl"
+            className="bg-white text-primary border-2 border-white font-bold py-4 px-8 rounded-xl hover:bg-primary hover:text-white hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary text-center min-h-[48px] flex items-center justify-center text-lg shadow-soft"
           >
             Book Your Home Visit Today
           </Link>

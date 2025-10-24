@@ -105,7 +105,7 @@ export default function LearningCenterPage() {
                   <div className="mt-4">
                     <a 
                       href="/contact?service=community-education" 
-                      className="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary-hover transition-colors"
+                      className="inline-flex items-center justify-center bg-primary text-white font-semibold py-3 px-6 rounded-xl hover:bg-primary-hover hover:shadow-glow hover:scale-105 transition-all duration-300 min-h-[48px]"
                     >
                       Register Now
                     </a>
@@ -128,7 +128,7 @@ export default function LearningCenterPage() {
                   </div>
                   <a 
                     href={resource.link} 
-                    className="bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary-hover transition-colors"
+                    className="inline-flex items-center justify-center bg-primary text-white font-semibold py-3 px-6 rounded-xl hover:bg-primary-hover hover:shadow-glow hover:scale-105 transition-all duration-300 min-h-[48px]"
                     download
                   >
                     Download

@@ -128,7 +128,7 @@ export default function AboutPage() {
                   I've seen how technology can transform lives, but I've also seen how expensive and intimidating it can be. 
                   That's not right. Everyone in our community deserves access to the digital world, regardless of their budget or comfort level with computers.
                 </p>
-                <div className="bg-background rounded-lg p-4 mb-4">
+                <div className="bg-background rounded-xl p-4 mb-4">
                   <h4 className="font-semibold mb-2 text-primary">How I Keep It Affordable:</h4>
                   <ul className="text-sm text-foreground-secondary space-y-1">
                     <li>• Sliding scale pricing for seniors and fixed-income families</li>
@@ -151,7 +151,7 @@ export default function AboutPage() {
                   Since moving to Turtle Creek in 2025, I&apos;ve been getting to know what our community really needs from technology. 
                   It&apos;s not the latest gadgets or complex systems - it&apos;s reliable solutions that make daily life easier and more connected.
                 </p>
-                <div className="bg-background rounded-lg p-4 mb-4">
+                <div className="bg-background rounded-xl p-4 mb-4">
                   <h4 className="font-semibold mb-2 text-primary">What I've Learned About Our Community:</h4>
                   <ul className="text-sm text-foreground-secondary space-y-1">
                     <li>• Many seniors want to stay connected but need patient, respectful help</li>
@@ -168,7 +168,7 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/10 rounded-lg border-l-4 border-primary">
+            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/10 rounded-xl border-l-4 border-primary">
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed italic">
                 &quot;Technology should serve people, not the other way around. My job is to make sure it works for you, 
                 in your home, for your business, at a price that makes sense for your situation. That&apos;s my commitment to Turtle Creek.&quot;
@@ -304,7 +304,7 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/10 rounded-lg border-l-4 border-primary">
+            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/10 rounded-xl border-l-4 border-primary">
               <h3 className="text-lg font-bold mb-2 text-primary">Projects & Portfolio</h3>
               <p className="text-sm sm:text-base text-foreground-secondary leading-relaxed mb-3">
                 Check out my GitHub for examples of cybersecurity projects, automation scripts, and web development work. 
@@ -369,7 +369,7 @@ export default function AboutPage() {
                   With a degree in Cybersecurity Analytics & Operations from Penn State Greater Allegheny and experience as a Help Desk Technician, 
                   I bring professional-level expertise to everyday problems while growing Three Rivers Tech into a full-time local technology partner.
                 </p>
-                <div className="bg-background rounded-lg p-4">
+                <div className="bg-background rounded-xl p-4">
                   <h4 className="font-semibold mb-2 text-primary">What This Means for You:</h4>
                   <ul className="text-sm text-foreground-secondary space-y-1">
                     <li>• Your computer problems get solved right the first time</li>

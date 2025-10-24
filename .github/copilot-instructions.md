@@ -1,46 +1,49 @@
 <!-- Copilot / AI agent instructions for Three Rivers Tech repository -->
 # Three Rivers Tech — AI Agent Productivity Guide
 
-This guide enables AI coding agents to be immediately effective in this monorepo. It merges current best practices and conventions from code and documentation.
+This guide enables AI coding agents to be immediately productive in this monorepo. It summarizes current architecture, workflows, and conventions, referencing key files and documentation.
 
-## Architecture Overview
-- **Monorepo**: Python entry (`app.py`) and Next.js 15 website in `website/`.
-- **Website**: Next.js App Router, TypeScript, Tailwind CSS, Turbopack, Vitest, Playwright.
-- **Deployment**: Static build deployed to Cloudflare Pages via CI (`website/.github/workflows/deploy.yml`). Only `/out` is published; avoid server-only features.
+## 🏗️ Architecture Overview
+- **Monorepo**: Python entry (`app.py`) and main Next.js 15 website in `website/`.
+- **Website**: Next.js App Router (`src/app/`), TypeScript, Tailwind CSS, Turbopack, Vitest, Playwright.
+- **Static Export**: Deployed to Cloudflare Pages via CI (`website/.github/workflows/deploy.yml`). Only `/out` is published—**avoid server-only features**.
 
-## Key Workflows
+## 🚦 Key Developer Workflows
 - **Install**: `npm install` in `website/`
 - **Dev server**: `npm run dev` (Turbopack)
 - **Build**: `npm run build` (includes image optimization)
 - **Start**: `npm start` (production)
 - **Image optimization**: `npm run optimize:images` (uses `sharp`)
 - **Tests**:
-	- Unit: `npm run test`
-	- Accessibility: `npm run test:accessibility`
-	- SEO: `npm run test:seo`
-	- E2E: `npx playwright test`
-- **Deploy**: Push/merge to master triggers CI build and deploy.
+  - Unit: `npm run test` (Vitest)
+  - Accessibility: `npm run test:accessibility`
+  - SEO: `npm run test:seo`
+  - E2E: `npx playwright test`
+- **Deploy**: Push/merge to `master` triggers CI build and deploy.
 
-## Project Conventions
-- **UI**: Shared components in `website/src/components/ui/` (`@/components/ui` imports).
-- **SEO**: Metadata in `website/src/lib/metadata-generators` and `website/src/lib/structured-data`.
-- **Accessibility**: Use `AccessibilityInitializer` and `AccessibilityControls` in layout.
-- **Images**: Place in `public/`, run optimization before build/deploy.
-- **TypeScript**: Strict types and `@/` imports enforced.
-- **Node scripts**: ESM (.mjs) in `website/scripts/`, Node 18+ required.
+## 📐 Project Conventions & Patterns
+- **UI**: Shared components in `website/src/components/ui/` (`@/components/ui` imports). Use PascalCase for components, kebab-case for files/dirs.
+- **SEO**: Metadata in `website/src/lib/metadata-generators.ts` and `website/src/lib/structured-data.ts`.
+- **Accessibility**: Use `AccessibilityInitializer` and `AccessibilityControls` in layout. Follow WCAG 2.1 AA.
+- **Images**: Place in `public/`, optimize before build/deploy. See `website/docs/IMAGE_GUIDELINES.md`.
+- **TypeScript**: Strict types, absolute `@/` imports from `src/`.
+- **Tests**: Test files end with `.test.ts` or `.test.tsx`.
+- **Scripts**: ESM (.mjs) in `website/scripts/`, Node 18+ required.
 
-## Integration Points & Cross-Cutting Concerns
+## 🔗 Integration Points & Cross-Cutting Concerns
 - **Analytics**: `website/src/lib/analytics.ts`
 - **Error/Telemetry**: `website/src/components/ErrorMonitoring.tsx`, `MonitoringDashboard.tsx`
 - **SEO/Robots/Sitemap**: `website/src/app/robots.ts`, `website/src/app/sitemap.ts`
 - **CI/CD**: `website/.github/workflows/deploy.yml`
 
-## Gotchas & Patterns
+## ⚡ Gotchas & Patterns
 - **Cloudflare Pages**: Only `/out` is deployed; server-only code is ignored.
-- **Image optimization**: Next.js image optimization is disabled for static export; use `sharp`.
+- **Image optimization**: Next.js image optimization is disabled for static export; use `sharp` and optimize images in `public/`.
 - **Static assets**: All must be in `public/` and optimized.
+- **Minimal state**: Use local React state, no global store.
+- **Absolute imports**: Always import from `src/` using `@/` alias.
 
-## Safe Change Checklist
+## ✅ Safe Change Checklist
 - TypeScript must build cleanly
 - Run all tests for new features
 - Optimize images before build/deploy
@@ -48,14 +51,22 @@ This guide enables AI coding agents to be immediately effective in this monorepo
 - Update `website/README.md` for new scripts/workflows
 - Document new environment variables/secrets
 
-## Branching & PRs
+## 🌱 Branching & PRs
 - Use feature branches for new work
-- Master is always deployable
+- `master` is always deployable
 - CI deploys latest build on merge
 - Keep changes scoped; update docs for new workflows
 - Run lint and tests before PRs; add verification notes
 
-## If Unclear
+## 📚 Documentation & References
+- Start with `website/docs/README.md` for navigation
+- See `website/docs/DEVELOPMENT_GUIDE.md` for architecture, setup, and patterns
+- Component specs: `website/docs/COMPONENT_LIBRARY.md`, `website/docs/VISUAL_STANDARDS.md`
+- Design system: `website/docs/DESIGN_SYSTEM.md`
+- Image workflow: `website/docs/IMAGE_GUIDELINES.md`
+- Animation: `website/docs/ANIMATION_GUIDE.md`
+
+## 🛑 If Unclear
 - If a pattern is not found in code, do not invent one—refer to maintainers in PRs.
 - Ask for feedback/examples of undocumented patterns after changes.
 
