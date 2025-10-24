@@ -280,7 +280,7 @@ export function initKeyboardNavigation(): () => void {
   // Return cleanup function
   return () => {
     document.removeEventListener('keydown', handleKeydown);
-    document.removeEventListener('mousedown', handleMousedown, { passive: true });
-    document.removeEventListener('touchstart', handleTouchstart, { passive: true });
+    document.removeEventListener('mousedown', handleMousedown);
+    document.removeEventListener('touchstart', handleTouchstart);
   };
 }
