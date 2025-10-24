@@ -319,7 +319,7 @@ export default function AboutPage() {
                   className="text-primary hover:text-primary-dark transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
-                > Github Profile
+                >GitHub Profile
                 </a>
               </div>
             </div>

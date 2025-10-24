@@ -27,7 +27,7 @@ export default function CommunityInvolvementPage() {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Our Commitment to Turtle Creek</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            &quot;We&apos;re more than just a tech company - we&apos;re your neighbors who care about this community&quot;
+            "We're more than just a tech company - we're your neighbors who care about this community"
           </p>
         </div>
 

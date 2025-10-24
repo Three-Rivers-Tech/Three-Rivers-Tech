@@ -274,13 +274,13 @@ export function initKeyboardNavigation(): () => void {
   };
 
   document.addEventListener('keydown', handleKeydown);
-  document.addEventListener('mousedown', handleMousedown);
-  document.addEventListener('touchstart', handleTouchstart);
+  document.addEventListener('mousedown', handleMousedown, { passive: true });
+  document.addEventListener('touchstart', handleTouchstart, { passive: true });
 
   // Return cleanup function
   return () => {
     document.removeEventListener('keydown', handleKeydown);
-    document.removeEventListener('mousedown', handleMousedown);
-    document.removeEventListener('touchstart', handleTouchstart);
+    document.removeEventListener('mousedown', handleMousedown, { passive: true });
+    document.removeEventListener('touchstart', handleTouchstart, { passive: true });
   };
 }

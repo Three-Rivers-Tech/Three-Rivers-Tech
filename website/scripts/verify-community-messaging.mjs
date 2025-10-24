@@ -61,8 +61,8 @@ function checkFile(filePath) {
   }
 
   // Check for location information
-  if (content.includes(expectedElements.location) || content.includes(expectedElements.zipCode)) {
-    console.log(`✅ Location info found in: ${filePath}`);
+  if (content.includes(expectedElements.location)) {
+    console.log(`✅ Location info found in: ${filePath}`);    console.log(`✅ Location info found in: ${filePath}`);
   } else if (filePath.includes('Hero') || filePath.includes('Footer') || filePath.includes('Contact')) {
     issues.push('Missing location information');
   }

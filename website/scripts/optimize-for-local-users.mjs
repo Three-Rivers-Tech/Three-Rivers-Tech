@@ -162,15 +162,10 @@ function checkCriticalResourcePreloading() {
 
   const layoutContent = fs.readFileSync(layoutPath, 'utf8');
   
-  // Check for preload links
+  // Find all preload link tags
+  const preloadLinks = Array.from(layoutContent.matchAll(/<link[^>]*rel=["']preload["'][^>]*>/gi));
   const hasPreloads = CRITICAL_RESOURCES.some(resource => {
-    // Check if resource appears in a preload link (within ~100 chars of rel="preload")
-    const preloadIndex = layoutContent.indexOf('rel="preload"');
-    if (preloadIndex === -1) return false;
-    const searchStart = Math.max(0, preloadIndex - 50);
-    const searchEnd = Math.min(layoutContent.length, preloadIndex + 150);
-    const preloadSection = layoutContent.substring(searchStart, searchEnd);
-    return preloadSection.includes(resource);
+    return preloadLinks.some(linkMatch => linkMatch[0].includes(resource));
   });
   if (!hasPreloads) {
     console.log('💡 Consider adding preload links for critical resources in layout.tsx');
@@ -189,8 +184,7 @@ function checkMobileOptimization() {
   const layoutPath = path.join(__dirname, '..', 'src', 'app', 'layout.tsx');
   if (!fs.existsSync(layoutPath)) {
     console.log('⚠️  layout.tsx not found. Cannot check viewport meta tag.');
-    // Optionally log a notice for mobile optimization check
-    return false;
+    return false; // Return false if layout.tsx is missing
   }
   const layoutContent = fs.readFileSync(layoutPath, 'utf8');
 
