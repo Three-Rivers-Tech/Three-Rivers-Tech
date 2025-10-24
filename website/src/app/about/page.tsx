@@ -1,3 +1,20 @@
+// Checkmark icon component for reuse
+function CheckmarkIcon({ className = "" }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
 import { generateStaticPageMetadata, generateLocalSeoMetadata } from "@/lib/metadata-generators";
 
 export const metadata = generateLocalSeoMetadata(generateStaticPageMetadata("about"));
@@ -200,49 +217,37 @@ export default function AboutPage() {
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <CheckmarkIcon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">We live and work here, just like you</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <CheckmarkIcon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Understanding local needs and values</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <CheckmarkIcon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Supporting local businesses and organizations</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <CheckmarkIcon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Personal service that large companies can&apos;t offer</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <CheckmarkIcon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Invested in the long-term success of our community</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <CheckmarkIcon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Fair, transparent pricing that serves the community</span>
               </li>

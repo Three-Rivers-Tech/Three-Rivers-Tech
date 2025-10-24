@@ -165,7 +165,13 @@ function checkCriticalResourcePreloading() {
   // Find all preload link tags
   const preloadLinks = Array.from(layoutContent.matchAll(/<link[^>]*rel=["']preload["'][^>]*>/gi));
   const hasPreloads = CRITICAL_RESOURCES.some(resource => {
-    return preloadLinks.some(linkMatch => linkMatch[0].includes(resource));
+    return preloadLinks.some(linkMatch => {
+      const tag = linkMatch[0];
+      const hrefMatch = tag.match(/href=["']([^"']+)["']/i);
+      if (!hrefMatch) return false;
+      const hrefValue = hrefMatch[1];
+      return hrefValue.includes(resource);
+    });
   });
   if (!hasPreloads) {
     console.log('💡 Consider adding preload links for critical resources in layout.tsx');
