@@ -7,7 +7,7 @@ import { NavLink, PrimaryButton } from "@/components/ui";
  * Main site header component with navigation and branding
  * 
  * Features:
- * - Sticky positioning with backdrop blur
+ * - Sticky positioning for persistent access
  * - Responsive logo and navigation
  * - Mobile-friendly hamburger menu
  * - Prominent contact CTA button
