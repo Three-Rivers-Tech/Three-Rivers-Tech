@@ -252,9 +252,9 @@ export function generateLocalSeoMetadata(baseMetadata: Metadata): Metadata {
   const combinedKeywords = existingKeywords ? `${existingKeywords}, ${localKeywords.join(', ')}` : localKeywords.join(', ');
 
   // Filter out undefined values from baseMetadata.other
-  const filteredOther = baseMetadata.other ? 
+  const filteredOther = baseMetadata.other ?
     Object.fromEntries(
-      Object.entries(baseMetadata.other).filter(([_, value]) => value !== undefined)
+      Object.entries(baseMetadata.other).filter(([, value]) => value !== undefined)
     ) : {};
 
   return {

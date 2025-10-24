@@ -5,8 +5,12 @@
  * Checks for consistent hometown messaging across all website components
  */
 
-const fs = require('fs');
-const path = require('path');
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Expected community messaging elements
 const expectedElements = {
@@ -138,9 +142,13 @@ function main() {
   return allGood;
 }
 
-if (require.main === module) {
+const isDirectExecution = process.argv[1]
+  ? path.resolve(process.argv[1]) === __filename
+  : false;
+
+if (isDirectExecution) {
   const success = main();
   process.exit(success ? 0 : 1);
 }
 
-module.exports = { checkFile, expectedElements };
+export { checkFile, expectedElements, main };

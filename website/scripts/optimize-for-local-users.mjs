@@ -6,8 +6,12 @@
  * Focuses on Turtle Creek and Mon Valley area users
  */
 
-const fs = require('fs');
-const path = require('path');
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Performance targets for local users
 const PERFORMANCE_TARGETS = {
@@ -288,20 +292,30 @@ function generateLocalUserGuidelines() {
   console.log('   - Optimize for Core Web Vitals');
 }
 
-// Main execution
-if (require.main === module) {
+const isDirectExecution = process.argv[1]
+  ? path.resolve(process.argv[1]) === __filename
+  : false;
+
+export function main() {
   console.log('🚀 Optimizing website for local users...\n');
-  
+
   const success = generatePerformanceReport();
   generateLocalUserGuidelines();
-  
-  process.exit(success ? 0 : 1);
+
+  return success;
 }
 
-module.exports = {
+if (isDirectExecution) {
+  process.exit(main() ? 0 : 1);
+}
+
+export {
   checkBundleSize,
   checkImageOptimization,
   checkMobileOptimization,
   checkContactFormOptimization,
-  PERFORMANCE_TARGETS
+  PERFORMANCE_TARGETS,
+  generatePerformanceReport,
+  generateLocalUserGuidelines,
+  main
 };

@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Get in Touch</h1>
           <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed px-2">
-            We're your hometown tech partners here in Turtle Creek. Request a free assessment of your tech needs - we're here to help with simple, affordable solutions.
+            We&apos;re your hometown tech partners here in Turtle Creek. Request a free assessment of your tech needs - we&apos;re here to help with simple, affordable solutions.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Book Your Visit</h2>
             <div className="mb-6 sm:mb-8">
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 sm:mb-6 leading-relaxed">
-                Schedule a free assessment with our local team. We'll come to your home or business in Turtle Creek and surrounding areas. Contact us via email or schedule a visit below.
+                Schedule a free assessment with our local team. We&apos;ll come to your home or business in Turtle Creek and surrounding areas. Contact us via email or schedule a visit below.
               </p>
               {/* Google Bookings Embed */}
               <div className="rounded-2xl overflow-hidden shadow-soft">
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold text-blue-800 mb-4">Ready to Get Started?</h3>
                 <p className="text-blue-700 mb-4">
                   The easiest way to get help is to call us directly or schedule a visit using the calendar below. 
-                  We'll discuss your tech needs and provide a free assessment.
+                  We&apos;ll discuss your tech needs and provide a free assessment.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center">

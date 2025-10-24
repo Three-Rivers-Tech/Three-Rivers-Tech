@@ -260,25 +260,20 @@ export function isUsingKeyboard(): boolean {
  * Initialize keyboard navigation detection
  */
 export function initKeyboardNavigation(): void {
-  let isUsingKeyboard = false;
-  
   // Detect keyboard usage
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Tab') {
-      isUsingKeyboard = true;
       document.body.classList.add('keyboard-navigation');
     }
   });
   
   // Detect mouse usage
   document.addEventListener('mousedown', () => {
-    isUsingKeyboard = false;
     document.body.classList.remove('keyboard-navigation');
   });
   
   // Detect touch usage
   document.addEventListener('touchstart', () => {
-    isUsingKeyboard = false;
     document.body.classList.remove('keyboard-navigation');
   });
 }

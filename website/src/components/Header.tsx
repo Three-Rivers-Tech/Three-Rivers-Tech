@@ -48,10 +48,21 @@ export default function Header() {
             <NavLink href="/about">About</NavLink>
           </div>
 
-          {/* CTA Button */}
-          <PrimaryButton href="/contact" className="min-h-[44px]">
+          {/* CTA Button (desktop) */}
+          <PrimaryButton href="/contact" className="hidden sm:inline-flex min-h-[44px]">
             Contact
           </PrimaryButton>
+
+          {/* Quick call button (mobile) */}
+          <Link
+            href="tel:+14124035559"
+            className="sm:hidden mr-1 inline-flex items-center justify-center rounded-lg border border-border bg-background px-3 py-2 text-sm font-semibold text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:bg-background-secondary"
+            aria-label="Call Three Rivers Tech"
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3.5 5.75a1.75 1.75 0 011.75-1.75h1.96c.74 0 1.38.48 1.6 1.18l.88 2.82a1.6 1.6 0 01-.82 1.9l-1.43.7a10.5 10.5 0 005.04 5.04l.7-1.43a1.6 1.6 0 011.9-.82l2.82.88c.7.22 1.18.86 1.18 1.6v1.96A1.75 1.75 0 0118.25 21H17C9.82 21 4 15.18 4 8V6.75z" />
+            </svg>
+          </Link>
 
           {/* Mobile Navigation */}
           <MobileNavigation />

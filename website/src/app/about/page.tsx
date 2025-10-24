@@ -125,8 +125,8 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-primary">Making Technology Accessible & Affordable</h3>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary mb-4 leading-relaxed">
-                  I've seen how technology can transform lives, but I've also seen how expensive and intimidating it can be. 
-                  That's not right. Everyone in our community deserves access to the digital world, regardless of their budget or comfort level with computers.
+                  I&apos;ve seen how technology can transform lives, but I&apos;ve also seen how expensive and intimidating it can be. 
+                  That&apos;s not right. Everyone in our community deserves access to the digital world, regardless of their budget or comfort level with computers.
                 </p>
                 <div className="bg-background rounded-xl p-4 mb-4">
                   <h4 className="font-semibold mb-2 text-primary">How I Keep It Affordable:</h4>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                     <li>• Payment plans for larger projects</li>
                     <li>• Free initial consultations - always</li>
                     <li>• Group discounts for neighbors who need similar help</li>
-                    <li>• Honest assessments - I'll tell you if you don't need an upgrade</li>
+                    <li>• Honest assessments - I&apos;ll tell you if you don&apos;t need an upgrade</li>
                   </ul>
                 </div>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   It&apos;s not the latest gadgets or complex systems - it&apos;s reliable solutions that make daily life easier and more connected.
                 </p>
                 <div className="bg-background rounded-xl p-4 mb-4">
-                  <h4 className="font-semibold mb-2 text-primary">What I've Learned About Our Community:</h4>
+                  <h4 className="font-semibold mb-2 text-primary">What I&apos;ve Learned About Our Community:</h4>
                   <ul className="text-sm text-foreground-secondary space-y-1">
                     <li>• Many seniors want to stay connected but need patient, respectful help</li>
                     <li>• Small businesses need simple, effective websites they can update themselves</li>
@@ -162,7 +162,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
-                  I'm not here to sell you the most expensive solution. I'm here to solve your actual problems with technology 
+                  I&apos;m not here to sell you the most expensive solution. I&apos;m here to solve your actual problems with technology 
                   that fits your life and your budget. Because when our community thrives, we all thrive.
                 </p>
               </div>
@@ -182,14 +182,14 @@ export default function AboutPage() {
               <h3 className="text-foreground text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Our Mission</h3>
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
                 To provide accessible, reliable technology solutions that empower Turtle Creek residents and local businesses. 
-                We believe everyone deserves tech support that's both professional and personal.
+                We believe everyone deserves tech support that&apos;s both professional and personal.
               </p>
             </div>
 
             <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
               <h3 className="text-foreground text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Our Vision</h3>
               <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">
-                To be the tech partner that our neighbors trust, where technology serves the community's needs and helps everyone thrive. 
+                To be the tech partner that our neighbors trust, where technology serves the community&apos;s needs and helps everyone thrive. 
                 We envision a digitally empowered Turtle Creek where every resident and business can leverage technology to succeed.
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Personal service that large companies can't offer</span>
+                <span className="text-sm sm:text-base lg:text-lg text-foreground-secondary leading-relaxed">Personal service that large companies can&apos;t offer</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4 flex-shrink-0">

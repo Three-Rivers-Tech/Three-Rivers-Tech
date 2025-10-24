@@ -144,7 +144,7 @@ export default function LearningCenterPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center">Making Technology Accessible</h2>
             <p className="text-foreground-secondary text-center mb-6 max-w-3xl mx-auto">
               At Three Rivers Tech, we believe everyone in our community should have access to the technology skills they need to thrive. 
-              That's why we offer free workshops and resources to help residents and local businesses make the most of technology.
+              That&apos;s why we offer free workshops and resources to help residents and local businesses make the most of technology.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-8">

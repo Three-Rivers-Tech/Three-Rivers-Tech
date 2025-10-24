@@ -48,12 +48,12 @@ export default function WhyChooseUs() {
           </h2>
           
           <p className="text-lg sm:text-xl md:text-2xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200 font-medium">
-            We're a startup focused on providing honest, straightforward tech services to our community
+            We&apos;re a startup focused on providing honest, straightforward tech services to our community
           </p>
         </div>
 
         {/* Honest approach section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20 sm:mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16 sm:mb-24">
           {approach.map((item, index) => (
             <div
               key={index}

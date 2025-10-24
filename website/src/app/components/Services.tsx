@@ -1,4 +1,3 @@
-import ServiceCard from "./ServiceCard";
 import HomeTechSupportIcon from "./icons/HomeTechSupportIcon";
 import SmallBusinessIcon from "./icons/SmallBusinessIcon";
 import CommunityEducationIcon from "./icons/CommunityEducationIcon";

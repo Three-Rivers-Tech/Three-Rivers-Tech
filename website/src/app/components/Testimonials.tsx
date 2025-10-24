@@ -33,7 +33,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-foreground-secondary max-w-3xl mx-auto">
-            Don't just take our word for it - hear from real people in our community who have experienced our honest, straightforward tech services.
+            Don&apos;t just take our word for it - hear from real people in our community who have experienced our honest, straightforward tech services.
           </p>
         </header>
 
@@ -64,7 +64,7 @@ export default function Testimonials() {
                   ))}
                 </div>
               <p className="text-foreground-secondary mb-6 italic">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
               
               <div>
