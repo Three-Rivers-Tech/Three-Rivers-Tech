@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { 
   OptimizedImageProps, 
   ResponsiveImageConfig, 
@@ -11,6 +11,11 @@ import {
   generateSizesAttribute,
   STANDARD_IMAGE_SIZES
 } from "@/lib/image-optimization";
+
+function createBlurDataURL(width: number, height: number): string {
+  const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#f3f4f6"/></svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
 
 /**
  * Optimized Image component with WebP/AVIF support and responsive sizing
@@ -27,6 +32,7 @@ export default function OptimizedImage({
 }: OptimizedImageProps) {
   const [imageError, setImageError] = useState(false);
   const [formatError, setFormatError] = useState<Set<string>>(new Set());
+  const blurPlaceholder = useMemo(() => createBlurDataURL(width, height), [height, width]);
 
   // Generate optimized alt text if not provided or generic
   const optimizedAlt = alt === "Image" || alt === "" ? getImageAltText(src) : alt;
@@ -96,11 +102,7 @@ export default function OptimizedImage({
       }}
       // Add placeholder to prevent layout shift
       placeholder="blur"
-      blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
-        `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100%" height="100%" fill="#f3f4f6"/>
-        </svg>`
-      ).toString('base64')}`}
+      blurDataURL={blurPlaceholder}
     />
   );
 }
@@ -125,6 +127,10 @@ export function ResponsiveImage({
   // Get the largest size for the main image
   const largestSize = sizes.reduce((max, current) => 
     current.width > max.width ? current : max
+  );
+  const blurPlaceholder = useMemo(
+    () => createBlurDataURL(largestSize.width, largestSize.height),
+    [largestSize.height, largestSize.width]
   );
 
   const getImageSrc = () => {
@@ -202,11 +208,7 @@ export function ResponsiveImage({
         }}
         // Add placeholder to prevent layout shift
         placeholder="blur"
-        blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
-          `<svg width="${largestSize.width}" height="${largestSize.height}" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="#f3f4f6"/>
-          </svg>`
-        ).toString('base64')}`}
+        blurDataURL={blurPlaceholder}
       />
     </picture>
   );
