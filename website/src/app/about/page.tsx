@@ -68,7 +68,7 @@ export default function AboutPage() {
                 <div className="relative inline-block">
                   <div className="bg-primary rounded-full w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4 relative flex items-center justify-center shadow-lg">
                     <Image
-                      src="/Capture.avif"
+                      src="/christian-avatar.avif"
                       alt="Christian Penrod"
                       fill
                       className="rounded-full object-cover object-center"
