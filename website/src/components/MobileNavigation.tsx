@@ -169,7 +169,7 @@ export default function MobileNavigation() {
                   </h3>
                   <div className="space-y-2">
                     <a
-                      href="tel:+14124035559"
+                      href="tel:+1Shop Number Coming Soon!"
                       className="flex items-center gap-3 rounded-xl border border-border bg-background-secondary/60 px-4 py-3 transition-colors duration-200 hover:border-primary/30 hover:bg-background-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     >
                       <svg className="h-5 w-5 flex-shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

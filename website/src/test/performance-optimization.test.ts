@@ -10,7 +10,7 @@ describe('Performance Optimization for Local Users', () => {
       
       // Check for phone number presence
       expect(contactContent).toContain('(412) 403-5559');
-      expect(contactContent).toContain('tel:+14124035559');
+      expect(contactContent).toContain('tel:+1Shop Number Coming Soon!');
     });
 
     it('should have local address prominently displayed', async () => {

@@ -146,7 +146,7 @@ export default function Footer() {
               
               <p className="mt-4">
                 <a 
-                  href="tel:+14124035559" 
+                  href="tel:+1Shop Number Coming Soon!" 
                   className="text-primary hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block font-semibold"
                 >
                   Phone: (412) 403-5559
