@@ -9,13 +9,14 @@ function CheckmarkIcon({ className = "" }: { className?: string }) {
     >
       <path
         fillRule="evenodd"
-        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z"
+        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
         clipRule="evenodd"
       />
     </svg>
   );
 }
 import { generateStaticPageMetadata, generateLocalSeoMetadata } from "@/lib/metadata-generators";
+import Image from "next/image";
 
 export const metadata = generateLocalSeoMetadata(generateStaticPageMetadata("about"));
 
@@ -65,10 +66,14 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 items-center">
               <div className="lg:col-span-1 text-center">
                 <div className="relative inline-block">
-                  <div className="bg-primary rounded-full w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4 flex items-center justify-center shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+                  <div className="bg-primary rounded-full w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4 relative flex items-center justify-center shadow-lg">
+                    <Image
+                      src="/Capture.avif"
+                      alt="Christian Penrod"
+                      fill
+                      className="rounded-full object-cover object-center"
+                      sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+                      />
                   </div>
                   <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -339,33 +344,25 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <div className="bg-primary rounded-full p-1 mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                      </svg>
+                      <CheckmarkIcon className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm sm:text-base text-foreground-secondary">Monthly tech workshops at Turtle Creek Community Center</span>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary rounded-full p-1 mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                      </svg>
+                      <CheckmarkIcon className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm sm:text-base text-foreground-secondary">Volunteer IT support for local nonprofits and churches</span>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary rounded-full p-1 mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                      </svg>
+                      <CheckmarkIcon className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm sm:text-base text-foreground-secondary">Sponsor of Turtle Creek Memorial Day Parade</span>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary rounded-full p-1 mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 0 01.414 0z" clipRule="evenodd" />
-                      </svg>
+                      <CheckmarkIcon className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm sm:text-base text-foreground-secondary">Member of Turtle Creek Business Association</span>
                   </li>
