@@ -12,7 +12,7 @@ export const formatPhone = (phone: string): string => {
 };
 
 export const formatPhoneForTel = (phone: string): string => {
-  return `+1-${phone.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}`;
+  return `-${phone.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}`;
 };
 
 export const formatAddress = (address: typeof business.address): string => {

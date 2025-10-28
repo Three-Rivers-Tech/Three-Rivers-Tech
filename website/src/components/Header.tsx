@@ -55,7 +55,7 @@ export default function Header() {
 
           {/* Quick call button (mobile) */}
           <Link
-            href="tel:+1Shop Number Coming Soon!"
+            href="tel:Shop Number Coming Soon!"
             className="sm:hidden mr-1 inline-flex items-center justify-center rounded-lg border border-border bg-background px-3 py-2 text-sm font-semibold text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:bg-background-secondary"
             aria-label="Call Three Rivers Tech"
           >

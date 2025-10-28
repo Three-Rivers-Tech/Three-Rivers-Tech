@@ -110,10 +110,10 @@ export default function ContactPage() {
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Phone</h3>
                   <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary">
                     <a 
-                      href="tel:+1Shop Number Coming Soon!"
+                      href="tel:Shop Number Coming Soon!"
                       className="text-primary hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 -m-1"
                     >
-                      (412) 403-5559
+                      Shop Number Coming Soon!
                     </a>
                   </p>
                 </div>
