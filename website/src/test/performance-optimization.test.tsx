@@ -16,19 +16,41 @@ vi.mock('next/link', () => {
 
 vi.mock('next/image', () => ({
   __esModule: true,
-  default: ({
-    alt,
-    src,
-    // The following props are omitted intentionally.
-    ...rest
-  }: {
+  default: (props: {
     alt: string;
     src: string | { src: string };
     [key: string]: unknown;
   }) => {
+    const {
+      alt,
+      src,
+      priority: _priority,
+      placeholder: _placeholder,
+      blurDataURL: _blurDataURL,
+      quality: _quality,
+      loader: _loader,
+      fill: _fill,
+      sizes,
+      onLoadingComplete: _onLoadingComplete,
+      ...imgProps
+    } = props;
+
+    if (typeof sizes === 'string') {
+      imgProps.sizes = sizes;
+    }
+
+    void _priority;
+    void _placeholder;
+    void _blurDataURL;
+    void _quality;
+    void _loader;
+    void _fill;
+    void _onLoadingComplete;
+
     const resolvedSrc = typeof src === 'string' ? src : src.src;
     // Using <img> here is intentional for test mocks and static export compatibility.
-    return <img alt={alt} src={resolvedSrc} {...rest} />;
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img alt={alt} src={resolvedSrc} {...imgProps} />;
   },
 }));
 

@@ -11,6 +11,8 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 // Base domain for absolute URLs (update if production domain differs)
 const siteUrl = 'https://www.three-rivers-tech.com';
+const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-0ZHMBRB53G';
+const isAnalyticsEnabled = process.env.NODE_ENV === 'production' && Boolean(googleAnalyticsId);
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -68,6 +70,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/company_logo.png" as="image" type="image/png" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        {isAnalyticsEnabled && (
+          <>
+            {/* Google tag (gtag.js) */}
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${googleAnalyticsId}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <Header />

@@ -3,9 +3,8 @@
  */
 
 
-
 // Analytics configuration
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-0ZHMBRB53G';
 
 // Event types for type safety
 export interface AnalyticsEvent {
@@ -56,7 +55,12 @@ export const CONVERSION_GOALS = {
  * Initialize Google Analytics
  */
 export function initializeAnalytics(): void {
-  if (typeof window === 'undefined' || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
+  if (
+    typeof window === 'undefined' ||
+    process.env.NODE_ENV !== 'production' ||
+    !GA_MEASUREMENT_ID ||
+    GA_MEASUREMENT_ID === 'G-XXXXXXXXXX'
+  ) {
     return;
   }
 
