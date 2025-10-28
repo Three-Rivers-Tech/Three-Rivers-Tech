@@ -368,6 +368,7 @@ const checkForPlaceholders = (text: unknown, context: string): string[] => {
           
           // Check for proper sentence structure (basic validation)
           const sentences = pageText.split(/[.!?]+/).filter(s => s.trim().length > 0)
+          const lowercaseSentenceExceptions = new Set(['iPhone', 'iPad', 'iOS', 'eBay', 'macOS'])
           sentences.forEach((sentence, index) => {
             const trimmed = sentence.trim()
             if (trimmed.length > 0) {
@@ -375,8 +376,13 @@ const checkForPlaceholders = (text: unknown, context: string): string[] => {
               const firstWordMatch = trimmed.match(/[A-Za-z][A-Za-z'-]*/)
               if (firstWordMatch) {
                 const firstWord = firstWordMatch[0]
-                if (firstWord !== firstWord.toLowerCase()) {
-                  expect(firstWord[0], `Sentence ${index + 1} in ${pageName} should start with capital letter`).toMatch(/[A-Z]/)
+                const firstChar = firstWord.charAt(0)
+                const secondChar = firstWord.charAt(1)
+                const isCamelCaseBrand = /[a-z]/.test(firstChar) && /[A-Z]/.test(secondChar)
+                const isAllowlisted = lowercaseSentenceExceptions.has(firstWord)
+
+                if (!isCamelCaseBrand && !isAllowlisted) {
+                  expect(firstChar, `Sentence ${index + 1} in ${pageName} should start with capital letter`).toMatch(/[A-Z]/)
                 }
               }
             }

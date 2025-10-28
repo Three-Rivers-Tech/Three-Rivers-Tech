@@ -178,7 +178,7 @@ export default function MobileNavigation() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M3 7l9 6 9-6M4.5 19h15a1.5 1.5 0 001.5-1.5V7.75A2.75 2.75 0 0018.25 5H5.75A2.75 2.75 0 003 7.75V17.5A1.5 1.5 0 004.5 19z"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                         />
                       </svg>
                       <div>

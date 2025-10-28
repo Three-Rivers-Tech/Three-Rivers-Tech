@@ -5,7 +5,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
   // Homepage
   home: {
     title: "Computer Repair Turtle Creek PA | IT Services 15145 | Three Rivers Tech",
-    description: "Computer repair Turtle Creek PA 15145. Your hometown tech partner offering IT services, web design Monroeville area, and tech support for Mon Valley families and small businesses. Reach out for a free consultation.",
+    description: "Computer repair Turtle Creek PA 15145, IT services for Mon Valley small businesses, and web design for Monroeville area. Contact us for a free consultation.",
     keywords: [
       "computer repair Turtle Creek PA",
       "IT services Turtle Creek 15145", 
@@ -81,7 +81,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
   // Contact page
   contact: {
     title: "Contact Three Rivers Tech Turtle Creek PA | Connect With Our Team",
-    description: "Contact Three Rivers Tech in Turtle Creek PA 15145 for computer repair, IT support, and website design. Serving Mon Valley communities with local tech solutions—send us a message to get started.",
+    description: "Three Rivers Tech — Turtle Creek, PA for computer repair, IT support, and website design serving Mon Valley neighbors. Contact us to schedule local help.",
     keywords: [
       "contact Three Rivers Tech Turtle Creek",
       "computer repair contact PA",

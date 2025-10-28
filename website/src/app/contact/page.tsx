@@ -67,18 +67,19 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center">
-                    <span className="font-semibold text-blue-800 mr-2">📞</span>
-                    <span className="text-blue-700">Phone line coming soon — reach out via email in the meantime.</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="font-semibold text-blue-800 mr-2">📧</span>
+                    <span className="mr-2 text-blue-800" aria-hidden="true">ℹ️</span>
+                    <span className="text-blue-700">
+                      <span className="sr-only">Information: </span>
+                      Phone line coming soon — reach out via email in the meantime.
+                    </span>
                     <a 
                       href="mailto:info@threeriverstech.com?subject=Tech Help Request&body=Hi! I need help with:%0D%0A%0D%0ADevice Type: %0D%0AProblem: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
                       className="text-blue-700 hover:text-blue-900 underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-1 -mx-1"
                       aria-label="Email the Three Rivers Tech support team"
                     >
-                      <span>Email us:</span>{' '}
-                      <span aria-hidden="true">info@threeriverstech.com</span>
+                      Email us: info@threeriverstech.com
+                    </a>
+                  </div>
                       <span className="sr-only"> info@threeriverstech.com</span>
                     </a>
                   </div>

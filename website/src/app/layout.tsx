@@ -57,18 +57,19 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/png" sizes="16x16" href="/company_logo.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/company_logo.png" />
         <link rel="icon" type="image/png" sizes="48x48" href="/company_logo.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/company_logo.png" />
+        <link rel="preload" href="/company_logo.avif" as="image" type="image/avif" />
         <link rel="preload" href="/company_logo.webp" as="image" type="image/webp" />
         <link rel="preload" href="/company_logo.png" as="image" type="image/png" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <Header />
         <main id="main-content" role="main">{children}</main>
         <Footer />

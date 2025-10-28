@@ -54,6 +54,7 @@ vi.mock('next/font/google', () => ({
 }));
 
 import { renderToString } from 'react-dom/server';
+import { JSDOM } from 'jsdom';
 import { render, screen, fireEvent, waitFor } from '@/test/test-utils';
 import ContactPage from '@/app/contact/page';
 import Header from '@/components/Header';
@@ -138,8 +139,10 @@ describe('Performance Optimization for Local Users', () => {
           <div>content</div>
         </RootLayout>,
       );
-      expect(head).toContain('rel="preload" href="/company_logo.webp"');
-      expect(head).toContain('rel="preload" href="/company_logo.png"');
+
+      ['avif', 'webp', 'png'].forEach((format) => {
+        expect(head).toContain(`rel="preload" href="/company_logo.${format}"`);
+      });
     });
 
     it('renders the logo with optimized formats and eager loading', () => {
@@ -153,14 +156,15 @@ describe('Performance Optimization for Local Users', () => {
     });
 
     it('injects structured data for organization, local business, and website schemas', () => {
-      const { container } = render(
+      const markup = renderToString(
         <RootLayout>
           <div>content</div>
         </RootLayout>,
       );
+      const dom = new JSDOM(markup);
 
       const scripts = Array.from(
-        container.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]'),
+        dom.window.document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]'),
       );
       expect(scripts.length).toBeGreaterThanOrEqual(3);
 

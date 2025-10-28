@@ -227,12 +227,18 @@ function checkContactFormOptimization() {
 
   const contactContent = fs.readFileSync(contactPath, 'utf8');
   
-  // Check for phone status messaging
-  const hasPhoneStatus = contactContent.includes('Phone line coming soon');
+  // Treat actual phone number availability as required, not placeholder messaging
+  const phoneComingSoon = contactContent.includes('Phone line coming soon');
+  const phonePattern = /(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}/;
+  const hasPhoneNumber = phonePattern.test(contactContent);
+  const phonePresent = hasPhoneNumber && !phoneComingSoon;
   const hasEmail = contactContent.includes('info@threeriverstech.com');
   const hasAddress = contactContent.includes('124 Grant Street');
   
-  console.log(`✅ Phone status messaging: ${hasPhoneStatus ? 'Present' : 'Missing'}`);
+  console.log(`✅ Phone contact: ${phonePresent ? 'Present' : 'Missing'}`);
+  if (!phonePresent && phoneComingSoon) {
+    console.log('ℹ️  Phone line marked as coming soon; treat as unavailable');
+  }
   console.log(`✅ Email contact: ${hasEmail ? 'Present' : 'Missing'}`);
   console.log(`✅ Local address: ${hasAddress ? 'Present' : 'Missing'}`);
 
@@ -240,7 +246,7 @@ function checkContactFormOptimization() {
   const hasScheduling = contactContent.includes('calendar') || contactContent.includes('schedule');
   console.log(`✅ Scheduling integration: ${hasScheduling ? 'Present' : 'Missing'}`);
 
-  return hasPhoneStatus && hasEmail && hasAddress;
+  return phonePresent && hasEmail && hasAddress;
 }
 
 function generatePerformanceReport() {
