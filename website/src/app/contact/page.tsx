@@ -66,21 +66,18 @@ export default function ContactPage() {
                   {`The easiest way to get help is to email us or schedule a visit using the calendar below. We'll discuss your tech needs and provide a free assessment.`}
                 </p>
                 <div className="space-y-3">
-                  <div className="flex items-center">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="mr-2 text-blue-800" aria-hidden="true">ℹ️</span>
                     <span className="text-blue-700">
                       <span className="sr-only">Information: </span>
                       Phone line coming soon — reach out via email in the meantime.
                     </span>
-                    <a 
+                    <a
                       href="mailto:info@threeriverstech.com?subject=Tech Help Request&body=Hi! I need help with:%0D%0A%0D%0ADevice Type: %0D%0AProblem: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
                       className="text-blue-700 hover:text-blue-900 underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-1 -mx-1"
                       aria-label="Email the Three Rivers Tech support team"
                     >
-                      Email us: info@threeriverstech.com
-                    </a>
-                  </div>
-                      <span className="sr-only"> info@threeriverstech.com</span>
+                      <span className="sr-only">Email address:</span> Email us: info@threeriverstech.com
                     </a>
                   </div>
                   <div className="flex items-center">
@@ -93,8 +90,8 @@ export default function ContactPage() {
             <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl">
               <h3 className="text-lg font-semibold text-green-800 mb-2">Response Time</h3>
               <p className="text-green-700 text-sm">
-                We typically respond to all emails within 24 hours during business days. 
-                For urgent issues, send us an email with "urgent" in the subject line and we will get back to you as quickly as possible.
+                We typically respond to all emails within 24 hours during business days.
+                For urgent issues, send us an email with the word urgent in the subject line and we will get back to you as quickly as possible.
               </p>
             </div>
             </div>

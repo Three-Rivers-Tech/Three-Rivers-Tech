@@ -19,30 +19,15 @@ vi.mock('next/image', () => ({
   default: ({
     alt,
     src,
-    // Omit Next-specific props that <img> does not understand.
-    priority,
-    placeholder,
-    blurDataURL,
-    quality,
-    loader,
-    fill,
-    sizes,
-    onLoadingComplete,
+    // The following props are omitted intentionally.
     ...rest
   }: {
     alt: string;
     src: string | { src: string };
-    priority?: unknown;
-    placeholder?: unknown;
-    blurDataURL?: unknown;
-    quality?: unknown;
-    loader?: unknown;
-    fill?: unknown;
-    sizes?: unknown;
-    onLoadingComplete?: unknown;
     [key: string]: unknown;
   }) => {
     const resolvedSrc = typeof src === 'string' ? src : src.src;
+    // Using <img> here is intentional for test mocks and static export compatibility.
     return <img alt={alt} src={resolvedSrc} {...rest} />;
   },
 }));
