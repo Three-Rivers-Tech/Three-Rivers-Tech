@@ -244,8 +244,8 @@ export function generateLocalSeoMetadata(baseMetadata: Metadata): Metadata {
     "affordable IT support Turtle Creek"
   ];
 
-  // Enhanced description with local focus and phone number
-  const enhancedDescription = `${baseMetadata.description} Serving Turtle Creek PA 15145, Monroeville, Wilmerding, and Mon Valley communities. Call (412) 403-5559 for local tech support.`;
+  // Enhanced description with local focus and contact guidance
+  const enhancedDescription = `${baseMetadata.description} Serving Turtle Creek PA 15145, Monroeville, Wilmerding, and Mon Valley communities. Reach out through our contact form for local tech support.`;
 
   // Combine existing keywords with local keywords
   const existingKeywords = typeof baseMetadata.keywords === 'string' ? baseMetadata.keywords : '';

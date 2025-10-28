@@ -63,7 +63,7 @@ This document ensures visual consistency across all pages and components of the 
     </h1>
     
     <div className="flex gap-4">
-      <PrimaryButton href="tel:Shop Number Coming Soon!">Call Now</PrimaryButton>
+      <PrimaryButton href="/contact">Contact Our Team</PrimaryButton>
       <SecondaryButton href="/contact">Book Visit</SecondaryButton>
     </div>
   </div>

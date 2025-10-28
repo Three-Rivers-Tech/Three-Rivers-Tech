@@ -144,13 +144,8 @@ export default function Footer() {
               <p className="font-semibold text-foreground">124 Grant Street</p>
               <p className="font-semibold text-foreground">Turtle Creek, PA 15145</p>
               
-              <p className="mt-4">
-                <a 
-                  href="tel:Shop Number Coming Soon!" 
-                  className="text-primary hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 no-underline block font-semibold"
-                >
-                  Phone: (412) 403-5559
-                </a>
+              <p className="mt-4 text-primary font-semibold">
+                Phone line coming soon — please email us for assistance.
               </p>
 
               <p>

@@ -18,11 +18,11 @@ const expectedElements = {
   tagline: "Your hometown tech partner",
   location: "Turtle Creek, PA 15145",
   address: "124 Grant Street",
-  phone: "(412) 403-5559",
+  phoneStatus: "Phone line coming soon",
   email: "info@threeriverstech.com",
   valueProposition: "big-city know-how at small-town prices",
   serviceAreas: ["Turtle Creek", "Monroeville", "Wilmerding", "Mon Valley"],
-  ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+  ctaPrimary: "Contact Our Team for a Free Consultation",
   ctaSecondary: "Book Your Home Visit Today"
 };
 
@@ -66,11 +66,11 @@ function checkFile(filePath) {
   } else if (filePath.includes('Hero') || filePath.includes('Footer') || filePath.includes('Contact')) {
     issues.push('Missing location information');
   }
-  // Check for phone number consistency
-  if (content.includes(expectedElements.phone)) {
-    console.log(`✅ Phone number found in: ${filePath}`);
+  // Check for phone availability messaging
+  if (content.includes(expectedElements.phoneStatus)) {
+    console.log(`✅ Phone status messaging found in: ${filePath}`);
   } else if (filePath.includes('Contact') || filePath.includes('Footer') || filePath.includes('Hero')) {
-    issues.push('Missing or inconsistent phone number');
+    issues.push('Missing or inconsistent phone status copy');
   }
 
   // Check for community messaging

@@ -63,20 +63,23 @@ export default function ContactPage() {
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-semibold text-blue-800 mb-4">Ready to Get Started?</h3>
                 <p className="text-blue-700 mb-4">
-                  {`The easiest way to get help is to call us directly or schedule a visit using the calendar below. We'll discuss your tech needs and provide a free assessment.`}
+                  {`The easiest way to get help is to email us or schedule a visit using the calendar below. We'll discuss your tech needs and provide a free assessment.`}
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <span className="font-semibold text-blue-800 mr-2">📞</span>
-                    <span className="text-blue-700">Call us: (412) 403-5559</span>
+                    <span className="text-blue-700">Phone line coming soon — reach out via email in the meantime.</span>
                   </div>
                   <div className="flex items-center">
                     <span className="font-semibold text-blue-800 mr-2">📧</span>
                     <a 
                       href="mailto:info@threeriverstech.com?subject=Tech Help Request&body=Hi! I need help with:%0D%0A%0D%0ADevice Type: %0D%0AProblem: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
-                      className="text-blue-700 hover:text-blue-900 underline"
+                      className="text-blue-700 hover:text-blue-900 underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-1 -mx-1"
+                      aria-label="Email the Three Rivers Tech support team"
                     >
-                      Email us: info@threeriverstech.com
+                      <span>Email us:</span>{' '}
+                      <span aria-hidden="true">info@threeriverstech.com</span>
+                      <span className="sr-only"> info@threeriverstech.com</span>
                     </a>
                   </div>
                   <div className="flex items-center">
@@ -90,7 +93,7 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-green-800 mb-2">Response Time</h3>
               <p className="text-green-700 text-sm">
                 We typically respond to all emails within 24 hours during business days. 
-                For urgent issues, please call us directly at (412) 403-5559.
+                For urgent issues, send us an email with "urgent" in the subject line and we will get back to you as quickly as possible.
               </p>
             </div>
             </div>
@@ -100,25 +103,6 @@ export default function ContactPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Contact Information</h2>
 
             <div className="space-y-6 sm:space-y-8">
-              <div className="flex items-start">
-                <div className="bg-primary rounded-full p-3 sm:p-4 mr-3 sm:mr-4 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Phone</h3>
-                  <p className="text-sm sm:text-base lg:text-lg text-foreground-secondary">
-                    <a 
-                      href="tel:Shop Number Coming Soon!"
-                      className="text-primary hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md py-1 -m-1"
-                    >
-                      Shop Number Coming Soon!
-                    </a>
-                  </p>
-                </div>
-              </div>
-
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 sm:p-4 mr-3 sm:mr-4 flex-shrink-0">
                   <FaEnvelope className="h-5 w-5 sm:h-6 sm:w-6 text-white" />

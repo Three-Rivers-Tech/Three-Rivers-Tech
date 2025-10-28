@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: 'Straightforward, community-focused technology services: web design, IT support, repairs, and custom software for small business & neighbors.',
   applicationName: 'Three Rivers Tech',
   keywords: [
-    'IT support','web design','software development','computer repair','Mon Valley','small business tech'
+    'IT support','web design','software development','computer repair','Mon Valley','small business tech','computer repair Turtle Creek PA'
   ],
   authors: [{ name: 'Three Rivers Tech' }],
   creator: 'Three Rivers Tech',

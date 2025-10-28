@@ -24,27 +24,27 @@ export default function EnhancedHero() {
     {
       title: "Your Hometown Tech Partner in Turtle Creek",
       subtitle: "Big-city know-how at small-town prices. We live here, work here, and understand your needs.",
-      ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+      ctaPrimary: "Contact Our Team for a Free Consultation",
       ctaSecondary: "Book Your Home Visit Today",
-      ctaPrimaryLink: "tel:Shop Number Coming Soon!",
+      ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/contact",
       bgColor: "from-teal-600 to-emerald-700" // Warm, earthy tones
     },
     {
       title: "Simple Tech Solutions for Families and Small Businesses",
       subtitle: "From computer repairs to website design, we make technology accessible and affordable for everyone in our community.",
-      ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+      ctaPrimary: "Contact Our Team for a Free Consultation",
       ctaSecondary: "Book Your Home Visit Today",
-      ctaPrimaryLink: "tel:Shop Number Coming Soon!",
+      ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/contact",
       bgColor: "from-emerald-600 to-teal-700" // Warm, earthy tones
     },
     {
       title: "Serving Turtle Creek and the Mon Valley",
       subtitle: "Your neighbors providing reliable tech support with personal service. We're here when you need us most.",
-      ctaPrimary: "Call (412) 403-5559 for Free Consultation",
+      ctaPrimary: "Contact Our Team for a Free Consultation",
       ctaSecondary: "Book Your Home Visit Today",
-      ctaPrimaryLink: "tel:Shop Number Coming Soon!",
+      ctaPrimaryLink: "/contact",
       ctaSecondaryLink: "/contact",
       bgColor: "from-teal-700 to-green-700" // Warm, earthy tones
     }

@@ -28,7 +28,9 @@ export const siteConfig = {
 // Business information for consistent contact details
 export const businessInfo = {
   name: "Three Rivers Tech",
-  phone: "(412) 403-5559",
+  description:
+    "Three Rivers Tech delivers trustworthy technology help for Turtle Creek and nearby communities, covering computer repair, modern web experiences, and dependable IT support with a hometown focus.",
+  phone: "Phone line coming soon",
   email: "info@threeriverstech.com",
   address: {
     street: "124 Grant Street",

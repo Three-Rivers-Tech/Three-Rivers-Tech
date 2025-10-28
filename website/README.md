@@ -334,7 +334,7 @@ When creating new components:
 For technical support or questions:
 
 - **Email**: info@threeriverstech.com
-- **Phone**: (412) 403-5559
+- **Phone**: Phone line coming soon
 - **Address**: 124 Grant Street, Turtle Creek, PA 15145
 
 ## 📄 License

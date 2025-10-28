@@ -168,8 +168,9 @@ export default function MobileNavigation() {
                     Contact us
                   </h3>
                   <div className="space-y-2">
-                    <a
-                      href="tel:Shop Number Coming Soon!"
+                    <Link
+                      href="/contact"
+                      onClick={closeMenu}
                       className="flex items-center gap-3 rounded-xl border border-border bg-background-secondary/60 px-4 py-3 transition-colors duration-200 hover:border-primary/30 hover:bg-background-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     >
                       <svg className="h-5 w-5 flex-shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -177,14 +178,14 @@ export default function MobileNavigation() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          d="M3 7l9 6 9-6M4.5 19h15a1.5 1.5 0 001.5-1.5V7.75A2.75 2.75 0 0018.25 5H5.75A2.75 2.75 0 003 7.75V17.5A1.5 1.5 0 004.5 19z"
                         />
                       </svg>
                       <div>
-                        <div className="font-medium text-foreground">(412) 403-5559</div>
-                        <div className="text-sm text-foreground-secondary">Call for free consultation</div>
+                        <div className="font-medium text-foreground">Email our team</div>
+                        <div className="text-sm text-foreground-secondary">Share details and we’ll follow up quickly</div>
                       </div>
-                    </a>
+                    </Link>
 
                     <div className="flex items-center gap-3 rounded-xl border border-border bg-background-secondary/60 px-4 py-3">
                       <svg className="h-5 w-5 flex-shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

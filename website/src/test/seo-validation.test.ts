@@ -10,7 +10,13 @@ describe('SEO Metadata Generation (sanity)', () => {
   });
   it('falls back for unknown page', () => {
     const m = generateStaticPageMetadata('unknown-x');
-    expect(m.title).toContain('Page Not Found');
+    const title =
+      typeof m.title === 'string'
+        ? m.title
+        : typeof m.title === 'object' && m.title !== null && 'default' in m.title
+          ? (m.title as { default?: string }).default ?? ''
+          : '';
+    expect(title).toContain('Page Not Found');
   });
   it('service metadata enhanced', () => {
     const m = generateServicePageMetadata('software-development');

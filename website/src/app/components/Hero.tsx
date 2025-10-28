@@ -81,7 +81,7 @@ export default function Hero() {
                 </svg>
               }
             >
-              Call (412) 403-5559 for Free Consultation
+              Contact Our Team for a Free Consultation
             </SecondaryButton>
             <SecondaryButton
               href="/contact"

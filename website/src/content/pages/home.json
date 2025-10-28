@@ -2,7 +2,7 @@
   "hero": {
     "headline": "Professional IT Services for Growing Businesses",
     "subheadline": "Enterprise Software Solutions • IT Infrastructure & Support • SaaS Integration • Hardware Maintenance",
-    "description": "Transform your business operations with expert technology solutions that drive efficiency, security, and growth. Our comprehensive IT services are designed to streamline your processes and deliver measurable results.",
+    "description": "Transform local operations with expert technology solutions that improve efficiency, resilience, and long-term growth. Our team partners with leaders across Turtle Creek and the Mon Valley to deliver measurable improvements without confusing jargon or hidden costs.",
     "primaryCTA": {
       "text": "Schedule a Consultation",
       "href": "/contact",
@@ -22,8 +22,8 @@
     ]
   },
   "callToAction": {
-    "headline": "Ready to Transform Your Business Technology?",
-    "description": "Schedule a comprehensive technology consultation to discover how our expert solutions can optimize your operations, enhance security, and drive sustainable growth for your business.",
+    "headline": "Ready to Transform Your Technology Strategy?",
+    "description": "Schedule a comprehensive technology consultation to discover how our expert solutions can optimize daily operations, enhance security, and drive sustainable growth for regional teams.",
     "primaryButton": {
       "text": "Schedule a Consultation",
       "href": "/contact"
@@ -31,6 +31,12 @@
 
     "backgroundType": "gradient",
     "backgroundColor": "from-blue-600 to-purple-600"
+  },
+  "messaging": {
+    "introParagraph": "Three Rivers Tech provides dependable technology guidance for local organizations that need practical answers. From the first discovery call we document infrastructure gaps, clarify priorities, and align every recommendation to budgets that make sense for Western Pennsylvania teams. Clients appreciate that we translate complex systems into plain language and stick around until the fix is verified.",
+    "communityParagraph": "Our engineers live in the neighborhoods we support, and that community focus shapes every project. We have modernized Wi-Fi in Turtle Creek offices, stabilized point-of-sale systems for Monroeville retailers, and trained seniors in Wilmerding on safe device practices. Volunteer workshops with youth robotics programs keep us tuned to emerging talent while reinforcing our commitment to local STEM education.",
+    "serviceParagraph": "Engagements range from proactive workstation maintenance and cloud migrations to custom software that eliminates manual paperwork. We combine code reviews, hardware testing, and cybersecurity assessments into one cohesive roadmap so leadership sees exactly how each investment reduces risk. Every deliverable includes a written maintenance checklist and a quick-reference guide for frontline staff.",
+    "ctaParagraph": "Contact us today to map out an improvement plan or request an on-site visit. Whether you need after-hours emergency support, quarterly infrastructure reviews, or a trusted partner for long-term digital strategy, our Turtle Creek specialists are ready to help you get started and stay confident."
   },
   "seo": {
     "title": "Three Rivers Tech - Comprehensive Technology Solutions",

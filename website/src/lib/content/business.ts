@@ -8,11 +8,19 @@ export const business: BusinessInfo = businessData as BusinessInfo;
 
 // Utility functions for consistent formatting
 export const formatPhone = (phone: string): string => {
-  return phone.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+  const digits = phone.replace(/\D/g, '');
+  if (digits.length === 10) {
+    return digits.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+  }
+  return phone;
 };
 
 export const formatPhoneForTel = (phone: string): string => {
-  return `-${phone.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}`;
+  const digits = phone.replace(/\D/g, '');
+  if (digits.length === 10) {
+    return `-${digits.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}`;
+  }
+  return phone;
 };
 
 export const formatAddress = (address: typeof business.address): string => {

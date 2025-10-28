@@ -110,10 +110,10 @@ export default function ITConsulting() {
               </svg>
             </a>
             <a
-              href="tel:Shop Number Coming Soon!"
+              href="mailto:info@threeriverstech.com?subject=IT%20consulting%20inquiry"
               className="inline-flex items-center justify-center border border-primary text-primary font-semibold py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition-colors"
             >
-              Call (412) 403-5559
+              Email Our Team
             </a>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function ServicesPage() {
         <div className="text-center mt-16 sm:mt-20">
           <p className="text-foreground-secondary mb-6 text-lg max-w-2xl mx-auto">
             Can&apos;t find what you need? We offer custom solutions for your specific tech challenges. 
-            Serving Turtle Creek PA 15145, Monroeville, Wilmerding, and the entire Mon Valley region. Call (412) 403-5559.
+            Serving Turtle Creek PA 15145, Monroeville, Wilmerding, and the entire Mon Valley region. Use our contact form to start the conversation.
           </p>
           <a
             href="/contact"

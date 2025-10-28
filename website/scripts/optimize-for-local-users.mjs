@@ -227,12 +227,12 @@ function checkContactFormOptimization() {
 
   const contactContent = fs.readFileSync(contactPath, 'utf8');
   
-  // Check for local phone number
-  const hasLocalPhone = contactContent.includes('(412) 403-5559');
+  // Check for phone status messaging
+  const hasPhoneStatus = contactContent.includes('Phone line coming soon');
   const hasEmail = contactContent.includes('info@threeriverstech.com');
   const hasAddress = contactContent.includes('124 Grant Street');
   
-  console.log(`✅ Local phone number: ${hasLocalPhone ? 'Present' : 'Missing'}`);
+  console.log(`✅ Phone status messaging: ${hasPhoneStatus ? 'Present' : 'Missing'}`);
   console.log(`✅ Email contact: ${hasEmail ? 'Present' : 'Missing'}`);
   console.log(`✅ Local address: ${hasAddress ? 'Present' : 'Missing'}`);
 
@@ -240,7 +240,7 @@ function checkContactFormOptimization() {
   const hasScheduling = contactContent.includes('calendar') || contactContent.includes('schedule');
   console.log(`✅ Scheduling integration: ${hasScheduling ? 'Present' : 'Missing'}`);
 
-  return hasLocalPhone && hasEmail && hasAddress;
+  return hasPhoneStatus && hasEmail && hasAddress;
 }
 
 function generatePerformanceReport() {

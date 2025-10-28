@@ -5,7 +5,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
   // Homepage
   home: {
     title: "Computer Repair Turtle Creek PA | IT Services 15145 | Three Rivers Tech",
-    description: "Computer repair Turtle Creek PA 15145. Your hometown tech partner offering IT services, web design Monroeville area, and tech support for Mon Valley families and small businesses. Call (412) 403-5559.",
+    description: "Computer repair Turtle Creek PA 15145. Your hometown tech partner offering IT services, web design Monroeville area, and tech support for Mon Valley families and small businesses. Reach out for a free consultation.",
     keywords: [
       "computer repair Turtle Creek PA",
       "IT services Turtle Creek 15145", 
@@ -24,7 +24,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
   // Services page
   services: {
     title: "Local Tech Services Turtle Creek PA | Computer Repair & IT Support 15145",
-    description: "Local tech services in Turtle Creek PA 15145. Computer repair, IT support, website design for Mon Valley small businesses and families. Home visits available. Call (412) 403-5559.",
+    description: "Local tech services in Turtle Creek PA 15145. Computer repair, IT support, website design for Mon Valley small businesses and families. Home visits available—contact us to schedule.",
     keywords: [
       "local tech services Turtle Creek PA",
       "computer repair Turtle Creek 15145",
@@ -80,21 +80,21 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
 
   // Contact page
   contact: {
-    title: "Contact Three Rivers Tech Turtle Creek PA | Call (412) 403-5559",
-    description: "Contact Three Rivers Tech in Turtle Creek PA 15145. Call (412) 403-5559 for computer repair, IT support, website design. Serving Mon Valley communities with local tech solutions.",
+    title: "Contact Three Rivers Tech Turtle Creek PA | Connect With Our Team",
+    description: "Contact Three Rivers Tech in Turtle Creek PA 15145 for computer repair, IT support, and website design. Serving Mon Valley communities with local tech solutions—send us a message to get started.",
     keywords: [
       "contact Three Rivers Tech Turtle Creek",
-      "call (412) 403-5559", 
       "computer repair contact PA",
       "IT support Turtle Creek contact",
       "tech help Mon Valley",
       "local computer services contact",
-      "Turtle Creek tech support phone",
-      "schedule computer repair PA"
+      "Turtle Creek tech support contact",
+      "schedule computer repair PA",
+      "connect with Three Rivers Tech"
     ],
     canonical: "https://threeriverstech.com/contact",
-    ogTitle: "Contact Three Rivers Tech - Turtle Creek PA (412) 403-5559",
-    ogDescription: "Contact Three Rivers Tech in Turtle Creek PA for computer repair, IT support, and website design. Call (412) 403-5559 or schedule online."
+    ogTitle: "Contact Three Rivers Tech - Turtle Creek PA",
+    ogDescription: "Contact Three Rivers Tech in Turtle Creek PA for computer repair, IT support, and website design. Send us a message or schedule online."
   },
 
   // Community Involvement page
@@ -173,7 +173,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
   // Computer Repair service
   "computer-repair": {
     title: "Computer Repair Turtle Creek PA 15145 | Home Visits Available",
-    description: "Computer repair Turtle Creek PA 15145. Virus removal, hardware fixes, slow computer repair. Home visits available for Turtle Creek, Monroeville, Mon Valley residents. Call (412) 403-5559.",
+    description: "Computer repair Turtle Creek PA 15145. Virus removal, hardware fixes, slow computer repair. Home visits available for Turtle Creek, Monroeville, Mon Valley residents. Contact us to arrange service.",
     keywords: [
       "computer repair Turtle Creek PA 15145",
       "virus removal Turtle Creek",
