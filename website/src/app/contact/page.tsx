@@ -136,9 +136,13 @@ export default function ContactPage() {
                 <div className="flex-grow">
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Business Hours</h3>
                   <div className="text-sm sm:text-base lg:text-lg text-foreground-secondary space-y-1">
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p>Saturday: 10:00 AM - 2:00 PM</p>
-                    <p>Sunday: Closed</p>
+                    <p>Monday: 9:00 AM - 5:00 PM</p>
+                    <p>Tuesday: Closed</p>
+                    <p>Wednesday: Closed</p>
+                    <p>Thursday: Closed</p>
+                    <p>Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 5:00 PM</p>
+                    <p>Sunday: 9:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>
