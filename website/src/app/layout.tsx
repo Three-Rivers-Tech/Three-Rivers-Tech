@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from 'next/script';
 import type { Metadata, Viewport } from 'next';
 import "./globals.css";
 import Header from "@/components/Header";
@@ -11,7 +12,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 // Base domain for absolute URLs (update if production domain differs)
 const siteUrl = 'https://www.three-rivers-tech.com';
-const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-0ZHMBRB53G';
+const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const isAnalyticsEnabled = process.env.NODE_ENV === 'production' && Boolean(googleAnalyticsId);
 
 export const metadata: Metadata = {
@@ -70,14 +71,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/company_logo.png" as="image" type="image/png" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+        <Header />
         {isAnalyticsEnabled && (
           <>
             {/* Google tag (gtag.js) */}
-            <script
-              async
+            <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+              strategy="afterInteractive"
             />
-            <script
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
@@ -89,9 +95,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </>
         )}
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
-        <Header />
         <main id="main-content" role="main">{children}</main>
         <Footer />
         <StructuredData data={[generateOrganizationSchema(), generateLocalBusinessSchema(), generateWebSiteSchema()]} />
