@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type { MutableRefObject } from "react";
 
 /**
  * ServiceWorkerRegistration
@@ -25,41 +26,40 @@ interface CacheUpdatedMessage {
   __sw: true;
 }
 
-type SWInboundMessage = CacheUpdatedMessage; // Extend union as more types are added.
-
 const MAX_UPDATED_URLS = 200;
 const MAX_URL_LENGTH = 512;
+
+const isValidUpdatedUrl = (value: unknown): value is string =>
+  typeof value === "string" && value.length > 0 && value.length <= MAX_URL_LENGTH;
 
 function isCacheUpdatedMessage(
   data: unknown,
   expectedToken: string
 ): data is CacheUpdatedMessage {
+  if (!data || typeof data !== "object") {
+    return false;
+  }
+  const message = data as Partial<CacheUpdatedMessage>;
   if (
-    !data ||
-    typeof data !== "object" ||
-    (data as any).type !== "CACHE_UPDATED" ||
-    (data as any).__sw !== true ||
-    (data as any).sessionToken !== expectedToken
+    message.type !== "CACHE_UPDATED" ||
+    message.__sw !== true ||
+    message.sessionToken !== expectedToken ||
+    !message.payload
   ) {
     return false;
   }
-  const payload = (data as any).payload;
-  if (
-    !payload ||
-    typeof payload !== "object" ||
-    typeof payload.cacheName !== "string" ||
-    !Array.isArray(payload.updatedUrls)
-  ) {
+  const payload = message.payload as Partial<CacheUpdatedPayload>;
+  if (typeof payload.cacheName !== "string") {
     return false;
   }
-  if (payload.updatedUrls.length > MAX_UPDATED_URLS) {
+  const updatedUrls = payload.updatedUrls;
+  if (!Array.isArray(updatedUrls)) {
     return false;
   }
-  if (
-    payload.updatedUrls.some(
-      (u) => typeof u !== "string" || u.length === 0 || u.length > MAX_URL_LENGTH
-    )
-  ) {
+  if (updatedUrls.length > MAX_UPDATED_URLS) {
+    return false;
+  }
+  if (!updatedUrls.every(isValidUpdatedUrl)) {
     return false;
   }
   return true;
@@ -68,9 +68,14 @@ function isCacheUpdatedMessage(
 export default function ServiceWorkerRegistration() {
   const sessionTokenRef = useRef<string>("");
   const registrationRef = useRef<ServiceWorkerRegistration | null>(null);
-  const messageListenerRef = useRef<(event: MessageEvent) => void>();
+  const messageListenerRef = useRef<((event: MessageEvent) => void) | null>(
+    null
+  );
+  const mountedRef = useRef(false);
 
   useEffect(() => {
+    mountedRef.current = true;
+
     // Only register in production & supported environments
     if (
       process.env.NODE_ENV === "production" &&
@@ -81,10 +86,11 @@ export default function ServiceWorkerRegistration() {
       sessionTokenRef.current = crypto.getRandomValues(new Uint32Array(4)).join(
         "-"
       );
-      void registerServiceWorker();
+      void registerServiceWorker(mountedRef);
     }
 
     return () => {
+      mountedRef.current = false;
       // Cleanup message listener if registered
       if (messageListenerRef.current) {
         navigator.serviceWorker.removeEventListener(
@@ -93,14 +99,21 @@ export default function ServiceWorkerRegistration() {
         );
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []);
 
-  const registerServiceWorker = async () => {
+  const registerServiceWorker = async (
+    activeRef?: MutableRefObject<boolean>
+  ) => {
     try {
       const registration = await navigator.serviceWorker.register("/sw.js", {
         scope: "/",
       });
+
+      if (activeRef && !activeRef.current) {
+        return;
+      }
+
       registrationRef.current = registration;
       console.info(
         "[SW] Registered successfully:",
@@ -117,7 +130,6 @@ export default function ServiceWorkerRegistration() {
           __sw: true,
         });
       }
-
       // Handle updates
       registration.addEventListener("updatefound", () => {
         const newWorker = registration.installing;
@@ -170,14 +182,14 @@ export default function ServiceWorkerRegistration() {
 
         // Allow-list message types
         if (isCacheUpdatedMessage(data, expectedToken)) {
-            console.info(
-              "[SW] Cache updated:",
-              data.payload.cacheName,
-              data.payload.updatedUrls.length,
-              "files"
-            );
-            // Consider surfacing UI prompt or soft refresh indicator here.
-            return;
+          console.info(
+            "[SW] Cache updated:",
+            data.payload.cacheName,
+            data.payload.updatedUrls.length,
+            "files"
+          );
+          // Consider surfacing UI prompt or soft refresh indicator here.
+          return;
         }
 
         // Unknown or invalid message; ignore silently
