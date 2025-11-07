@@ -69,27 +69,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/company_logo.avif" as="image" type="image/avif" />
         <link rel="preload" href="/company_logo.webp" as="image" type="image/webp" />
         <link rel="preload" href="/company_logo.png" as="image" type="image/png" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />        
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
-        {gaId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaId}');
-              `}
-            </Script>
-          </>
-        )}
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+       </head>
+       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+         {gaId && (
+           <>
+             <Script
+               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+               strategy="afterInteractive"
+             />
+             <Script id="gtag-init" strategy="afterInteractive">
+               {`
+                 window.dataLayer = window.dataLayer || [];
+                 function gtag(){dataLayer.push(arguments);}
+                 gtag('js', new Date());
+                 gtag('config', '${gaId}');
+               `}
+             </Script>
+           </>
+         )}
+         <Header />      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <Header />
         <main id="main-content" role="main">{children}</main>
         <Footer />
