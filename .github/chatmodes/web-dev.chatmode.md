@@ -112,10 +112,7 @@ Strictly follow patterns in `website/docs/COMPONENT_LIBRARY.md`:
 **Rule**: If a component exists, extend it. Don't create competing patterns.
 
 ### **Performance Requirements**
-- **Core Web Vitals**: LCP < 2.5s, FID < 100ms, CLS < 0.1
-- **Image Optimization**: AVIF format, responsive srcsets, lazy loading
-- **Bundle Size**: Monitor with `npm run analyze:bundle`
-- **Accessibility**: Zero `axe-core` violations in tests
+- **Core Web Vitals**: LCP < 2.5s, INP < 200ms, CLS < 0.1
 
 ## 🎨 Design System Mastery
 

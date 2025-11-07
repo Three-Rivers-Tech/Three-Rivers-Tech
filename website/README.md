@@ -239,7 +239,7 @@ Create a `.env.local` file for local development:
 
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your-ga-id
+NEXT_PUBLIC_GA_ID=your-ga-id
 ```
 
 ## 📊 Analytics & Monitoring

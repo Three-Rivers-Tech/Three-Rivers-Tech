@@ -4,7 +4,7 @@
 
 
 // Analytics configuration
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-0ZHMBRB53G';
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID
 
 // Event types for type safety
 export interface AnalyticsEvent {
