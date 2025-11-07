@@ -71,9 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/company_logo.png" as="image" type="image/png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />        
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-       </head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />       </head>
        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
          {gaId && (
            <>
@@ -91,8 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
              </Script>
            </>
          )}
-         <Header />      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
-        <Header />
+        <Header/>
         <main id="main-content" role="main">{children}</main>
         <Footer />
         <StructuredData data={[generateOrganizationSchema(), generateLocalBusinessSchema(), generateWebSiteSchema()]} />
