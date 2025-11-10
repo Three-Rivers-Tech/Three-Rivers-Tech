@@ -91,21 +91,21 @@ export default function CommunityInvolvementPage() {
                   These sessions cover everything from basic computer skills to online safety for seniors.
                 </p>
                 <ul className="space-y-2 mb-4">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Basic Computer Skills for Beginners</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Basic Computer Skills for Beginners</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Online Safety & Security</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Online Safety &amp; Security</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Smartphone Training for Seniors</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Smartphone Training for Seniors</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Social Media for Small Businesses</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Social Media for Small Businesses</span>
                   </li>
                 </ul>
               </div>
@@ -117,17 +117,17 @@ export default function CommunityInvolvementPage() {
                   Our goal is to make technology accessible to everyone in our community, regardless of their financial situation.
                 </p>
                 <ul className="space-y-2 mb-4">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Discounted computer repairs for seniors</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Discounted computer repairs for seniors</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Free basic website setup for local non-profits</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Free basic website setup for local non-profits</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Reduced rate training sessions for community groups</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Reduced rate training sessions for community groups</span>
                   </li>
                 </ul>
               </div>
@@ -145,17 +145,17 @@ export default function CommunityInvolvementPage() {
                   We proudly sponsor local initiatives including:
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Turtle Creek Memorial Day Parade</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Turtle Creek Memorial Day Parade</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Local high school technology programs</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Local high school technology programs</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Small business association events</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Small business association events</span>
                   </li>
                 </ul>
               </div>
@@ -166,17 +166,17 @@ export default function CommunityInvolvementPage() {
                   We work closely with:
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Turtle Creek Borough Administration</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Turtle Creek Borough Administration</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Turtle Creek Senior Center</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Turtle Creek Senior Center</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">✓</span>
-                    <span>Mon Valley Small Business Network</span>
+                  <li className="flex items-start gap-3 text-sm sm:text-base text-foreground">
+                    <span aria-hidden="true" className="text-primary mt-0.5 flex-shrink-0">✓</span>
+                    <span className="leading-relaxed">Mon Valley Small Business Network</span>
                   </li>
                 </ul>
               </div>
