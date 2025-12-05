@@ -34,7 +34,7 @@ export default function CommunityInvolvementPage() {
         <div className="max-w-5xl mx-auto">
           {/* Community Support Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center">Supporting Our Community</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center text-foreground">Supporting Our Community</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
               <div className="text-center">
@@ -81,7 +81,7 @@ export default function CommunityInvolvementPage() {
 
           {/* Community Education Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center">Community Education</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center text-foreground">Community Education</h2>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
               <div>
@@ -136,7 +136,7 @@ export default function CommunityInvolvementPage() {
 
           {/* Local Impact Section */}
           <div className="bg-background-secondary rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center">Our Local Impact</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center text-foreground">Our Local Impact</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-shadow duration-300">
