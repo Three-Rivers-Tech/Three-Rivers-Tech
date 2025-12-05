@@ -43,7 +43,7 @@ export default function CommunityInvolvementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Local Partnerships</h3>
+                <h3 className="text-lg font-bold mb-2 text-foreground">Local Partnerships</h3>
                 <p className="text-sm text-foreground-secondary">
                   {"Partnering with other local businesses to strengthen our community's economic foundation"}
                 </p>
@@ -55,7 +55,7 @@ export default function CommunityInvolvementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Community Events</h3>
+                <h3 className="text-lg font-bold mb-2 text-foreground">Community Events</h3>
                 <p className="text-sm text-foreground-secondary">
                   Participating in and sponsoring local events like the Memorial Day parade and community fairs
                 </p>
@@ -67,7 +67,7 @@ export default function CommunityInvolvementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Educational Programs</h3>
+                <h3 className="text-lg font-bold mb-2 text-foreground">Educational Programs</h3>
                 <p className="text-sm text-foreground-secondary">
                   Providing technology workshops for seniors and local small business owners
                 </p>
@@ -140,7 +140,7 @@ export default function CommunityInvolvementPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-shadow duration-300">
-                <h3 className="text-lg font-bold mb-3">Sponsorships & Support</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Sponsorships & Support</h3>
                 <p className="text-foreground-secondary mb-4">
                   We proudly sponsor local initiatives including:
                 </p>
@@ -161,7 +161,7 @@ export default function CommunityInvolvementPage() {
               </div>
               
               <div className="bg-white rounded-2xl p-6 border border-border shadow-soft hover:shadow-large transition-shadow duration-300">
-                <h3 className="text-lg font-bold mb-3">Community Partnerships</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Community Partnerships</h3>
                 <p className="text-foreground-secondary mb-4">
                   We work closely with:
                 </p>
