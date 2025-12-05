@@ -1,0 +1,11 @@
+# Essential commands
+- Install deps: `cd website && npm install`
+- Dev server: `cd website && npm run dev`
+- Build static export: `cd website && npm run build`
+- Production preview: `cd website && npm start`
+- Lint: `cd website && npm run lint`
+- Tests: `cd website && npm run test`
+- Accessibility: `cd website && npm run test:accessibility`
+- SEO checks: `cd website && npm run test:seo`
+- Bundle analysis: `cd website && npm run analyze:bundle`
+- Image optimization: `cd website && npm run optimize:images`
