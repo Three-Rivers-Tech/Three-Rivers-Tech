@@ -20,7 +20,7 @@
     "build:analyze": "npm run build && npm run analyze:bundle"
   },
   "dependencies": {
-    "@next/third-parties": "^15.5.2",
+    "@next/third-parties": "^15.5.6",
     "js-yaml": "^4.1.1",
     "next": "15.5.7",
     "nodemailer": "^7.0.11",
