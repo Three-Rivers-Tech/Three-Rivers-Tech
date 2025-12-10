@@ -28,7 +28,7 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "sharp": "^0.34.4",
-    "zod": "^4.1.11"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@axe-core/react": "^4.10.2",
