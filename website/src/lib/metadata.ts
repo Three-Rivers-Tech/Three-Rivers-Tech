@@ -131,6 +131,7 @@ export function generatePageMetadata(config: PageMetadataConfig): Metadata {
     other: {
       "theme-color": "#1e40af", // Primary blue color
       "color-scheme": "light dark",
+      "mobile-web-app-capable": "yes",
       "apple-mobile-web-app-capable": "yes",
       "apple-mobile-web-app-status-bar-style": "default",
       "format-detection": "telephone=no"
