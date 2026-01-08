@@ -77,7 +77,8 @@ export default function ContactPage() {
                       className="text-blue-700 hover:text-blue-900 underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-1 -mx-1"
                       aria-label="Email the Three Rivers Tech support team"
                     >
-                      <span className="sr-only">Email address:</span> Email us: info@threeriverstech.com
+                      <span className="sr-only">Email address:</span>
+                      <span>Email us: info@threeriverstech.com</span>
                     </a>
                   </div>
                   <div className="flex items-center">
