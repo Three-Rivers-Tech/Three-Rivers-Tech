@@ -1,4 +1,4 @@
-import { FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaClock, FaPhone } from "react-icons/fa";
 import { GoogleCalendarIframe } from "@/components/OptimizedIframe";
 
 export default function ContactPage() {
@@ -63,15 +63,18 @@ export default function ContactPage() {
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-semibold text-blue-800 mb-4">Ready to Get Started?</h3>
                 <p className="text-blue-700 mb-4">
-                  {`The easiest way to get help is to email us or schedule a visit using the calendar below. We'll discuss your tech needs and provide a free assessment.`}
+                  {`The easiest way to get help is to call us, email us, or schedule a visit using the calendar below. We'll discuss your tech needs and provide a free assessment.`}
                 </p>
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="mr-2 text-blue-800" aria-hidden="true">ℹ️</span>
-                    <span className="text-blue-700">
-                      <span className="sr-only">Information: </span>
-                      Phone line coming soon — reach out via email in the meantime.
+                    <span className="mr-2 text-blue-800" aria-hidden="true">📞</span>
+                    <span className="text-blue-700 font-semibold">
+                      <span className="sr-only">Phone: </span>
+                      Call us: <a href="tel:+14122069453" className="text-blue-700 hover:text-blue-900 underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-1 -mx-1">(412) 206-9453</a>
                     </span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="mr-2 text-blue-800" aria-hidden="true">✉️</span>
                     <a
                       href="mailto:info@threeriverstech.com?subject=Tech Help Request&body=Hi! I need help with:%0D%0A%0D%0ADevice Type: %0D%0AProblem: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
                       className="text-blue-700 hover:text-blue-900 underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-1 -mx-1"
@@ -102,6 +105,21 @@ export default function ContactPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8">Contact Information</h2>
 
             <div className="space-y-6 sm:space-y-8">
+              <div className="flex items-start">
+                <div className="bg-primary rounded-full p-3 sm:p-4 mr-3 sm:mr-4 flex-shrink-0">
+                  <FaPhone className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Phone</h3>
+                  <a 
+                    href="tel:+14122069453"
+                    className="text-sm sm:text-base lg:text-lg text-foreground-secondary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1 -m-1 font-semibold"
+                  >
+                    (412) 206-9453
+                  </a>
+                </div>
+              </div>
+
               <div className="flex items-start">
                 <div className="bg-primary rounded-full p-3 sm:p-4 mr-3 sm:mr-4 flex-shrink-0">
                   <FaEnvelope className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
