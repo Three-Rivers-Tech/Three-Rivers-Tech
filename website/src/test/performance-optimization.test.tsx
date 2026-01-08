@@ -140,16 +140,19 @@ describe('Performance Optimization for Local Users', () => {
   });
 
   describe('Performance Optimizations', () => {
-    it('preloads brand imagery in the root layout head', () => {
+    it('includes favicon links in the root layout head', () => {
       const head = renderToString(
         <RootLayout>
           <div>content</div>
         </RootLayout>,
       );
 
-      ['avif', 'webp', 'png'].forEach((format) => {
-        expect(head).toContain(`rel="preload" href="/company_logo.${format}"`);
-      });
+      // Check for favicon links (which are sufficient for logo loading)
+      expect(head).toContain('rel="icon" type="image/png" sizes="16x16" href="/company_logo.png"');
+      expect(head).toContain('rel="icon" type="image/png" sizes="32x32" href="/company_logo.png"');
+      
+      // Verify preload tags for logo are not present (they cause unused resource warnings)
+      expect(head).not.toContain('rel="preload" href="/company_logo.webp"');
     });
 
     it('renders the logo with optimized formats and eager loading', () => {
