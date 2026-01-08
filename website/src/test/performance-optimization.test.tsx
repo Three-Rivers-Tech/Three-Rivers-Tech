@@ -73,10 +73,10 @@ import nextConfig from '../../next.config';
 
 describe('Performance Optimization for Local Users', () => {
   describe('Contact Information Accessibility', () => {
-    it('communicates phone availability status for local visitors', () => {
+    it('displays phone number prominently for local visitors', () => {
       render(<ContactPage />);
 
-      expect(screen.getByText(/phone line coming soon/i)).toBeVisible();
+      expect(screen.getByText(/(412) 206-9453/i)).toBeVisible();
     });
 
     it('includes local mailing address details for in-person visits', () => {

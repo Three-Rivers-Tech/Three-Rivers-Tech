@@ -18,7 +18,7 @@ const expectedElements = {
   tagline: "Your hometown tech partner",
   location: "Turtle Creek, PA 15145",
   address: "124 Grant Street",
-  phoneStatus: "Phone line coming soon",
+  phone: "(412) 206-9453",
   email: "info@threeriverstech.com",
   valueProposition: "big-city know-how at small-town prices",
   serviceAreas: ["Turtle Creek", "Monroeville", "Wilmerding", "Mon Valley"],
