@@ -39,14 +39,13 @@
     },
     {
       "day": "Saturday",
-      "open": "10:00 AM",
-      "close": "2:00 PM"
+      "open": "11:00 AM",
+      "close": "5:00 PM"
     },
     {
       "day": "Sunday", 
-      "closed": true,
-      "open": "",
-      "close": ""
+      "open": "11:00 AM",
+      "close": "5:00 PM"
     }
   ],
   "socialMedia": {
