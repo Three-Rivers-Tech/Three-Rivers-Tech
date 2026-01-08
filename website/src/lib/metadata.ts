@@ -41,8 +41,8 @@ export const businessInfo = {
   },
   hours: {
     weekdays: "Monday - Friday: 9:00 AM - 5:00 PM",
-    saturday: "Saturday: 10:00 AM - 2:00 PM", 
-    sunday: "Sunday: Closed"
+    saturday: "Saturday: 11:00 AM - 5:00 PM", 
+    sunday: "Sunday: 11:00 AM - 5:00 PM"
   },
   socialMedia: {
     linkedin: "https://www.linkedin.com/company/three-rivers-tech",
