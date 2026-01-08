@@ -376,7 +376,7 @@ function createFallbackBusinessInfo(): BusinessInfo {
   return {
     name: 'Three Rivers Tech',
     description: 'Comprehensive technology solutions for your business',
-    phone: 'Business phone line coming soon',
+    phone: '(412) 206-9453',
     email: 'info@threeriverstech.com',
     address: {
       street: '124 Grant Street',

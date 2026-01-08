@@ -73,10 +73,16 @@ import nextConfig from '../../next.config';
 
 describe('Performance Optimization for Local Users', () => {
   describe('Contact Information Accessibility', () => {
-    it('communicates phone availability status for local visitors', () => {
+    it('displays phone number prominently for local visitors', () => {
       render(<ContactPage />);
 
-      expect(screen.getByText(/phone line coming soon/i)).toBeVisible();
+      // Check for phone number links (there are multiple on the page)
+      const phoneLinks = screen.getAllByRole('link', { name: /412.*206.*9453/i });
+      expect(phoneLinks.length).toBeGreaterThan(0);
+      phoneLinks.forEach(link => {
+        expect(link).toBeVisible();
+        expect(link).toHaveAttribute('href', 'tel:+14122069453');
+      });
     });
 
     it('includes local mailing address details for in-person visits', () => {
@@ -199,7 +205,7 @@ describe('Performance Optimization for Local Users', () => {
     });
 
     it('maintains consistent contact details in reusable business metadata', () => {
-      expect(businessInfo.phone).toMatch(/coming soon/i);
+      expect(businessInfo.phone).toBe('(412) 206-9453');
       expect(businessInfo.address.street).toBe('124 Grant Street');
       expect(businessInfo.serviceAreas).toContain('Mon Valley');
     });
