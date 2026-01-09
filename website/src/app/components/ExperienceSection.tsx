@@ -57,8 +57,7 @@ export default function ExperienceSection() {
             What I Bring to Our Community
           </h2>
           <p className="text-lg text-foreground-secondary max-w-3xl mx-auto">
-            With formal cybersecurity education, professional help desk experience, and a commitment to Turtle Creek, 
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            With formal cybersecurity education, professional help desk experience, and a commitment to Turtle Creek, {/* eslint-disable-next-line react/no-unescaped-entities */}
             I combine technical expertise with a genuine understanding of our community's needs.
           </p>
         </header>
@@ -115,8 +114,7 @@ export default function ExperienceSection() {
             Growing Three Rivers Tech Full-Time
           </h3>
           <p className="text-lg text-foreground-secondary mb-6 max-w-3xl mx-auto leading-relaxed">
-            Currently working as a Help Desk Technician by day while building Three Rivers Tech as my side business, 
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            Currently working as a Help Desk Technician by day while building Three Rivers Tech as my side business, {/* eslint-disable-next-line react/no-unescaped-entities */}
             my goal is to make this a full-time operation serving our community's technology needs. Every client helps 
             me get closer to that dream of being your dedicated local tech partner.
           </p>
