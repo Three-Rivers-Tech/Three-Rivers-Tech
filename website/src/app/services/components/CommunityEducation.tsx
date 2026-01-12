@@ -2,7 +2,7 @@ import OptimizedImage from "@/components/OptimizedImage";
 
 export default function CommunityEducation() {
   return (
-    <section className="py-16 bg-background-secondary rounded-2xl p-8">
+    <section id="community-education" className="py-16 bg-background-secondary rounded-2xl p-8 scroll-mt-24">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">Community Education & Learning Center</h2>

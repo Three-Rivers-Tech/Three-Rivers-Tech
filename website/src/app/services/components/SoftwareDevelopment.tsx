@@ -2,7 +2,7 @@ import OptimizedImage from "@/components/OptimizedImage";
 
 export default function SoftwareDevelopment() {
   return (
-    <section className="py-16 border-b border-border">
+    <section id="web-development" className="py-16 border-b border-border scroll-mt-24">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
           <div className="bg-gradient-to-br from-purple-50 to-pink-100 p-4 rounded-xl relative overflow-hidden">

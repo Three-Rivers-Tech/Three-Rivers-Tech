@@ -33,28 +33,28 @@ const services = [
     title: "Home & Personal Tech Support",
     description: "Computer repair, virus removal, Wi-Fi setup, and smartphone training for seniors. We come to you in Turtle Creek and surrounding areas.",
     icon: HomeTechSupportIcon,
-    link: "/contact?service=home-support",
+    link: "/services#home-support",
   },
   {
     id: "small-business-it",
     title: "Small Business IT Packages",
     description: "Affordable IT solutions for local businesses including network setup, cybersecurity, and website maintenance with transparent pricing.",
     icon: SmallBusinessIcon,
-    link: "/contact?service=small-business-it",
+    link: "/services#small-business-it",
   },
   {
     id: "community-education",
     title: "Community Education",
     description: "Free workshops on basic computer skills, online safety, and digital marketing for local businesses and residents.",
     icon: CommunityEducationIcon,
-    link: "/contact?service=community-education",
+    link: "/services#community-education",
   },
   {
     id: "web-development",
     title: "Simple Website Design",
     description: "Professional, affordable websites starting at $499 for local businesses. Includes WordPress, SEO, and ongoing support.",
     icon: WebsiteDesignIcon,
-    link: "/contact?service=web-development",
+    link: "/services#web-development",
   },
 ];
 

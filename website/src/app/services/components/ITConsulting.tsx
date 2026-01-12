@@ -2,7 +2,7 @@ import OptimizedImage from "@/components/OptimizedImage";
 
 export default function ITConsulting() {
   return (
-    <section className="py-16 border-b border-border">
+    <section id="small-business-it" className="py-16 border-b border-border scroll-mt-24">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">Small Business IT Packages</h2>
