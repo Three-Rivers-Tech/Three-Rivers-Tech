@@ -11,8 +11,8 @@ export default function GitHubStats({ username }: GitHubStatsProps) {
   const [languagesError, setLanguagesError] = useState(false);
 
   const encodedUsername = encodeURIComponent(username);
-  const statsUrl = `https://github-readme-stats.vercel.app/api?username=${encodedUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=2563eb&icon_color=2563eb&text_color=374151&bg_color=00000000`;
-  const languagesUrl = `https://github-readme-stats.vercel.app/api/top-langs/?username=${encodedUsername}&layout=compact&theme=transparent&hide_border=true&title_color=2563eb&text_color=374151&bg_color=00000000`;
+  const statsUrl = `https://github-readme-stats-eight-rho-46.vercel.app/api?username=${encodedUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=2563eb&icon_color=2563eb&text_color=374151&bg_color=00000000`;
+  const languagesUrl = `https://github-readme-stats-eight-rho-46.vercel.app/api/top-langs/?username=${encodedUsername}&layout=compact&theme=transparent&hide_border=true&title_color=2563eb&text_color=374151&bg_color=00000000`;
 
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 sm:p-8">
