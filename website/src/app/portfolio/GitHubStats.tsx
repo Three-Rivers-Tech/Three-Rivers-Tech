@@ -15,6 +15,12 @@ const PeopleIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const CodeIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+  </svg>
+);
+
 export default function GitHubStats({ username }: GitHubStatsProps) {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 sm:p-8">
@@ -43,17 +49,11 @@ export default function GitHubStats({ username }: GitHubStatsProps) {
                 Building innovative solutions through open source collaboration. Check out our repositories, contribute to our projects, and join our developer community.
               </p>
               <div className="flex flex-wrap gap-2">
-const CodeIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-  </svg>
-);
-
-// Usage:
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 dark:bg-gray-700 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium">
                   <CodeIcon className="w-3 h-3" />
                   Open Source
-                </span>                <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 dark:bg-gray-700 text-green-800 dark:text-green-300 rounded-full text-xs font-medium">
+                </span>
+                <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 dark:bg-gray-700 text-green-800 dark:text-green-300 rounded-full text-xs font-medium">
                   <PeopleIcon className="w-3 h-3" />
                   Community Driven
                 </span>
