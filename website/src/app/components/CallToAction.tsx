@@ -14,10 +14,10 @@ export default function CallToAction() {
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 max-w-6xl">
         <header className="mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
-            Request a Free Assessment
+            Request an Assessment
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200">
-            Get in touch with Three Rivers Tech, your hometown tech partner. We&apos;ll provide a free assessment of your tech needs and help you find affordable solutions.
+            Get in touch with Three Rivers Tech, your hometown tech partner. We&apos;ll assess your tech needs and help you find affordable solutions.
           </p>
         </header>
 
@@ -27,24 +27,24 @@ export default function CallToAction() {
             <p className="text-white/90 text-lg mb-6">
               Ready to get started? Contact us directly for the fastest response.
             </p>
-            
+
             <div className="space-y-4">
               <a
                 href="tel:+14122069453"
                 className="block w-full bg-white text-primary font-bold py-4 px-8 rounded-xl hover:bg-gray-50 hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[48px] text-lg border border-primary/30 focus:border-primary"
-                aria-label="Call Three Rivers Tech for free tech assessment"
+                aria-label="Call Three Rivers Tech for tech assessment"
               >
                 📞 Call Now: (412) 206-9453
               </a>
 
               <a
-                href="mailto:info@threeriverstech.com?subject=Free Tech Assessment Request&body=Hi! I&apos;d like to request a free assessment for:%0D%0A%0D%0ADevice/Service Type: %0D%0AProblem Description: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
+                href="mailto:info@threeriverstech.com?subject=Tech Assessment Request&body=Hi! I'd like to request an assessment for:%0D%0A%0D%0ADevice/Service Type: %0D%0AProblem Description: %0D%0A%0D%0APlease contact me to schedule a visit.%0D%0A%0D%0AThank you!"
                 className="block w-full bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-xl hover:bg-white/30 hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary min-h-[48px] text-lg border border-white/30 focus:border-white"
-                aria-label="Send email for free tech assessment"
+                aria-label="Send email for tech assessment"
               >
-                📧 Email for Free Assessment
+                📧 Email for Assessment
               </a>
-              
+
               <div className="text-white/80 text-sm">
                 <p>📍 Serving Turtle Creek and surrounding areas</p>
               </div>

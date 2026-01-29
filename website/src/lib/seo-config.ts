@@ -1,11 +1,12 @@
-import { PageMetadataConfig } from "./metadata";
+import { PageMetadataConfig } from "@/lib/metadata";
+import type { ServicesSeoConfig, ServiceSeoConfig } from "@/types/seo";
 
 // SEO configuration for all pages
 export const seoConfig: Record<string, PageMetadataConfig> = {
   // Homepage
   home: {
     title: "Computer Repair Turtle Creek PA | IT Services 15145 | Three Rivers Tech",
-    description: "Computer repair Turtle Creek PA 15145, IT services for Mon Valley small businesses, and web design for Monroeville area. Contact us for a free consultation.",
+    description: "Computer repair Turtle Creek PA 15145, IT services for Mon Valley small businesses, and web design for Monroeville area. Contact us for a consultation.",
     keywords: [
       "computer repair Turtle Creek PA",
       "IT services Turtle Creek 15145", 
@@ -75,7 +76,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
     ],
     canonical: "https://threeriverstech.com/about",
     ogTitle: "About Three Rivers Tech - Your Local Turtle Creek PA Tech Partners",
-    ogDescription: "Meet Alex Johnson and learn how Three Rivers Tech became Turtle Creek's trusted local technology partner serving the Mon Valley community."
+    ogDescription: "Meet Christian Penrod and learn how Three Rivers Tech became Turtle Creek's trusted local technology partner serving the Mon Valley community."
   },
 
   // Contact page
@@ -191,7 +192,7 @@ export const seoConfig: Record<string, PageMetadataConfig> = {
 };
 
 // Service-specific SEO configurations
-export const servicesSeoConfig = {
+export const servicesSeoConfig: ServicesSeoConfig = {
   "software-development": {
     features: [
       "Custom Web Applications",
@@ -256,6 +257,6 @@ export function getPageSeoConfig(pageKey: string): PageMetadataConfig | null {
 /**
  * Get service-specific SEO configuration
  */
-export function getServiceSeoConfig(serviceKey: string) {
+export function getServiceSeoConfig(serviceKey: string): ServiceSeoConfig | null {
   return servicesSeoConfig[serviceKey as keyof typeof servicesSeoConfig] || null;
 }

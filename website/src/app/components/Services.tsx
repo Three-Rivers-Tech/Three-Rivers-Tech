@@ -156,7 +156,7 @@ export default function Services() {
               </svg>
             }
           >
-            Request a Free Assessment
+            Request an Assessment
           </PrimaryButton>
         </div>
       </div>
