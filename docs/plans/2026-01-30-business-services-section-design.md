@@ -103,6 +103,13 @@ BusinessServicesSection.tsx
 - `@/components/ui/SectionBadge` - for "Business Services" badge
 - Existing gradient classes and color tokens
 
+### Additional Technical Considerations
+- **Analytics:** Track events for CTA clicks and section visibility to measure metrics defined in the "Success Metrics" section.
+- **Performance:** As this section appears high on the homepage, it should not be lazy-loaded to avoid impacting Core Web Vitals (LCP/CLS). Code-splitting is handled by Next.js at the page level.
+- **SEO:** Content within this section will be indexed. No specific schema or metadata changes are planned for this initial implementation, but content is structured with semantic headings.
+- **Error Handling:** Pricing and service data are currently static. If this data becomes dynamic in the future, the component should be updated to include loading states (e.g., skeleton UI) and error states (e.g., "Pricing currently unavailable").
+- **A/B Testing:** The component should be structured to facilitate future A/B testing of headlines, messaging, and CTAs, although no tests are planned for the initial rollout.
+
 ## Success Metrics
 
 ### Technical Validation
