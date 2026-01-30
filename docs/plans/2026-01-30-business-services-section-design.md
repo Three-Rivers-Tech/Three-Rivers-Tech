@@ -2,6 +2,13 @@
 **Date:** 2026-01-30
 **Status:** Approved for Implementation
 
+## Approvals
+| Role       | Name      | Date         | Sign-off |
+|------------|-----------|--------------|----------|
+| **Lead**   | C. Penrod | 2026-01-30   | ✅        |
+| **Stakeholder**|           |              |          |
+
+
 ## Overview
 Add a dedicated "Small Business Tech Help" section to the homepage to communicate B2B value proposition to micro-businesses (0-10 employees) in the Mon Valley area.
 
@@ -83,6 +90,7 @@ BusinessServicesSection.tsx
 - Mobile (sm): Single column, services → pricing stacked
 
 ### Accessibility
+- **WCAG Compliance:** Aim for WCAG 2.1 Level AA compliance.
 - Semantic HTML (section, article, heading hierarchy)
 - ARIA labels for CTAs
 - Minimum 44px touch targets
@@ -95,11 +103,18 @@ BusinessServicesSection.tsx
 - `@/components/ui/SectionBadge` - for "Business Services" badge
 - Existing gradient classes and color tokens
 
-## Success Metrics (Not Tracked in Code)
-- Section viewable and functional
-- Mobile responsive
-- Clear pricing display
-- CTAs link correctly
+## Success Metrics
+
+### Technical Validation
+- Section renders correctly without errors
+- Layout is responsive across mobile, tablet, and desktop breakpoints
+- All interactive elements (CTAs) are functional and link to the correct destination
+
+### Business & UX Metrics (To be tracked via analytics)
+- **Scroll Depth:** Percentage of users who scroll the business services section into view.
+- **Engagement:** CTA click-through rate (CTR) for the "Get a Quick Quote" button.
+- **Dwell Time:** Average time spent with the section visible in the viewport.
+- **Audience Insights:** Comparison of engagement metrics (CTR, dwell time) between mobile and desktop users.
 
 ## Future Enhancements (Out of Scope)
 - Business portfolio page (`/business-portfolio`)
@@ -108,6 +123,11 @@ BusinessServicesSection.tsx
 - Google Business Profile integration
 
 ## Implementation Checklist
+- [ ] Verify `/website/src/app/page.tsx` path exists
+- [ ] Verify UI components exist (Card, PrimaryButton, SectionBadge)
+- [ ] Verify `/contact` route exists
+- [ ] Implement placeholder or hide secondary CTA for `/business-portfolio`
+- [ ] Validate pricing figures against current market rates
 - [ ] Create `BusinessServicesSection.tsx` component
 - [ ] Add icons for business services (reuse or create simple ones)
 - [ ] Import and insert into homepage after Services section
